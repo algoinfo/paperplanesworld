@@ -8,3 +8,7 @@ dist/
 !.env.example
 .vscode/
 .idea/
+
+# Trae HTML share packages / IDE docs
+.trae-html-share-packages/
+.trae/

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img">
+  <rect width="100%" height="100%" fill="#e8f1f8"/>
+  <rect x="24" y="24" width="592" height="312" rx="18" fill="#fff" stroke="#c5d7ea"/>
+
+  <text x="320" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="#13233a" font-weight="700">Step 2 · Foil cone</text>
+  <path d="M200 280 L320 110 L440 280 Z" fill="#cfd8e3" stroke="#13233a" stroke-width="2"/>
+  <rect x="300" y="150" width="40" height="120" fill="#9ec0e0"/>
+  <text x="320" y="320" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#3a4d66">Shape a cone around the bottle</text>
+
+</svg>

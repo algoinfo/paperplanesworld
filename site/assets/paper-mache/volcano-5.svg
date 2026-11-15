@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img">
+  <rect width="100%" height="100%" fill="#e8f1f8"/>
+  <rect x="24" y="24" width="592" height="312" rx="18" fill="#fff" stroke="#c5d7ea"/>
+
+  <text x="320" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="#13233a" font-weight="700">Step 5 · Eruption mix</text>
+  <path d="M220 270 L320 130 L420 270 Z" fill="#b86b32"/>
+  <circle cx="320" cy="155" r="16" fill="#3a2818"/>
+  <path d="M300 150 Q320 70 340 150" fill="#e4572e"/>
+  <path d="M290 160 Q320 90 350 160" fill="#f0a020" opacity=".7"/>
+  <text x="320" y="320" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#3a4d66">Baking soda + vinegar demo</text>
+
+</svg>

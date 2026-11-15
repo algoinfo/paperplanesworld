@@ -39,3 +39,34 @@ site/
 
 - 叠法步骤与示意图整理自 Fold'N Fly，界面与筛选交互为独立实现。
 - 仅供个人学习 / 演示；请尊重原站版权，勿用于商业分发。
+
+## 部署
+
+已部署到 **Cloudflare Pages** 项目 `paperplanesworld`。
+
+- 预览：https://paperplanesworld.pages.dev
+- 正式：https://paperairplaneworld.wiki
+- 仓库：https://github.com/algoinfo/paperplanesworld
+
+手动再发一版：
+
+```bash
+export PATH="$HOME/.local/node20/bin:$PATH"
+wrangler pages deploy site --project-name=paperplanesworld --commit-dirty=true
+```
+
+### 域名 paperairplaneworld.wiki
+
+Spaceship 自定义 NS（已设置）：
+
+- `conrad.ns.cloudflare.com`
+- `magnolia.ns.cloudflare.com`
+
+Cloudflare DNS：
+
+| Type  | Name | Content                      | Proxy |
+|-------|------|------------------------------|-------|
+| CNAME | `@`  | `paperplanesworld.pages.dev` | 开    |
+| CNAME | `www`| `paperplanesworld.pages.dev` | 开    |
+
+Pages → Custom domains 添加 `paperairplaneworld.wiki` 与 `www`。NS 生效后自动签发 HTTPS。

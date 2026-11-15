@@ -1,11 +1,4 @@
 (() => {
-  const TAG_LABEL = {
-    distance: "远距",
-    time_aloft: "滞空",
-    acrobatic: "特技",
-    decorative: "装饰",
-  };
-
   const state = {
     planes: [],
     filtered: [],
@@ -38,6 +31,7 @@
     document.querySelector('input[name="cut"]:checked')?.value || "any";
 
   function applyFilters() {
+    if (!state.planes.length) return;
     const q = els.q.value.trim().toLowerCase();
     const tags = getChecked("tag");
     const diffs = getChecked("diff");
@@ -71,7 +65,10 @@
     });
 
     state.filtered = list;
-    els.count.textContent = `${list.length} / ${state.planes.length} 架`;
+    els.count.textContent = window.PPW.t("count", {
+      n: list.length,
+      total: state.planes.length,
+    });
     paintGrid();
   }
 
@@ -85,21 +82,29 @@
     els.grid.innerHTML = state.filtered
       .map((p, i) => {
         const tags = (p.tags || [])
-          .map((t) => `<span class="chip">${TAG_LABEL[t] || t}</span>`)
+          .map(
+            (t) =>
+              `<span class="chip">${escapeHtml(window.PPW.tagLabel(t))}</span>`
+          )
           .join("");
-        const cut = p.scissors ? `<span class="chip cut">需剪刀</span>` : "";
+        const cut = p.scissors
+          ? `<span class="chip cut">${escapeHtml(window.PPW.t("needScissors"))}</span>`
+          : "";
         const badge = p.badge
           ? `<span class="badge">${escapeHtml(p.badge)}</span>`
           : "";
         const fallback = escapeHtml(p.thumb.replace(".webp", ".jpg"));
+        const alt = escapeHtml(
+          window.PPW.t("planeAlt", { name: p.name })
+        );
         return `
           <a class="plane-card" href="${planeHref(p)}" style="animation-delay:${Math.min(i, 12) * 0.03}s">
             ${badge}
-            <img class="thumb" src="${escapeHtml(p.thumb)}" alt="${escapeHtml(p.name)} 纸飞机" loading="lazy" width="300" height="250" onerror="this.onerror=null;this.src='${fallback}'" />
+            <img class="thumb" src="${escapeHtml(p.thumb)}" alt="${alt}" loading="lazy" width="300" height="250" onerror="this.onerror=null;this.src='${fallback}'" />
             <div class="body">
-              <h2>${escapeHtml(p.name)}</h2>
+              <h3>${escapeHtml(p.name)}</h3>
               <div class="meta-row">
-                <span class="chip diff-${escapeHtml(p.difficulty)}">${escapeHtml(p.difficultyCn || p.difficulty)}</span>
+                <span class="chip diff-${escapeHtml(p.difficulty)}">${escapeHtml(window.PPW.diffLabel(p.difficulty))}</span>
                 ${tags}${cut}
               </div>
             </div>
@@ -125,17 +130,23 @@
       const pick = pool[Math.floor(Math.random() * pool.length)];
       location.href = planeHref(pick);
     });
+
+    window.addEventListener("ppw:lang", () => {
+      window.PPW.applyStatic();
+      applyFilters();
+    });
   }
 
   async function init() {
     bind();
+    els.count.textContent = window.PPW.t("loading");
     const res = await fetch("data/planes.json");
     state.planes = await res.json();
     applyFilters();
   }
 
   init().catch((err) => {
-    els.count.textContent = "加载失败";
+    els.count.textContent = window.PPW.t("loadFail");
     console.error(err);
   });
 })();

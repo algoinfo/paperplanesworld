@@ -1,297 +1,367 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://paperplanesworld.wiki/</loc>
+    <loc>https://paperairplaneworld.wiki/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/The-Bird.html</loc>
+    <loc>https://paperairplaneworld.wiki/paper-mache/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://paperairplaneworld.wiki/paper-mache-recipe/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://paperairplaneworld.wiki/paper-mache-volcano/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://paperairplaneworld.wiki/learn.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paperairplaneworld.wiki/guides.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paperairplaneworld.wiki/fix-flight.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paperairplaneworld.wiki/how-to-throw.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paperairplaneworld.wiki/dart-or-glider.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paperairplaneworld.wiki/choose-paper.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paperairplaneworld.wiki/how-planes-fly.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paperairplaneworld.wiki/3d-learn.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paperairplaneworld.wiki/read.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paperairplaneworld.wiki/video.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paperairplaneworld.wiki/fly.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paperairplaneworld.wiki/planes/The-Bird.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Sky-OmniWing.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Sky-OmniWing.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Basic-Dart.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Basic-Dart.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Heavy-Nosed-Plane.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Heavy-Nosed-Plane.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Fast-Hawk.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Fast-Hawk.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Lock-Bottom.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Lock-Bottom.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Horizon.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Horizon.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Hunting-Flight.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Hunting-Flight.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Tail-Spin.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Tail-Spin.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Lift-Off.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Lift-Off.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/V-Wing.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/V-Wing.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Sonic-Jet.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Sonic-Jet.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/The-Arrow.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/The-Arrow.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Raven.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Raven.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/The-UFO.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/The-UFO.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Spinner-Plane.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Spinner-Plane.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Soaring-Eagle.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Soaring-Eagle.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Navy-Plane.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Navy-Plane.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Stealth-Glider.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Stealth-Glider.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Fast-Glider.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Fast-Glider.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Trooper.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Trooper.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Space-Fighter.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Space-Fighter.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Arrowhead.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Arrowhead.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Condor.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Condor.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Canard.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Canard.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Mosquito.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Mosquito.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Flying-Shovel.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Flying-Shovel.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/The-Stable.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/The-Stable.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Spin-Plane.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Spin-Plane.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Origami-Plane.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Origami-Plane.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Zip-Dart.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Zip-Dart.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Fast-Swallow.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Fast-Swallow.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Vulture.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Vulture.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Loop-Plane.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Loop-Plane.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Wilson.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Wilson.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Tailed-Plane.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Tailed-Plane.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Stunt-Plane.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Stunt-Plane.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Underside-Plane.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Underside-Plane.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Sailor-Wing.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Sailor-Wing.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Uppercat.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Uppercat.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/The-Buzz.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/The-Buzz.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Gliding-Plane.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Gliding-Plane.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Eagle-Eye.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Eagle-Eye.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/King-Bee.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/King-Bee.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Boomerang.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Boomerang.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/The-Square.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/The-Square.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/White-Dove.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/White-Dove.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Light-Spinner.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Light-Spinner.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Fun-Flyer.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Fun-Flyer.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Wedge-Plane.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Wedge-Plane.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Jet-Fighter.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Jet-Fighter.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/The-Basic.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/The-Basic.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Sea-Glider.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Sea-Glider.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Cross-Wing.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Cross-Wing.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Royal-Wing.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Royal-Wing.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Star-Wing.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Star-Wing.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/The-Sprinter.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/The-Sprinter.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paperplanesworld.wiki/planes/Water-Plane.html</loc>
+    <loc>https://paperairplaneworld.wiki/planes/Water-Plane.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
