@@ -1,0 +1,3702 @@
+[
+  {
+    "id": 32,
+    "name": "The Bird",
+    "slug": "The-Bird",
+    "blurb": "The birdlike wings give this fast flying paper airplane a lot of stability during flight.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "distance"
+    ],
+    "scissors": false,
+    "popularity": 44,
+    "distanceScore": 384,
+    "timeScore": 180,
+    "badge": "Go Far",
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "远距"
+    ],
+    "description": "This is a very reliable distance flier. We've given precise measurements below, but feel free to experiment with the wings.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the top right corner diagonally down to the other side.",
+        "image": "assets/planes/32/1.webp",
+        "textCn": "Fold the top right corner diagonally down to the other side."
+      },
+      {
+        "n": 2,
+        "text": "Open the paper back up and repeat with the other side.",
+        "image": "assets/planes/32/2.webp",
+        "textCn": "展开纸，另一侧重复同样操作。"
+      },
+      {
+        "n": 3,
+        "text": "Now fold the top down and line the crease up with the center part of the X shape.",
+        "image": "assets/planes/32/3.webp",
+        "textCn": "Now fold the top down and line the crease up with the center part of the X shape."
+      },
+      {
+        "n": 4,
+        "text": "Unfold and flatten the paper out.",
+        "image": "assets/planes/32/4.webp",
+        "textCn": "Unfold and flatten the paper out."
+      },
+      {
+        "n": 5,
+        "text": "Next, fold the top edge down so it meets the first horizontal crease.",
+        "image": "assets/planes/32/5.webp",
+        "textCn": "Next, fold the top edge down so it meets the first horizontal crease."
+      },
+      {
+        "n": 6,
+        "text": "Fold the top section down again along the horizontal crease.",
+        "image": "assets/planes/32/6.webp",
+        "textCn": "Fold the top section down again along the horizontal crease."
+      }
+    ],
+    "thumb": "assets/planes/32/thumb.webp",
+    "square": "assets/planes/32/square.webp",
+    "source": "https://www.foldnfly.com/32.html"
+  },
+  {
+    "id": 60,
+    "name": "Sky OmniWing",
+    "slug": "Sky-OmniWing",
+    "blurb": "A stealthy flying wing that is optimized for maximum hangtime.",
+    "difficulty": "Easy",
+    "difficultyLevel": 0,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": true,
+    "popularity": 44,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "简单",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "This design is an improved version of the original Proto OmniWing, designed by Mike Kelsey. It features a unique construction that uses tape and layered pieces to produce a well engineered structural aircraft that has low drag and can float for a long time.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Hold the paper so the long edge is facing you and fold the paper in half, left to right.",
+        "image": "assets/planes/60/1.webp",
+        "textCn": "Hold the paper so the long edge is facing you and fold the paper in half, left to right."
+      },
+      {
+        "n": 2,
+        "text": "Then fold the left and right sides over to meet this middle crease. Unfold.",
+        "image": "assets/planes/60/2.webp",
+        "textCn": "Then fold the left and right sides over to meet this middle crease. Unfold."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top two corners down to meet the outer creases, making two triangles.",
+        "image": "assets/planes/60/3.webp",
+        "textCn": "Fold the top two corners down to meet the outer creases, making two triangles."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top edges in to the center crease. Unfold.",
+        "image": "assets/planes/60/4.webp",
+        "textCn": "Fold the top edges in to the center crease. Unfold."
+      },
+      {
+        "n": 5,
+        "text": "Fold the left and right sides in to meet the crease made in the previous step.",
+        "image": "assets/planes/60/5.webp",
+        "textCn": "Fold the left and right sides in to meet the crease made in the previous step."
+      },
+      {
+        "n": 6,
+        "text": "Refold the crease made in step 4.",
+        "image": "assets/planes/60/6.webp",
+        "textCn": "Refold the crease made in step 4."
+      }
+    ],
+    "thumb": "assets/planes/60/thumb.webp",
+    "square": "assets/planes/60/square.webp",
+    "source": "https://www.foldnfly.com/60.html"
+  },
+  {
+    "id": 1,
+    "name": "Basic Dart",
+    "slug": "Basic-Dart",
+    "blurb": "A basic design with decent distance and speed.",
+    "difficulty": "Easy",
+    "difficultyLevel": 0,
+    "tags": [
+      "distance"
+    ],
+    "scissors": false,
+    "popularity": 43,
+    "distanceScore": 340,
+    "timeScore": 120,
+    "badge": "Easy",
+    "difficultyCn": "简单",
+    "tagsCn": [
+      "远距"
+    ],
+    "description": "This is one of the most iconic paper airplane designs, and also one of the easiest to fold. It flies very fast, in a nice straight line. A forgiving airplane design that works well even with uneven or asymmetrical folds. The perfect starter airplane for anyone just learning.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half.",
+        "image": "assets/planes/1/1.webp",
+        "textCn": "把纸对折。"
+      },
+      {
+        "n": 2,
+        "text": "Unfold and then fold the corners into the center line.",
+        "image": "assets/planes/1/2.webp",
+        "textCn": "展开，再把两角折到中线。"
+      },
+      {
+        "n": 3,
+        "text": "Fold the top edges to the center.",
+        "image": "assets/planes/1/3.webp",
+        "textCn": "把上边两缘折到中心。"
+      },
+      {
+        "n": 4,
+        "text": "Fold the paper airplane in half.",
+        "image": "assets/planes/1/4.webp",
+        "textCn": "把纸飞机对折。"
+      },
+      {
+        "n": 5,
+        "text": "Fold the wings down to meet the bottom edge of the plane's body.",
+        "image": "assets/planes/1/5.webp",
+        "textCn": "把机翼向下折，对齐机身底边。"
+      }
+    ],
+    "thumb": "assets/planes/1/thumb.webp",
+    "square": "assets/planes/1/square.webp",
+    "source": "https://www.foldnfly.com/1.html"
+  },
+  {
+    "id": 7,
+    "name": "Heavy-Nosed Plane",
+    "slug": "Heavy-Nosed-Plane",
+    "blurb": "A basic dart with a blunt heavy nose.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 43,
+    "distanceScore": 200,
+    "timeScore": 200,
+    "badge": null,
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "This starts off like a basic dart, but the additional folds give it more weight at the nose, allowing it to go far.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half and unfold.",
+        "image": "assets/planes/7/1.webp",
+        "textCn": "Fold the paper in half and unfold."
+      },
+      {
+        "n": 2,
+        "text": "Fold the top two corners to the center line",
+        "image": "assets/planes/7/2.webp",
+        "textCn": "Fold the top two corners to the center line"
+      },
+      {
+        "n": 3,
+        "text": "Fold the upper sides to the center line.",
+        "image": "assets/planes/7/3.webp",
+        "textCn": "Fold the upper sides to the center line."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top point down to the bottom edge of the paper.",
+        "image": "assets/planes/7/4.webp",
+        "textCn": "Fold the top point down to the bottom edge of the paper."
+      },
+      {
+        "n": 5,
+        "text": "Now, fold the point back up about 5.5cm past the top edge.",
+        "image": "assets/planes/7/5.webp",
+        "textCn": "Now, fold the point back up about 5.5cm past the top edge."
+      },
+      {
+        "n": 6,
+        "text": "Fold the point back down again to the edge of the previous crease.",
+        "image": "assets/planes/7/6.webp",
+        "textCn": "Fold the point back down again to the edge of the previous crease."
+      }
+    ],
+    "thumb": "assets/planes/7/thumb.webp",
+    "square": "assets/planes/7/square.webp",
+    "source": "https://www.foldnfly.com/7.html"
+  },
+  {
+    "id": 21,
+    "name": "Fast Hawk",
+    "slug": "Fast-Hawk",
+    "blurb": "A fast paper airplane that can soar for miles with very little effort.",
+    "difficulty": "Expert",
+    "difficultyLevel": 3,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": true,
+    "popularity": 43,
+    "distanceScore": 178,
+    "timeScore": 200,
+    "badge": null,
+    "difficultyCn": "专家",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "Like a hawk, this paper plane can glide over long distances. A little tricky to fold, but a reliable performer.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Holding the paper width-wise, fold the top down about 2 inches (5cm).",
+        "image": "assets/planes/21/1.webp",
+        "textCn": "Holding the paper width-wise, fold the top down about 2 inches (5cm)."
+      },
+      {
+        "n": 2,
+        "text": "Fold the sheet in half vertically.",
+        "image": "assets/planes/21/2.webp",
+        "textCn": "Fold the sheet in half vertically."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top right corner down to the left edge.",
+        "image": "assets/planes/21/3.webp",
+        "textCn": "Fold the top right corner down to the left edge."
+      },
+      {
+        "n": 4,
+        "text": "Repeat step three with the other side, folding the opposite way.",
+        "image": "assets/planes/21/4.webp",
+        "textCn": "Repeat step three with the other side, folding the opposite way."
+      },
+      {
+        "n": 5,
+        "text": "Open the sheet back up to the end of step 1, as shown.",
+        "image": "assets/planes/21/5.webp",
+        "textCn": "Open the sheet back up to the end of step 1, as shown."
+      },
+      {
+        "n": 6,
+        "text": "Accordion fold the top sides in to get this shape.",
+        "image": "assets/planes/21/6.webp",
+        "textCn": "Accordion fold the top sides in to get this shape."
+      }
+    ],
+    "thumb": "assets/planes/21/thumb.webp",
+    "square": "assets/planes/21/square.webp",
+    "source": "https://www.foldnfly.com/21.html"
+  },
+  {
+    "id": 29,
+    "name": "Lock-Bottom",
+    "slug": "Lock-Bottom",
+    "blurb": "An easy paper airplane that flies farther that most other designs.",
+    "difficulty": "Easy",
+    "difficultyLevel": 0,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": true,
+    "popularity": 43,
+    "distanceScore": 355,
+    "timeScore": 240,
+    "badge": null,
+    "difficultyCn": "简单",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "It shoots straight through the air with a quick push and keeps going and going.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half and open it back up.",
+        "image": "assets/planes/29/1.webp",
+        "textCn": "Fold the paper in half and open it back up."
+      },
+      {
+        "n": 2,
+        "text": "Fold both corners in to the center line.",
+        "image": "assets/planes/29/2.webp",
+        "textCn": "Fold both corners in to the center line."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top point down, leaving it about 1 inch (2.5cm) from the bottom edge.",
+        "image": "assets/planes/29/3.webp",
+        "textCn": "Fold the top point down, leaving it about 1 inch (2.5cm) from the bottom edge."
+      },
+      {
+        "n": 4,
+        "text": "Fold both corners in to the center line.",
+        "image": "assets/planes/29/4.webp",
+        "textCn": "Fold both corners in to the center line."
+      },
+      {
+        "n": 5,
+        "text": "Take the little triangle piece at the bottom and fold it up to lock down the two flaps.",
+        "image": "assets/planes/29/5.webp",
+        "textCn": "Take the little triangle piece at the bottom and fold it up to lock down the two flaps."
+      },
+      {
+        "n": 6,
+        "text": "Now, fold the paper plane in half away from you.",
+        "image": "assets/planes/29/6.webp",
+        "textCn": "Now, fold the paper plane in half away from you."
+      }
+    ],
+    "thumb": "assets/planes/29/thumb.webp",
+    "square": "assets/planes/29/square.webp",
+    "source": "https://www.foldnfly.com/29.html"
+  },
+  {
+    "id": 52,
+    "name": "Horizon",
+    "slug": "Horizon",
+    "blurb": "A great gliding paper airplane that can soar for many meters.",
+    "difficulty": "Expert",
+    "difficultyLevel": 3,
+    "tags": [
+      "distance"
+    ],
+    "scissors": false,
+    "popularity": 43,
+    "distanceScore": 260,
+    "timeScore": 301,
+    "badge": null,
+    "difficultyCn": "专家",
+    "tagsCn": [
+      "远距"
+    ],
+    "description": "This reliable design likes to stay up in the air and fly for a long long ways.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half vertically. Unfold and then fold the top two corners to the center.",
+        "image": "assets/planes/52/1.webp",
+        "textCn": "Fold the paper in half vertically. Unfold and then fold the top two corners to the center."
+      },
+      {
+        "n": 2,
+        "text": "Fold the top point down to the bottom edge. If you are using A4 paper, fold it about 2cm shy of the bottom edge.",
+        "image": "assets/planes/52/2.webp",
+        "textCn": "Fold the top point down to the bottom edge. If you are using A4 paper, fold it about 2cm shy of the bottom edge."
+      },
+      {
+        "n": 3,
+        "text": "Fold the point back up, even with the bottom of the triangle flaps, about 3cm of overlap.",
+        "image": "assets/planes/52/3.webp",
+        "textCn": "Fold the point back up, even with the bottom of the triangle flaps, about 3cm of overlap."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top part of the right side to the center and then take the bottom part of the right side and stretch it to the side and flatten it out. Repeat with the left side.",
+        "image": "assets/planes/52/4.webp",
+        "textCn": "Fold the top part of the right side to the center and then take the bottom part of the right side and stretch it to the side and flatten it out. Repeat with the left side."
+      },
+      {
+        "n": 5,
+        "text": "Reach inside and pull out the center flaps. Then refold them in the opposite direction and fold the sides in.",
+        "image": "assets/planes/52/5.webp",
+        "textCn": "Reach inside and pull out the center flaps. Then refold them in the opposite direction and fold the sides in."
+      },
+      {
+        "n": 6,
+        "text": "Take the bottom edge of each center flap and fold it backwards at a slight angle and then tuck under and press flat.",
+        "image": "assets/planes/52/6.webp",
+        "textCn": "Take the bottom edge of each center flap and fold it backwards at a slight angle and then tuck under and press flat."
+      }
+    ],
+    "thumb": "assets/planes/52/thumb.webp",
+    "square": "assets/planes/52/square.webp",
+    "source": "https://www.foldnfly.com/52.html"
+  },
+  {
+    "id": 6,
+    "name": "Hunting Flight",
+    "slug": "Hunting-Flight",
+    "blurb": "This straight shooting airplane has a heavy nose which helps it go fast and far.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 42,
+    "distanceScore": 280,
+    "timeScore": 170,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "Throw this paper airplane as hard as you want and see how far it goes.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half and then unfold.",
+        "image": "assets/planes/6/1.webp",
+        "textCn": "Fold the paper in half and then unfold."
+      },
+      {
+        "n": 2,
+        "text": "Fold the top edge down about 5 cm.",
+        "image": "assets/planes/6/2.webp",
+        "textCn": "Fold the top edge down about 5 cm."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top edge down again to double up the thick part.",
+        "image": "assets/planes/6/3.webp",
+        "textCn": "Fold the top edge down again to double up the thick part."
+      },
+      {
+        "n": 4,
+        "text": "Repeat the previous step one more time.",
+        "image": "assets/planes/6/4.webp",
+        "textCn": "Repeat the previous step one more time."
+      },
+      {
+        "n": 5,
+        "text": "Fold the top corners away from you to the back center line.",
+        "image": "assets/planes/6/5.webp",
+        "textCn": "Fold the top corners away from you to the back center line."
+      },
+      {
+        "n": 6,
+        "text": "Fold the plane in half towards you.",
+        "image": "assets/planes/6/6.webp",
+        "textCn": "Fold the plane in half towards you."
+      }
+    ],
+    "thumb": "assets/planes/6/thumb.webp",
+    "square": "assets/planes/6/square.webp",
+    "source": "https://www.foldnfly.com/6.html"
+  },
+  {
+    "id": 37,
+    "name": "Tail Spin",
+    "slug": "Tail-Spin",
+    "blurb": "An acrobatic paper airplane that spins through the air.",
+    "difficulty": "Easy",
+    "difficultyLevel": 0,
+    "tags": [
+      "acrobatic"
+    ],
+    "scissors": false,
+    "popularity": 42,
+    "distanceScore": 286,
+    "timeScore": 160,
+    "badge": null,
+    "difficultyCn": "简单",
+    "tagsCn": [
+      "特技"
+    ],
+    "description": "Using tail flaps that are bent in opposite directions gives this paper airplane some dramatic spinning acrobatics.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the sheet in half vertically and unfold.",
+        "image": "assets/planes/37/1.webp",
+        "textCn": "Fold the sheet in half vertically and unfold."
+      },
+      {
+        "n": 2,
+        "text": "Next, fold both upper corner to the center.",
+        "image": "assets/planes/37/2.webp",
+        "textCn": "Next, fold both upper corner to the center."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top right edge to the center line.",
+        "image": "assets/planes/37/3.webp",
+        "textCn": "Fold the top right edge to the center line."
+      },
+      {
+        "n": 4,
+        "text": "Repeat with the other side.",
+        "image": "assets/planes/37/4.webp",
+        "textCn": "另一侧重复同样操作。"
+      },
+      {
+        "n": 5,
+        "text": "Now, fold the top point down about 2 inches, as shown.",
+        "image": "assets/planes/37/5.webp",
+        "textCn": "Now, fold the top point down about 2 inches, as shown."
+      },
+      {
+        "n": 6,
+        "text": "Fold the plane in half.",
+        "image": "assets/planes/37/6.webp",
+        "textCn": "Fold the plane in half."
+      }
+    ],
+    "thumb": "assets/planes/37/thumb.webp",
+    "square": "assets/planes/37/square.webp",
+    "source": "https://www.foldnfly.com/37.html"
+  },
+  {
+    "id": 38,
+    "name": "Lift Off",
+    "slug": "Lift-Off",
+    "blurb": "Use a rubber band to add a little more power to the launch of this paper airplane.",
+    "difficulty": "Easy",
+    "difficultyLevel": 0,
+    "tags": [
+      "distance"
+    ],
+    "scissors": true,
+    "popularity": 42,
+    "distanceScore": 430,
+    "timeScore": 140,
+    "badge": "Fast",
+    "difficultyCn": "简单",
+    "tagsCn": [
+      "远距"
+    ],
+    "description": "Fling this paper airplane at high speeds, either straight up like a rocket or long distance like a jet.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the sheet in half and then fold both upper corner to the center.",
+        "image": "assets/planes/38/1.webp",
+        "textCn": "Fold the sheet in half and then fold both upper corner to the center."
+      },
+      {
+        "n": 2,
+        "text": "Next, fold the top point back about 3cm.",
+        "image": "assets/planes/38/2.webp",
+        "textCn": "Next, fold the top point back about 3cm."
+      },
+      {
+        "n": 3,
+        "text": "Fold both upper edges to the center line.",
+        "image": "assets/planes/38/3.webp",
+        "textCn": "Fold both upper edges to the center line."
+      },
+      {
+        "n": 4,
+        "text": "Fold the plane in half.",
+        "image": "assets/planes/38/4.webp",
+        "textCn": "Fold the plane in half."
+      },
+      {
+        "n": 5,
+        "text": "Grab a pair of scissors and cut out a slit like the one shown here.",
+        "image": "assets/planes/38/5.webp",
+        "textCn": "Grab a pair of scissors and cut out a slit like the one shown here."
+      },
+      {
+        "n": 6,
+        "text": "Now, fold out the first wing.",
+        "image": "assets/planes/38/6.webp",
+        "textCn": "Now, fold out the first wing."
+      }
+    ],
+    "thumb": "assets/planes/38/thumb.webp",
+    "square": "assets/planes/38/square.webp",
+    "source": "https://www.foldnfly.com/38.html"
+  },
+  {
+    "id": 39,
+    "name": "V-Wing",
+    "slug": "V-Wing",
+    "blurb": "A smooth sailing paper airplane with a simple silhouette.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": true,
+    "popularity": 42,
+    "distanceScore": 292,
+    "timeScore": 145,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "Like a stealthy spy plane, this paper glider flies quietly through the air.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "First, cut off the bottom to make a perfectly square piece of paper.",
+        "image": "assets/planes/39/1.webp",
+        "textCn": "First, cut off the bottom to make a perfectly square piece of paper."
+      },
+      {
+        "n": 2,
+        "text": "Fold the sheet in half and then open back up.",
+        "image": "assets/planes/39/2.webp",
+        "textCn": "Fold the sheet in half and then open back up."
+      },
+      {
+        "n": 3,
+        "text": "Fold both upper corners to the center line as shown.",
+        "image": "assets/planes/39/3.webp",
+        "textCn": "Fold both upper corners to the center line as shown."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top point down to meet the corners from the previous step.",
+        "image": "assets/planes/39/4.webp",
+        "textCn": "Fold the top point down to meet the corners from the previous step."
+      },
+      {
+        "n": 5,
+        "text": "Fold the right upper corner to the center again.",
+        "image": "assets/planes/39/5.webp",
+        "textCn": "Fold the right upper corner to the center again."
+      },
+      {
+        "n": 6,
+        "text": "Repeat with the other side.",
+        "image": "assets/planes/39/6.webp",
+        "textCn": "另一侧重复同样操作。"
+      }
+    ],
+    "thumb": "assets/planes/39/thumb.webp",
+    "square": "assets/planes/39/square.webp",
+    "source": "https://www.foldnfly.com/39.html"
+  },
+  {
+    "id": 41,
+    "name": "Sonic Jet",
+    "slug": "Sonic-Jet",
+    "blurb": "A paper jet that can reach supersonic speeds as it soars through the air.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 42,
+    "distanceScore": 374,
+    "timeScore": 143,
+    "badge": "Speed",
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "This design looks like a fighter jet, complete with a cockpit for the pilot to fly the paper airplane.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the plane in half vertically.",
+        "image": "assets/planes/41/1.webp",
+        "textCn": "Fold the plane in half vertically."
+      },
+      {
+        "n": 2,
+        "text": "Open it back up and then fold in half horizontally.",
+        "image": "assets/planes/41/2.webp",
+        "textCn": "Open it back up and then fold in half horizontally."
+      },
+      {
+        "n": 3,
+        "text": "Unfold the paper all the way and then fold the top two corners to the center.",
+        "image": "assets/planes/41/3.webp",
+        "textCn": "Unfold the paper all the way and then fold the top two corners to the center."
+      },
+      {
+        "n": 4,
+        "text": "Again, fold both top edges to the center.",
+        "image": "assets/planes/41/4.webp",
+        "textCn": "Again, fold both top edges to the center."
+      },
+      {
+        "n": 5,
+        "text": "Flip the plane around and fold the top point down to the bottom edge.",
+        "image": "assets/planes/41/5.webp",
+        "textCn": "Flip the plane around and fold the top point down to the bottom edge."
+      },
+      {
+        "n": 6,
+        "text": "Flip it around again and fold both corners to the center.",
+        "image": "assets/planes/41/6.webp",
+        "textCn": "Flip it around again and fold both corners to the center."
+      }
+    ],
+    "thumb": "assets/planes/41/thumb.webp",
+    "square": "assets/planes/41/square.webp",
+    "source": "https://www.foldnfly.com/41.html"
+  },
+  {
+    "id": 49,
+    "name": "The Arrow",
+    "slug": "The-Arrow",
+    "blurb": "A fast paper airplane that goes straight like an arrow.",
+    "difficulty": "Expert",
+    "difficultyLevel": 3,
+    "tags": [
+      "distance"
+    ],
+    "scissors": true,
+    "popularity": 42,
+    "distanceScore": 280,
+    "timeScore": 130,
+    "badge": null,
+    "difficultyCn": "专家",
+    "tagsCn": [
+      "远距"
+    ],
+    "description": "Difficult to fold, but worth the effort for this fast flying dart.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half and then unfold.",
+        "image": "assets/planes/49/1.webp",
+        "textCn": "Fold the paper in half and then unfold."
+      },
+      {
+        "n": 2,
+        "text": "Fold the top right corner so that you make a crease going from the center top to the bottom right corner. Unfold.",
+        "image": "assets/planes/49/2.webp",
+        "textCn": "Fold the top right corner so that you make a crease going from the center top to the bottom right corner. Unfold."
+      },
+      {
+        "n": 3,
+        "text": "Fold the right corner down to the crease of the previous fold and then refold step 2.",
+        "image": "assets/planes/49/3.webp",
+        "textCn": "Fold the right corner down to the crease of the previous fold and then refold step 2."
+      },
+      {
+        "n": 4,
+        "text": "Repeat step two and three with the left side.",
+        "image": "assets/planes/49/4.webp",
+        "textCn": "Repeat step two and three with the left side."
+      },
+      {
+        "n": 5,
+        "text": "Fold the top point down to the bottom.",
+        "image": "assets/planes/49/5.webp",
+        "textCn": "Fold the top point down to the bottom."
+      },
+      {
+        "n": 6,
+        "text": "Fold the top point back up as shown. The doubled over part should be just under 1 inch (2.5cm) tall.",
+        "image": "assets/planes/49/6.webp",
+        "textCn": "Fold the top point back up as shown. The doubled over part should be just under 1 inch (2.5cm) tall."
+      }
+    ],
+    "thumb": "assets/planes/49/thumb.webp",
+    "square": "assets/planes/49/square.webp",
+    "source": "https://www.foldnfly.com/49.html"
+  },
+  {
+    "id": 50,
+    "name": "Raven",
+    "slug": "Raven",
+    "blurb": "This easy paper airplane flies swiftly through the air in big circles.",
+    "difficulty": "Easy",
+    "difficultyLevel": 0,
+    "tags": [
+      "distance"
+    ],
+    "scissors": false,
+    "popularity": 42,
+    "distanceScore": 260,
+    "timeScore": 248,
+    "badge": null,
+    "difficultyCn": "简单",
+    "tagsCn": [
+      "远距"
+    ],
+    "description": "Like a bird with wide wings, this airplane will circle around before landing.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the sheet in half and then unfold.",
+        "image": "assets/planes/50/1.webp",
+        "textCn": "Fold the sheet in half and then unfold."
+      },
+      {
+        "n": 2,
+        "text": "Fold the top two corner to the center.",
+        "image": "assets/planes/50/2.webp",
+        "textCn": "Fold the top two corner to the center."
+      },
+      {
+        "n": 3,
+        "text": "Again, fold the top two edges to the center.",
+        "image": "assets/planes/50/3.webp",
+        "textCn": "Again, fold the top two edges to the center."
+      },
+      {
+        "n": 4,
+        "text": "Next, fold the top point down. You can fold it all the way to the bottom, or shy by a little bit. It's up to you!",
+        "image": "assets/planes/50/4.webp",
+        "textCn": "Next, fold the top point down. You can fold it all the way to the bottom, or shy by a little bit. It's up to you!"
+      },
+      {
+        "n": 5,
+        "text": "Fold the top two corners to the center.",
+        "image": "assets/planes/50/5.webp",
+        "textCn": "Fold the top two corners to the center."
+      },
+      {
+        "n": 6,
+        "text": "It should now look like this.",
+        "image": "assets/planes/50/6.webp",
+        "textCn": "It should now look like this."
+      }
+    ],
+    "thumb": "assets/planes/50/thumb.webp",
+    "square": "assets/planes/50/square.webp",
+    "source": "https://www.foldnfly.com/50.html"
+  },
+  {
+    "id": 13,
+    "name": "The UFO",
+    "slug": "The-UFO",
+    "blurb": "This paper airplane is shaped like a flying saucer.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "time_aloft",
+      "acrobatic"
+    ],
+    "scissors": true,
+    "popularity": 41,
+    "distanceScore": 0,
+    "timeScore": 287,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "滞空",
+      "特技"
+    ],
+    "description": "Its round shape allows it float slowly through the air just like a UFO.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half. Cut out the bottom corner to round it off as shown, then unfold.",
+        "image": "assets/planes/13/1.webp",
+        "textCn": "Fold the paper in half. Cut out the bottom corner to round it off as shown, then unfold."
+      },
+      {
+        "n": 2,
+        "text": "Fold the top corners to the center line.",
+        "image": "assets/planes/13/2.webp",
+        "textCn": "Fold the top corners to the center line."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top point down 2 inches (5cm) before the bottom edge.",
+        "image": "assets/planes/13/3.webp",
+        "textCn": "Fold the top point down 2 inches (5cm) before the bottom edge."
+      },
+      {
+        "n": 4,
+        "text": "Fold down the top two corners about half way down each diagonal crease.",
+        "image": "assets/planes/13/4.webp",
+        "textCn": "Fold down the top two corners about half way down each diagonal crease."
+      },
+      {
+        "n": 5,
+        "text": "Now, fold the top edge down about one inch (2.5cm).",
+        "image": "assets/planes/13/5.webp",
+        "textCn": "Now, fold the top edge down about one inch (2.5cm)."
+      },
+      {
+        "n": 6,
+        "text": "Fold the paper airplane in half towards you.",
+        "image": "assets/planes/13/6.webp",
+        "textCn": "Fold the paper airplane in half towards you."
+      }
+    ],
+    "thumb": "assets/planes/13/thumb.webp",
+    "square": "assets/planes/13/square.webp",
+    "source": "https://www.foldnfly.com/13.html"
+  },
+  {
+    "id": 42,
+    "name": "Spinner Plane",
+    "slug": "Spinner-Plane",
+    "blurb": "A fun and easy paper plane that might get you a little dizzy.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "acrobatic",
+      "decorative"
+    ],
+    "scissors": false,
+    "popularity": 41,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "特技",
+      "装饰"
+    ],
+    "description": "Designed to spin through the air with amazing aerobatics.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the top right corner to the left side.",
+        "image": "assets/planes/42/1.webp",
+        "textCn": "Fold the top right corner to the left side."
+      },
+      {
+        "n": 2,
+        "text": "Open the sheet back up and repeat the same step with the left corner.",
+        "image": "assets/planes/42/2.webp",
+        "textCn": "Open the sheet back up and repeat the same step with the left corner."
+      },
+      {
+        "n": 3,
+        "text": "Open the sheet back up and accordion fold both sides in so it looks like this.",
+        "image": "assets/planes/42/3.webp",
+        "textCn": "Open the sheet back up and accordion fold both sides in so it looks like this."
+      },
+      {
+        "n": 4,
+        "text": "Next, fold the bottom layer to the center.",
+        "image": "assets/planes/42/4.webp",
+        "textCn": "Next, fold the bottom layer to the center."
+      },
+      {
+        "n": 5,
+        "text": "Repeat with the left side.",
+        "image": "assets/planes/42/5.webp",
+        "textCn": "Repeat with the left side."
+      },
+      {
+        "n": 6,
+        "text": "Now, fold the right side of the triangle shape to the top point.",
+        "image": "assets/planes/42/6.webp",
+        "textCn": "Now, fold the right side of the triangle shape to the top point."
+      }
+    ],
+    "thumb": "assets/planes/42/thumb.webp",
+    "square": "assets/planes/42/square.webp",
+    "source": "https://www.foldnfly.com/42.html"
+  },
+  {
+    "id": 34,
+    "name": "Soaring Eagle",
+    "slug": "Soaring-Eagle",
+    "blurb": "This fast paper airplane soars well indoors and out.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 40,
+    "distanceScore": 178,
+    "timeScore": 110,
+    "badge": null,
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "滞空"
+    ],
+    "description": "A glider that circles in the air like an eagle search for its next meal.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Measure around 2.5 inches (6.3 cm) down from the top and draw a horizontal line.",
+        "image": "assets/planes/34/1.webp",
+        "textCn": "Measure around 2.5 inches (6.3 cm) down from the top and draw a horizontal line."
+      },
+      {
+        "n": 2,
+        "text": "Fold the top edge down to the line and then fold it down again on the line.",
+        "image": "assets/planes/34/2.webp",
+        "textCn": "Fold the top edge down to the line and then fold it down again on the line."
+      },
+      {
+        "n": 3,
+        "text": "Next, fold the plane in half away from you.",
+        "image": "assets/planes/34/3.webp",
+        "textCn": "Next, fold the plane in half away from you."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top right corner down along the opposite edge.",
+        "image": "assets/planes/34/4.webp",
+        "textCn": "Fold the top right corner down along the opposite edge."
+      },
+      {
+        "n": 5,
+        "text": "Flip the plane around and repeat with the other side.",
+        "image": "assets/planes/34/5.webp",
+        "textCn": "Flip the plane around and repeat with the other side."
+      },
+      {
+        "n": 6,
+        "text": "Unfold everything back to step two. Then fold the top corners so they meet the diagonal creases.",
+        "image": "assets/planes/34/6.webp",
+        "textCn": "Unfold everything back to step two. Then fold the top corners so they meet the diagonal creases."
+      }
+    ],
+    "thumb": "assets/planes/34/thumb.webp",
+    "square": "assets/planes/34/square.webp",
+    "source": "https://www.foldnfly.com/34.html"
+  },
+  {
+    "id": 35,
+    "name": "Navy Plane",
+    "slug": "Navy-Plane",
+    "blurb": "Designed to look like a fighter jet, this paper airplane is made for speed.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 40,
+    "distanceScore": 246,
+    "timeScore": 220,
+    "badge": null,
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "Throw this paper jet as fast as you can and go for distance.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Holding the paper horizontally, fold in half and then unfold.",
+        "image": "assets/planes/35/1.webp",
+        "textCn": "Holding the paper horizontally, fold in half and then unfold."
+      },
+      {
+        "n": 2,
+        "text": "Fold down both top corners to the center.",
+        "image": "assets/planes/35/2.webp",
+        "textCn": "Fold down both top corners to the center."
+      },
+      {
+        "n": 3,
+        "text": "Fold the tip of the plane down to meet the previous fold. If you are using A4 paper, fold it only half way to the previous folds.",
+        "image": "assets/planes/35/3.webp",
+        "textCn": "Fold the tip of the plane down to meet the previous fold. If you are using A4 paper, fold it only half way to the previous folds."
+      },
+      {
+        "n": 4,
+        "text": "Fold down the top right corner, aligning it with the center.",
+        "image": "assets/planes/35/4.webp",
+        "textCn": "Fold down the top right corner, aligning it with the center."
+      },
+      {
+        "n": 5,
+        "text": "Now repeat with the left corner.",
+        "image": "assets/planes/35/5.webp",
+        "textCn": "Now repeat with the left corner."
+      },
+      {
+        "n": 6,
+        "text": "Turn the plane around and fold the right bottom corner to the center.",
+        "image": "assets/planes/35/6.webp",
+        "textCn": "Turn the plane around and fold the right bottom corner to the center."
+      }
+    ],
+    "thumb": "assets/planes/35/thumb.webp",
+    "square": "assets/planes/35/square.webp",
+    "source": "https://www.foldnfly.com/35.html"
+  },
+  {
+    "id": 43,
+    "name": "Stealth Glider",
+    "slug": "Stealth-Glider",
+    "blurb": "Lightly throw this paper airplane into the air and watch it glide.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 40,
+    "distanceScore": 314,
+    "timeScore": 388,
+    "badge": "Glides",
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "Try throwing it from a balcony or other high location to watch it soar for a long time.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the top right corner to the left side.",
+        "image": "assets/planes/43/1.webp",
+        "textCn": "Fold the top right corner to the left side."
+      },
+      {
+        "n": 2,
+        "text": "Open the sheet back up and repeat the same step with the left corner.",
+        "image": "assets/planes/43/2.webp",
+        "textCn": "Open the sheet back up and repeat the same step with the left corner."
+      },
+      {
+        "n": 3,
+        "text": "Open the sheet back up and accordion fold both sides in so it looks like the photo.",
+        "image": "assets/planes/43/3.webp",
+        "textCn": "Open the sheet back up and accordion fold both sides in so it looks like the photo."
+      },
+      {
+        "n": 4,
+        "text": "Next, fold the right side of the triangle shape to the top point.",
+        "image": "assets/planes/43/4.webp",
+        "textCn": "Next, fold the right side of the triangle shape to the top point."
+      },
+      {
+        "n": 5,
+        "text": "Repeat with the left side.",
+        "image": "assets/planes/43/5.webp",
+        "textCn": "Repeat with the left side."
+      },
+      {
+        "n": 6,
+        "text": "Now, fold in the bottom right edge of the diamond shape.",
+        "image": "assets/planes/43/6.webp",
+        "textCn": "Now, fold in the bottom right edge of the diamond shape."
+      }
+    ],
+    "thumb": "assets/planes/43/thumb.webp",
+    "square": "assets/planes/43/square.webp",
+    "source": "https://www.foldnfly.com/43.html"
+  },
+  {
+    "id": 48,
+    "name": "Fast Glider",
+    "slug": "Fast-Glider",
+    "blurb": "A realistic paper airplane that looks like a real airplane.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": true,
+    "popularity": 40,
+    "distanceScore": 230,
+    "timeScore": 150,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "The separate wing and tail sections make this one of the more realistic designs. It flies and glides well too!",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the sheet in half, unfold and then fold the top two corners to the center.",
+        "image": "assets/planes/48/1.webp",
+        "textCn": "Fold the sheet in half, unfold and then fold the top two corners to the center."
+      },
+      {
+        "n": 2,
+        "text": "Fold the top point down to meet the edge of the previous folds.",
+        "image": "assets/planes/48/2.webp",
+        "textCn": "Fold the top point down to meet the edge of the previous folds."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top two edges in to the center.",
+        "image": "assets/planes/48/3.webp",
+        "textCn": "Fold the top two edges in to the center."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top point down to the bottom edge.",
+        "image": "assets/planes/48/4.webp",
+        "textCn": "Fold the top point down to the bottom edge."
+      },
+      {
+        "n": 5,
+        "text": "Next, fold the point back up as shown. The doubled over part should be about 1 inch (2.5cm) tall.",
+        "image": "assets/planes/48/5.webp",
+        "textCn": "Next, fold the point back up as shown. The doubled over part should be about 1 inch (2.5cm) tall."
+      },
+      {
+        "n": 6,
+        "text": "Fold the plane in half and grab a pair of scissors.",
+        "image": "assets/planes/48/6.webp",
+        "textCn": "Fold the plane in half and grab a pair of scissors."
+      }
+    ],
+    "thumb": "assets/planes/48/thumb.webp",
+    "square": "assets/planes/48/square.webp",
+    "source": "https://www.foldnfly.com/48.html"
+  },
+  {
+    "id": 51,
+    "name": "Trooper",
+    "slug": "Trooper",
+    "blurb": "A compact and realistic looking paper airplane that resembles a fighter jet.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "distance"
+    ],
+    "scissors": false,
+    "popularity": 40,
+    "distanceScore": 277,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "远距"
+    ],
+    "description": "This small dart like paper plane is a great long-distance flyer.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Holding the paper vertically, fold the top down to the bottom and then fold it in half again from left to right.",
+        "image": "assets/planes/51/1.webp",
+        "textCn": "Holding the paper vertically, fold the top down to the bottom and then fold it in half again from left to right."
+      },
+      {
+        "n": 2,
+        "text": "Unfold the horizontal fold and then fold the top two corners to the center.",
+        "image": "assets/planes/51/2.webp",
+        "textCn": "Unfold the horizontal fold and then fold the top two corners to the center."
+      },
+      {
+        "n": 3,
+        "text": "Unfold all the way and then accordion fold the sides in.",
+        "image": "assets/planes/51/3.webp",
+        "textCn": "Unfold all the way and then accordion fold the sides in."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top layer of the right flap all the way over to the left side. Then take the remaining flap on the right side and fold it to the center.",
+        "image": "assets/planes/51/4.webp",
+        "textCn": "Fold the top layer of the right flap all the way over to the left side. Then take the remaining flap on the right side and fold it to the center."
+      },
+      {
+        "n": 5,
+        "text": "There are 3 layers on the left now.  Grab the top layer and fold to the center.",
+        "image": "assets/planes/51/5.webp",
+        "textCn": "There are 3 layers on the left now.  Grab the top layer and fold to the center."
+      },
+      {
+        "n": 6,
+        "text": "Take these two folded flaps and fold them up in opposite directions as shown.",
+        "image": "assets/planes/51/6.webp",
+        "textCn": "Take these two folded flaps and fold them up in opposite directions as shown."
+      }
+    ],
+    "thumb": "assets/planes/51/thumb.webp",
+    "square": "assets/planes/51/square.webp",
+    "source": "https://www.foldnfly.com/51.html"
+  },
+  {
+    "id": 54,
+    "name": "Space Fighter",
+    "slug": "Space-Fighter",
+    "blurb": "This paper airplane is styled after Darth Vader's TIE Fighter from Star Wars.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "acrobatic",
+      "decorative"
+    ],
+    "scissors": false,
+    "popularity": 40,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "特技",
+      "装饰"
+    ],
+    "description": "This is an acrobatic design that likes to quickly dart around in the air to evade blaster shots.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Holding the paper vertically, fold the top down to the bottom and then fold it in half again from left to right.",
+        "image": "assets/planes/54/1.webp",
+        "textCn": "Holding the paper vertically, fold the top down to the bottom and then fold it in half again from left to right."
+      },
+      {
+        "n": 2,
+        "text": "Unfold the horizontal fold and then fold the top two corners to the center.",
+        "image": "assets/planes/54/2.webp",
+        "textCn": "Unfold the horizontal fold and then fold the top two corners to the center."
+      },
+      {
+        "n": 3,
+        "text": "Unfold all the way and then accordion fold the sides in.",
+        "image": "assets/planes/54/3.webp",
+        "textCn": "Unfold all the way and then accordion fold the sides in."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top point down to the bottom.",
+        "image": "assets/planes/54/4.webp",
+        "textCn": "Fold the top point down to the bottom."
+      },
+      {
+        "n": 5,
+        "text": "Fold it back up as shown, leaving about 23mm of overlap.",
+        "image": "assets/planes/54/5.webp",
+        "textCn": "Fold it back up as shown, leaving about 23mm of overlap."
+      },
+      {
+        "n": 6,
+        "text": "Fold the airplane in half.",
+        "image": "assets/planes/54/6.webp",
+        "textCn": "Fold the airplane in half."
+      }
+    ],
+    "thumb": "assets/planes/54/thumb.webp",
+    "square": "assets/planes/54/square.webp",
+    "source": "https://www.foldnfly.com/54.html"
+  },
+  {
+    "id": 58,
+    "name": "Arrowhead",
+    "slug": "Arrowhead",
+    "blurb": "This classically styled, easy-to-fold paper airplane can fly over 100ft!",
+    "difficulty": "Easy",
+    "difficultyLevel": 0,
+    "tags": [
+      "distance"
+    ],
+    "scissors": false,
+    "popularity": 40,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "简单",
+    "tagsCn": [
+      "远距"
+    ],
+    "description": "",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half lengthwise and then unfold.",
+        "image": "assets/planes/58/1.webp",
+        "textCn": "Fold the paper in half lengthwise and then unfold."
+      },
+      {
+        "n": 2,
+        "text": "Flip the paper over and fold the top edge down about 1 inch (2.5cm).",
+        "image": "assets/planes/58/2.webp",
+        "textCn": "Flip the paper over and fold the top edge down about 1 inch (2.5cm)."
+      },
+      {
+        "n": 3,
+        "text": "Flip the paper back around and fold the top two corners to the middle crease.",
+        "image": "assets/planes/58/3.webp",
+        "textCn": "Flip the paper back around and fold the top two corners to the middle crease."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top triangle piece down, so the diagonal edges line up with the top corners of the paper.",
+        "image": "assets/planes/58/4.webp",
+        "textCn": "Fold the top triangle piece down, so the diagonal edges line up with the top corners of the paper."
+      },
+      {
+        "n": 5,
+        "text": "Fold the triangle piece back up so that the point touches the top of the paper.",
+        "image": "assets/planes/58/5.webp",
+        "textCn": "Fold the triangle piece back up so that the point touches the top of the paper."
+      },
+      {
+        "n": 6,
+        "text": "Flip the paper over to the back side and fold the top two corners to the middle crease.",
+        "image": "assets/planes/58/6.webp",
+        "textCn": "Flip the paper over to the back side and fold the top two corners to the middle crease."
+      }
+    ],
+    "thumb": "assets/planes/58/thumb.webp",
+    "square": "assets/planes/58/square.webp",
+    "source": "https://www.foldnfly.com/58.html"
+  },
+  {
+    "id": 61,
+    "name": "Condor",
+    "slug": "Condor",
+    "blurb": "An advanced long duration glider that can hover in the air for an extended time.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 40,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "滞空"
+    ],
+    "description": "A locking fold keeps this paper airplane together during flight. No tape, staples or paperclips required!",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold one corner down to meet the other side. Unfold and repeat with the other corner.",
+        "image": "assets/planes/61/1.webp",
+        "textCn": "Fold one corner down to meet the other side. Unfold and repeat with the other corner."
+      },
+      {
+        "n": 2,
+        "text": "Unfold and flip the paper over. Fold the top down so the new crease goes right through the cross made by the previous step.",
+        "image": "assets/planes/61/2.webp",
+        "textCn": "Unfold and flip the paper over. Fold the top down so the new crease goes right through the cross made by the previous step."
+      },
+      {
+        "n": 3,
+        "text": "Unfold and flip the paper over. Accordion fold the sides into the middle and press flat.",
+        "image": "assets/planes/61/3.webp",
+        "textCn": "Unfold and flip the paper over. Accordion fold the sides into the middle and press flat."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top point down to meet the edge of the top layer of paper.",
+        "image": "assets/planes/61/4.webp",
+        "textCn": "Fold the top point down to meet the edge of the top layer of paper."
+      },
+      {
+        "n": 5,
+        "text": "Unfold everything to the beginning. Then fold on the existing crease which is just under the middle of the paper.",
+        "image": "assets/planes/61/5.webp",
+        "textCn": "Unfold everything to the beginning. Then fold on the existing crease which is just under the middle of the paper."
+      },
+      {
+        "n": 6,
+        "text": "Fold that crease all the way over so it goes past the bottom.",
+        "image": "assets/planes/61/6.webp",
+        "textCn": "Fold that crease all the way over so it goes past the bottom."
+      }
+    ],
+    "thumb": "assets/planes/61/thumb.webp",
+    "square": "assets/planes/61/square.webp",
+    "source": "https://www.foldnfly.com/61.html"
+  },
+  {
+    "id": 36,
+    "name": "Canard",
+    "slug": "Canard",
+    "blurb": "A steady distance flyer that stays on target.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "distance"
+    ],
+    "scissors": false,
+    "popularity": 39,
+    "distanceScore": 262,
+    "timeScore": 290,
+    "badge": null,
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "远距"
+    ],
+    "description": "The small front wings on this paper airplane are called canard wings, and they help stabilize the airplane during flight.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold your paper in half vertically and then unfold.",
+        "image": "assets/planes/36/1.webp",
+        "textCn": "Fold your paper in half vertically and then unfold."
+      },
+      {
+        "n": 2,
+        "text": "Fold both upper corners to the center.",
+        "image": "assets/planes/36/2.webp",
+        "textCn": "Fold both upper corners to the center."
+      },
+      {
+        "n": 3,
+        "text": "Now, fold the outer edges to the center.",
+        "image": "assets/planes/36/3.webp",
+        "textCn": "Now, fold the outer edges to the center."
+      },
+      {
+        "n": 4,
+        "text": "Next, open the sheet back up and fold down the right side. The second crease should meet the center line. Then fold the corner out.",
+        "image": "assets/planes/36/4.webp",
+        "textCn": "Next, open the sheet back up and fold down the right side. The second crease should meet the center line. Then fold the corner out."
+      },
+      {
+        "n": 5,
+        "text": "Repeat with the other side.",
+        "image": "assets/planes/36/5.webp",
+        "textCn": "另一侧重复同样操作。"
+      },
+      {
+        "n": 6,
+        "text": "Fold down the top point to meet where the other folds come together.",
+        "image": "assets/planes/36/6.webp",
+        "textCn": "Fold down the top point to meet where the other folds come together."
+      }
+    ],
+    "thumb": "assets/planes/36/thumb.webp",
+    "square": "assets/planes/36/square.webp",
+    "source": "https://www.foldnfly.com/36.html"
+  },
+  {
+    "id": 55,
+    "name": "Mosquito",
+    "slug": "Mosquito",
+    "blurb": "A compact paper airplane that glides quickly across the room.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 39,
+    "distanceScore": 307,
+    "timeScore": 148,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "This paper airplane design has a thick blunt nose that makes it very durable. It won't get bent up as easily when it bumps into an obstacle.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half and then unfold.",
+        "image": "assets/planes/55/1.webp",
+        "textCn": "Fold the paper in half and then unfold."
+      },
+      {
+        "n": 2,
+        "text": "Fold the right side over to the left, unfold and repeat with the left side.",
+        "image": "assets/planes/55/2.webp",
+        "textCn": "Fold the right side over to the left, unfold and repeat with the left side."
+      },
+      {
+        "n": 3,
+        "text": "Unfold and then fold the top down so the fold goes through the X formed by all the other creases.",
+        "image": "assets/planes/55/3.webp",
+        "textCn": "Unfold and then fold the top down so the fold goes through the X formed by all the other creases."
+      },
+      {
+        "n": 4,
+        "text": "Unfold again and then fold the right side down to the diagonal crease.",
+        "image": "assets/planes/55/4.webp",
+        "textCn": "Unfold again and then fold the right side down to the diagonal crease."
+      },
+      {
+        "n": 5,
+        "text": "Repeat with the left side.",
+        "image": "assets/planes/55/5.webp",
+        "textCn": "Repeat with the left side."
+      },
+      {
+        "n": 6,
+        "text": "Fold the top down to the bottom.",
+        "image": "assets/planes/55/6.webp",
+        "textCn": "Fold the top down to the bottom."
+      }
+    ],
+    "thumb": "assets/planes/55/thumb.webp",
+    "square": "assets/planes/55/square.webp",
+    "source": "https://www.foldnfly.com/55.html"
+  },
+  {
+    "id": 59,
+    "name": "Flying Shovel",
+    "slug": "Flying-Shovel",
+    "blurb": "You'll dig this big flying wing that stays aloft for ages.",
+    "difficulty": "Easy",
+    "difficultyLevel": 0,
+    "tags": [
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 39,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "简单",
+    "tagsCn": [
+      "滞空"
+    ],
+    "description": "Don't let the name fool you, this wedge shaped wing will plow through the air in a long, slow and stable, gentle glide.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold one corner down to the other side. Unfold.",
+        "image": "assets/planes/59/1.webp",
+        "textCn": "Fold one corner down to the other side. Unfold."
+      },
+      {
+        "n": 2,
+        "text": "Repeat on the other side and unfold again.",
+        "image": "assets/planes/59/2.webp",
+        "textCn": "Repeat on the other side and unfold again."
+      },
+      {
+        "n": 3,
+        "text": "Fold one side over and line up the edge with the crease made in the previous step.",
+        "image": "assets/planes/59/3.webp",
+        "textCn": "Fold one side over and line up the edge with the crease made in the previous step."
+      },
+      {
+        "n": 4,
+        "text": "Fold the other side over along the same crease.",
+        "image": "assets/planes/59/4.webp",
+        "textCn": "Fold the other side over along the same crease."
+      },
+      {
+        "n": 5,
+        "text": "Fold the top down along the existing creased line.",
+        "image": "assets/planes/59/5.webp",
+        "textCn": "Fold the top down along the existing creased line."
+      },
+      {
+        "n": 6,
+        "text": "Fold the entire airplane in half down the middle. Unfold.",
+        "image": "assets/planes/59/6.webp",
+        "textCn": "Fold the entire airplane in half down the middle. Unfold."
+      }
+    ],
+    "thumb": "assets/planes/59/thumb.webp",
+    "square": "assets/planes/59/square.webp",
+    "source": "https://www.foldnfly.com/59.html"
+  },
+  {
+    "id": 2,
+    "name": "The Stable",
+    "slug": "The-Stable",
+    "blurb": "This paper airplane has a lot of stability and can fly for a long time.",
+    "difficulty": "Easy",
+    "difficultyLevel": 0,
+    "tags": [
+      "time_aloft",
+      "acrobatic"
+    ],
+    "scissors": false,
+    "popularity": 38,
+    "distanceScore": 150,
+    "timeScore": 210,
+    "badge": null,
+    "difficultyCn": "简单",
+    "tagsCn": [
+      "滞空",
+      "特技"
+    ],
+    "description": "It likes to fly in big wide loops. If you slightly bend up some flaps at the rear edge, you can get it to do flips and tricks.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half.",
+        "image": "assets/planes/2/1.webp",
+        "textCn": "把纸对折。"
+      },
+      {
+        "n": 2,
+        "text": "Unfold and then fold the top two corners to the center line.",
+        "image": "assets/planes/2/2.webp",
+        "textCn": "Unfold and then fold the top two corners to the center line."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top point down to create a square.",
+        "image": "assets/planes/2/3.webp",
+        "textCn": "Fold the top point down to create a square."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top two corners to the center about an inch (2.5 cm) above the downward facing point, to form a triangle shape on top and a diamond shape on bottom.",
+        "image": "assets/planes/2/4.webp",
+        "textCn": "Fold the top two corners to the center about an inch (2.5 cm) above the downward facing point, to form a triangle shape on top and a diamond shape on bottom."
+      },
+      {
+        "n": 5,
+        "text": "Fold the downward facing point up to secure the flaps.",
+        "image": "assets/planes/2/5.webp",
+        "textCn": "Fold the downward facing point up to secure the flaps."
+      },
+      {
+        "n": 6,
+        "text": "Fold the plane in half away from you and flatten it out.",
+        "image": "assets/planes/2/6.webp",
+        "textCn": "Fold the plane in half away from you and flatten it out."
+      }
+    ],
+    "thumb": "assets/planes/2/thumb.webp",
+    "square": "assets/planes/2/square.webp",
+    "source": "https://www.foldnfly.com/2.html"
+  },
+  {
+    "id": 15,
+    "name": "Spin Plane",
+    "slug": "Spin-Plane",
+    "blurb": "This paper plane will spin, spiral and corkscrew through the air like a stunt pilot!",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "acrobatic"
+    ],
+    "scissors": false,
+    "popularity": 38,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": "Spins",
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "特技"
+    ],
+    "description": "Watch in awe as it executes a mesmerizing aerial dance, a thrilling adventure through the air, a spectacle of spin that promises to captivate and exhilarate.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the corners down to each side and unfold to make an X shape.",
+        "image": "assets/planes/15/1.webp",
+        "textCn": "Fold the corners down to each side and unfold to make an X shape."
+      },
+      {
+        "n": 2,
+        "text": "Fold the top down and make a crease so it lines up with the middle of the X shape.",
+        "image": "assets/planes/15/2.webp",
+        "textCn": "Fold the top down and make a crease so it lines up with the middle of the X shape."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top two corners to the center line.",
+        "image": "assets/planes/15/3.webp",
+        "textCn": "Fold the top two corners to the center line."
+      },
+      {
+        "n": 4,
+        "text": "Unfold the last step and then accordion fold the sides so they are tucked inside.",
+        "image": "assets/planes/15/4.webp",
+        "textCn": "Unfold the last step and then accordion fold the sides so they are tucked inside."
+      },
+      {
+        "n": 5,
+        "text": "Fold the bottom corners of the triangle up to the top.",
+        "image": "assets/planes/15/5.webp",
+        "textCn": "Fold the bottom corners of the triangle up to the top."
+      },
+      {
+        "n": 6,
+        "text": "Now, fold the top sides of the diamond to the center line.",
+        "image": "assets/planes/15/6.webp",
+        "textCn": "Now, fold the top sides of the diamond to the center line."
+      }
+    ],
+    "thumb": "assets/planes/15/thumb.webp",
+    "square": "assets/planes/15/square.webp",
+    "source": "https://www.foldnfly.com/15.html"
+  },
+  {
+    "id": 18,
+    "name": "Origami Plane",
+    "slug": "Origami-Plane",
+    "blurb": "Learn how to make an origami paper airplane.",
+    "difficulty": "Expert",
+    "difficultyLevel": 3,
+    "tags": [
+      "time_aloft",
+      "acrobatic"
+    ],
+    "scissors": true,
+    "popularity": 38,
+    "distanceScore": 0,
+    "timeScore": 200,
+    "badge": null,
+    "difficultyCn": "专家",
+    "tagsCn": [
+      "滞空",
+      "特技"
+    ],
+    "description": "Designed by an origami expert, this paper plane flies fast, stays up a long time and can do tricks.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold one corner diagonally.",
+        "image": "assets/planes/18/1.webp",
+        "textCn": "Fold one corner diagonally."
+      },
+      {
+        "n": 2,
+        "text": "Cut off the extra piece at the bottom and open up the paper. You should have a perfect square.",
+        "image": "assets/planes/18/2.webp",
+        "textCn": "Cut off the extra piece at the bottom and open up the paper. You should have a perfect square."
+      },
+      {
+        "n": 3,
+        "text": "Rotate the sheet so that one corner is facing up and then fold in the outer corners to the center line.",
+        "image": "assets/planes/18/3.webp",
+        "textCn": "Rotate the sheet so that one corner is facing up and then fold in the outer corners to the center line."
+      },
+      {
+        "n": 4,
+        "text": "Fold down the top point so that it touches the horizontal line.",
+        "image": "assets/planes/18/4.webp",
+        "textCn": "Fold down the top point so that it touches the horizontal line."
+      },
+      {
+        "n": 5,
+        "text": "Fold the top two corners to the center line.",
+        "image": "assets/planes/18/5.webp",
+        "textCn": "Fold the top two corners to the center line."
+      },
+      {
+        "n": 6,
+        "text": "Unfold the previous step and then accordion fold the sides in to form a diamond shape.",
+        "image": "assets/planes/18/6.webp",
+        "textCn": "Unfold the previous step and then accordion fold the sides in to form a diamond shape."
+      }
+    ],
+    "thumb": "assets/planes/18/thumb.webp",
+    "square": "assets/planes/18/square.webp",
+    "source": "https://www.foldnfly.com/18.html"
+  },
+  {
+    "id": 23,
+    "name": "Zip Dart",
+    "slug": "Zip-Dart",
+    "blurb": "If you are looking for speed and distance, this zippy dart is a great option.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 38,
+    "distanceScore": 250,
+    "timeScore": 140,
+    "badge": null,
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "The thin body and front stabilizing wings allows it to quickly zip through the air and travel long distances.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the corner down to the other side of the paper.",
+        "image": "assets/planes/23/1.webp",
+        "textCn": "Fold the corner down to the other side of the paper."
+      },
+      {
+        "n": 2,
+        "text": "Unfold and repeat with the other corner. Then unfold again.",
+        "image": "assets/planes/23/2.webp",
+        "textCn": "Unfold and repeat with the other corner. Then unfold again."
+      },
+      {
+        "n": 3,
+        "text": "Accordion fold the sides inside using the creases made in the previous steps.",
+        "image": "assets/planes/23/3.webp",
+        "textCn": "Accordion fold the sides inside using the creases made in the previous steps."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top layer of the side corners up to the top.",
+        "image": "assets/planes/23/4.webp",
+        "textCn": "Fold the top layer of the side corners up to the top."
+      },
+      {
+        "n": 5,
+        "text": "Take both outer edges and fold them to the center. Be sure they are tucked underneath the diamond shape.",
+        "image": "assets/planes/23/5.webp",
+        "textCn": "Take both outer edges and fold them to the center. Be sure they are tucked underneath the diamond shape."
+      },
+      {
+        "n": 6,
+        "text": "Fold the paper plane in half.",
+        "image": "assets/planes/23/6.webp",
+        "textCn": "Fold the paper plane in half."
+      }
+    ],
+    "thumb": "assets/planes/23/thumb.webp",
+    "square": "assets/planes/23/square.webp",
+    "source": "https://www.foldnfly.com/23.html"
+  },
+  {
+    "id": 33,
+    "name": "Fast Swallow",
+    "slug": "Fast-Swallow",
+    "blurb": "The distinctive tail shape gives this paper airplane a unique look.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": true,
+    "popularity": 38,
+    "distanceScore": 198,
+    "timeScore": 150,
+    "badge": null,
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "The tail and wide wings allows this paper airplane to soar in the wind.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the sheet of paper in half vertically and horizontally.",
+        "image": "assets/planes/33/1.webp",
+        "textCn": "Fold the sheet of paper in half vertically and horizontally."
+      },
+      {
+        "n": 2,
+        "text": "Next, fold the top edge down to meet the center crease.",
+        "image": "assets/planes/33/2.webp",
+        "textCn": "Next, fold the top edge down to meet the center crease."
+      },
+      {
+        "n": 3,
+        "text": "Again, take the top edge and fold to the center.",
+        "image": "assets/planes/33/3.webp",
+        "textCn": "Again, take the top edge and fold to the center."
+      },
+      {
+        "n": 4,
+        "text": "Repeat the previous step once again.",
+        "image": "assets/planes/33/4.webp",
+        "textCn": "Repeat the previous step once again."
+      },
+      {
+        "n": 5,
+        "text": "Measure one inch (2.5cm) to the left and right of the center line and draw vertical lines.",
+        "image": "assets/planes/33/5.webp",
+        "textCn": "Measure one inch (2.5cm) to the left and right of the center line and draw vertical lines."
+      },
+      {
+        "n": 6,
+        "text": "Now, measure 3 inches (7.6cm) from the bottom on both sides and draw a horizontal line.",
+        "image": "assets/planes/33/6.webp",
+        "textCn": "Now, measure 3 inches (7.6cm) from the bottom on both sides and draw a horizontal line."
+      }
+    ],
+    "thumb": "assets/planes/33/thumb.webp",
+    "square": "assets/planes/33/square.webp",
+    "source": "https://www.foldnfly.com/33.html"
+  },
+  {
+    "id": 40,
+    "name": "Vulture",
+    "slug": "Vulture",
+    "blurb": "A small and fast flying paper plane.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 38,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "This compact paper airplane makes up for its size with speed. Throw it hard and watch it sail.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the sheet in half vertically.",
+        "image": "assets/planes/40/1.webp",
+        "textCn": "Fold the sheet in half vertically."
+      },
+      {
+        "n": 2,
+        "text": "Open the sheet back up and fold in half horizontally.",
+        "image": "assets/planes/40/2.webp",
+        "textCn": "Open the sheet back up and fold in half horizontally."
+      },
+      {
+        "n": 3,
+        "text": "With the folded paper held with the opening on the bottom, fold both left and right edges to the center.",
+        "image": "assets/planes/40/3.webp",
+        "textCn": "With the folded paper held with the opening on the bottom, fold both left and right edges to the center."
+      },
+      {
+        "n": 4,
+        "text": "Open the last two folds and then fold the top corner down to the first crease.",
+        "image": "assets/planes/40/4.webp",
+        "textCn": "Open the last two folds and then fold the top corner down to the first crease."
+      },
+      {
+        "n": 5,
+        "text": "Repeat with the other side.",
+        "image": "assets/planes/40/5.webp",
+        "textCn": "另一侧重复同样操作。"
+      },
+      {
+        "n": 6,
+        "text": "Now, fold the top right edge down to the center line.",
+        "image": "assets/planes/40/6.webp",
+        "textCn": "Now, fold the top right edge down to the center line."
+      }
+    ],
+    "thumb": "assets/planes/40/thumb.webp",
+    "square": "assets/planes/40/square.webp",
+    "source": "https://www.foldnfly.com/40.html"
+  },
+  {
+    "id": 46,
+    "name": "Loop Plane",
+    "slug": "Loop-Plane",
+    "blurb": "This paper airplane can fly a big loop-the-loop in the air and keep flying.",
+    "difficulty": "Easy",
+    "difficultyLevel": 0,
+    "tags": [
+      "acrobatic",
+      "decorative"
+    ],
+    "scissors": true,
+    "popularity": 38,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": "Loops",
+    "difficultyCn": "简单",
+    "tagsCn": [
+      "特技",
+      "装饰"
+    ],
+    "description": "This is a decent glider that we have turned into an acrobatic vertical loop flying paper plane.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Place the sheet horizontally and fold it in half from left to right. Open the sheet back up.",
+        "image": "assets/planes/46/1.webp",
+        "textCn": "Place the sheet horizontally and fold it in half from left to right. Open the sheet back up."
+      },
+      {
+        "n": 2,
+        "text": "Fold down the top left corner to the center, so that the crease lines up with the corner.",
+        "image": "assets/planes/46/2.webp",
+        "textCn": "Fold down the top left corner to the center, so that the crease lines up with the corner."
+      },
+      {
+        "n": 3,
+        "text": "Repeat the previous step with the right side.",
+        "image": "assets/planes/46/3.webp",
+        "textCn": "Repeat the previous step with the right side."
+      },
+      {
+        "n": 4,
+        "text": "Next, fold down the top edge about half an inch (1.25cm).",
+        "image": "assets/planes/46/4.webp",
+        "textCn": "Next, fold down the top edge about half an inch (1.25cm)."
+      },
+      {
+        "n": 5,
+        "text": "Fold down the top edge three more times.",
+        "image": "assets/planes/46/5.webp",
+        "textCn": "Fold down the top edge three more times."
+      },
+      {
+        "n": 6,
+        "text": "Now, fold the plane in half towards you.",
+        "image": "assets/planes/46/6.webp",
+        "textCn": "Now, fold the plane in half towards you."
+      }
+    ],
+    "thumb": "assets/planes/46/thumb.webp",
+    "square": "assets/planes/46/square.webp",
+    "source": "https://www.foldnfly.com/46.html"
+  },
+  {
+    "id": 53,
+    "name": "Wilson",
+    "slug": "Wilson",
+    "blurb": "A skinny paper airplane that flies fast and twists in mid-air.",
+    "difficulty": "Easy",
+    "difficultyLevel": 0,
+    "tags": [
+      "distance",
+      "acrobatic"
+    ],
+    "scissors": false,
+    "popularity": 38,
+    "distanceScore": 317,
+    "timeScore": 112,
+    "badge": null,
+    "difficultyCn": "简单",
+    "tagsCn": [
+      "远距",
+      "特技"
+    ],
+    "description": "This design has a tight and narrow nose with wings that flair out in the back.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the sheet in half, unfold and then fold the top two corners to the center.",
+        "image": "assets/planes/53/1.webp",
+        "textCn": "Fold the sheet in half, unfold and then fold the top two corners to the center."
+      },
+      {
+        "n": 2,
+        "text": "Fold the top two edges to the center.",
+        "image": "assets/planes/53/2.webp",
+        "textCn": "Fold the top two edges to the center."
+      },
+      {
+        "n": 3,
+        "text": "Again, fold both outer edges to the center.",
+        "image": "assets/planes/53/3.webp",
+        "textCn": "Again, fold both outer edges to the center."
+      },
+      {
+        "n": 4,
+        "text": "Grab the right center flap and fold it out, as shown.",
+        "image": "assets/planes/53/4.webp",
+        "textCn": "Grab the right center flap and fold it out, as shown."
+      },
+      {
+        "n": 5,
+        "text": "Repeat with the left center flap.",
+        "image": "assets/planes/53/5.webp",
+        "textCn": "Repeat with the left center flap."
+      },
+      {
+        "n": 6,
+        "text": "Fold the plane in half.",
+        "image": "assets/planes/53/6.webp",
+        "textCn": "Fold the plane in half."
+      }
+    ],
+    "thumb": "assets/planes/53/thumb.webp",
+    "square": "assets/planes/53/square.webp",
+    "source": "https://www.foldnfly.com/53.html"
+  },
+  {
+    "id": 10,
+    "name": "Tailed Plane",
+    "slug": "Tailed-Plane",
+    "blurb": "This fun paper glider flies well and has a unique look with a long tail.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": true,
+    "popularity": 37,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "A unique design that uses one piece of paper, but cuts it into two pieces that you put back together to make one paper airplane.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper diagonally as shown. Cut off the bottom piece to make a square. Save the bottom piece to use later.",
+        "image": "assets/planes/10/1.webp",
+        "textCn": "Fold the paper diagonally as shown. Cut off the bottom piece to make a square. Save the bottom piece to use later."
+      },
+      {
+        "n": 2,
+        "text": "Fold the left corner down to the opposite corner and unfold to create an 'x' crease.",
+        "image": "assets/planes/10/2.webp",
+        "textCn": "Fold the left corner down to the opposite corner and unfold to create an 'x' crease."
+      },
+      {
+        "n": 3,
+        "text": "Next, accordion fold the sides in to create a triangle shape.",
+        "image": "assets/planes/10/3.webp",
+        "textCn": "Next, accordion fold the sides in to create a triangle shape."
+      },
+      {
+        "n": 4,
+        "text": "Fold both bottom corners up to the top point.",
+        "image": "assets/planes/10/4.webp",
+        "textCn": "Fold both bottom corners up to the top point."
+      },
+      {
+        "n": 5,
+        "text": "Take the extra piece that you cut off earlier and fold the top corners to the center to form an arrow.",
+        "image": "assets/planes/10/5.webp",
+        "textCn": "Take the extra piece that you cut off earlier and fold the top corners to the center to form an arrow."
+      },
+      {
+        "n": 6,
+        "text": "Insert the arrow all the way into the plane's body.",
+        "image": "assets/planes/10/6.webp",
+        "textCn": "Insert the arrow all the way into the plane's body."
+      }
+    ],
+    "thumb": "assets/planes/10/thumb.webp",
+    "square": "assets/planes/10/square.webp",
+    "source": "https://www.foldnfly.com/10.html"
+  },
+  {
+    "id": 16,
+    "name": "Stunt Plane",
+    "slug": "Stunt-Plane",
+    "blurb": "This paper airplane can do tricks, making it a very fun airplane to fly.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "acrobatic"
+    ],
+    "scissors": false,
+    "popularity": 37,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "特技"
+    ],
+    "description": "Adjust the wingtips to make it spin or flip. If you throw it the right way, it will spin into the air.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the corners down to each side and unfold, making an X pattern.",
+        "image": "assets/planes/16/1.webp",
+        "textCn": "Fold the corners down to each side and unfold, making an X pattern."
+      },
+      {
+        "n": 2,
+        "text": "Fold the top down so the crease lines up with the center of the X pattern.",
+        "image": "assets/planes/16/2.webp",
+        "textCn": "Fold the top down so the crease lines up with the center of the X pattern."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top two corners to the center line.",
+        "image": "assets/planes/16/3.webp",
+        "textCn": "Fold the top two corners to the center line."
+      },
+      {
+        "n": 4,
+        "text": "Unfold the last step and then tuck the sides inside with an accordion fold.",
+        "image": "assets/planes/16/4.webp",
+        "textCn": "Unfold the last step and then tuck the sides inside with an accordion fold."
+      },
+      {
+        "n": 5,
+        "text": "Fold in the sides of the bottom layer. Note that the crease goes right through the bottom corners.",
+        "image": "assets/planes/16/5.webp",
+        "textCn": "Fold in the sides of the bottom layer. Note that the crease goes right through the bottom corners."
+      },
+      {
+        "n": 6,
+        "text": "Now, fold the big triangle in half, away from you and then fold it back up again so a little bit is poking up.",
+        "image": "assets/planes/16/6.webp",
+        "textCn": "Now, fold the big triangle in half, away from you and then fold it back up again so a little bit is poking up."
+      }
+    ],
+    "thumb": "assets/planes/16/thumb.webp",
+    "square": "assets/planes/16/square.webp",
+    "source": "https://www.foldnfly.com/16.html"
+  },
+  {
+    "id": 27,
+    "name": "Underside Plane",
+    "slug": "Underside-Plane",
+    "blurb": "This paper glider has a slow circular flight pattern.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 37,
+    "distanceScore": 205,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "滞空"
+    ],
+    "description": "The extra underside flaps give the wings rigidity and help it glide better.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half vertically and horizontally, then open it back up.",
+        "image": "assets/planes/27/1.webp",
+        "textCn": "Fold the paper in half vertically and horizontally, then open it back up."
+      },
+      {
+        "n": 2,
+        "text": "Holding the paper horizontally, fold the top edge down to meet the center crease.",
+        "image": "assets/planes/27/2.webp",
+        "textCn": "Holding the paper horizontally, fold the top edge down to meet the center crease."
+      },
+      {
+        "n": 3,
+        "text": "Now, fold the top edge down at the center crease.",
+        "image": "assets/planes/27/3.webp",
+        "textCn": "Now, fold the top edge down at the center crease."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top right corner over, down to the center fold as shown.",
+        "image": "assets/planes/27/4.webp",
+        "textCn": "Fold the top right corner over, down to the center fold as shown."
+      },
+      {
+        "n": 5,
+        "text": "Repeat with the left side.",
+        "image": "assets/planes/27/5.webp",
+        "textCn": "Repeat with the left side."
+      },
+      {
+        "n": 6,
+        "text": "Again, fold the corner down to meet the horizontal fold.",
+        "image": "assets/planes/27/6.webp",
+        "textCn": "Again, fold the corner down to meet the horizontal fold."
+      }
+    ],
+    "thumb": "assets/planes/27/thumb.webp",
+    "square": "assets/planes/27/square.webp",
+    "source": "https://www.foldnfly.com/27.html"
+  },
+  {
+    "id": 28,
+    "name": "Sailor Wing",
+    "slug": "Sailor-Wing",
+    "blurb": "This paper glider will slide through the air in a slow and steady straight line.",
+    "difficulty": "Expert",
+    "difficultyLevel": 3,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 37,
+    "distanceScore": 268,
+    "timeScore": 190,
+    "badge": null,
+    "difficultyCn": "专家",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "All it needs is a slight push and you’ll see it go. The lifted tail helps with stability.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the top right corner to the left side.",
+        "image": "assets/planes/28/1.webp",
+        "textCn": "Fold the top right corner to the left side."
+      },
+      {
+        "n": 2,
+        "text": "Open the paper back up and repeat with the left corner.",
+        "image": "assets/planes/28/2.webp",
+        "textCn": "Open the paper back up and repeat with the left corner."
+      },
+      {
+        "n": 3,
+        "text": "Open the paper back up and accordion fold both sides into the middle.",
+        "image": "assets/planes/28/3.webp",
+        "textCn": "Open the paper back up and accordion fold both sides into the middle."
+      },
+      {
+        "n": 4,
+        "text": "Next, fold the bottom right corner of the triangle shape up to the top.",
+        "image": "assets/planes/28/4.webp",
+        "textCn": "Next, fold the bottom right corner of the triangle shape up to the top."
+      },
+      {
+        "n": 5,
+        "text": "Repeat with the left corner.",
+        "image": "assets/planes/28/5.webp",
+        "textCn": "Repeat with the left corner."
+      },
+      {
+        "n": 6,
+        "text": "Now, fold the bottom right edge of the diamond shape up to the center line.",
+        "image": "assets/planes/28/6.webp",
+        "textCn": "Now, fold the bottom right edge of the diamond shape up to the center line."
+      }
+    ],
+    "thumb": "assets/planes/28/thumb.webp",
+    "square": "assets/planes/28/square.webp",
+    "source": "https://www.foldnfly.com/28.html"
+  },
+  {
+    "id": 57,
+    "name": "Uppercat",
+    "slug": "Uppercat",
+    "blurb": "This designs looks like a superhero cat with cute little ears. Watch it fly slowly through the air!",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 37,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "滞空"
+    ],
+    "description": "",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half lengthwise and then unfold.",
+        "image": "assets/planes/57/1.webp",
+        "textCn": "Fold the paper in half lengthwise and then unfold."
+      },
+      {
+        "n": 2,
+        "text": "Fold the two sides into the middle.",
+        "image": "assets/planes/57/2.webp",
+        "textCn": "Fold the two sides into the middle."
+      },
+      {
+        "n": 3,
+        "text": "Fold the paper in half the other direction and orient the folded edge at the bottom. The flaps from the previous fold should be on the outside.",
+        "image": "assets/planes/57/3.webp",
+        "textCn": "Fold the paper in half the other direction and orient the folded edge at the bottom. The flaps from the previous fold should be on the outside."
+      },
+      {
+        "n": 4,
+        "text": "Fold the bottom two corners in to the middle to make a triangle shape. Unfold.",
+        "image": "assets/planes/57/4.webp",
+        "textCn": "Fold the bottom two corners in to the middle to make a triangle shape. Unfold."
+      },
+      {
+        "n": 5,
+        "text": "Accordion fold the corners into the middle, tucking the triangle pieces inside.",
+        "image": "assets/planes/57/5.webp",
+        "textCn": "Accordion fold the corners into the middle, tucking the triangle pieces inside."
+      },
+      {
+        "n": 6,
+        "text": "Fold the front piece down, aligned with the corner on the outside edge. Make a strong crease and fold back up so it looks like step 5.",
+        "image": "assets/planes/57/6.webp",
+        "textCn": "Fold the front piece down, aligned with the corner on the outside edge. Make a strong crease and fold back up so it looks like step 5."
+      }
+    ],
+    "thumb": "assets/planes/57/thumb.webp",
+    "square": "assets/planes/57/square.webp",
+    "source": "https://www.foldnfly.com/57.html"
+  },
+  {
+    "id": 3,
+    "name": "The Buzz",
+    "slug": "The-Buzz",
+    "blurb": "This paper plane looks like a fly and it flies like one too!",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 36,
+    "distanceScore": 178,
+    "timeScore": 180,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "Bend the tail flaps up or down to control the flight.  Bend one up and one down to make it spiral!",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half.",
+        "image": "assets/planes/3/1.webp",
+        "textCn": "把纸对折。"
+      },
+      {
+        "n": 2,
+        "text": "Unfold and then fold the top corners to the center line.",
+        "image": "assets/planes/3/2.webp",
+        "textCn": "Unfold and then fold the top corners to the center line."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top point down to the edge of the previous fold.",
+        "image": "assets/planes/3/3.webp",
+        "textCn": "Fold the top point down to the edge of the previous fold."
+      },
+      {
+        "n": 4,
+        "text": "Fold the upper sides to the center line.",
+        "image": "assets/planes/3/4.webp",
+        "textCn": "Fold the upper sides to the center line."
+      },
+      {
+        "n": 5,
+        "text": "Fold the top about 1/2 inch (13mm) away from you.",
+        "image": "assets/planes/3/5.webp",
+        "textCn": "Fold the top about 1/2 inch (13mm) away from you."
+      },
+      {
+        "n": 6,
+        "text": "Fold the plane in half towards you.",
+        "image": "assets/planes/3/6.webp",
+        "textCn": "Fold the plane in half towards you."
+      }
+    ],
+    "thumb": "assets/planes/3/thumb.webp",
+    "square": "assets/planes/3/square.webp",
+    "source": "https://www.foldnfly.com/3.html"
+  },
+  {
+    "id": 9,
+    "name": "Gliding Plane",
+    "slug": "Gliding-Plane",
+    "blurb": "This paper airplane glides for long distances and is perfect to throw from high areas.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "time_aloft",
+      "acrobatic"
+    ],
+    "scissors": false,
+    "popularity": 36,
+    "distanceScore": 237,
+    "timeScore": 130,
+    "badge": null,
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "滞空",
+      "特技"
+    ],
+    "description": "A quick flyer. The odd folds are made to withstand the wind.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half.",
+        "image": "assets/planes/9/1.webp",
+        "textCn": "把纸对折。"
+      },
+      {
+        "n": 2,
+        "text": "Bring the right corner down to meet the bottom-center of the left rectangle. If you are using A4 sized paper, stop 2cm away from the bottom edge.",
+        "image": "assets/planes/9/2.webp",
+        "textCn": "Bring the right corner down to meet the bottom-center of the left rectangle. If you are using A4 sized paper, stop 2cm away from the bottom edge."
+      },
+      {
+        "n": 3,
+        "text": "Open the sheet and repeat with the other corner to get the creases shown.",
+        "image": "assets/planes/9/3.webp",
+        "textCn": "Open the sheet and repeat with the other corner to get the creases shown."
+      },
+      {
+        "n": 4,
+        "text": "Open the sheet back up and accordion fold the center in.",
+        "image": "assets/planes/9/4.webp",
+        "textCn": "Open the sheet back up and accordion fold the center in."
+      },
+      {
+        "n": 5,
+        "text": "Now, fold the outer flaps to the center line.",
+        "image": "assets/planes/9/5.webp",
+        "textCn": "Now, fold the outer flaps to the center line."
+      },
+      {
+        "n": 6,
+        "text": "Fold the center piece up as shown.",
+        "image": "assets/planes/9/6.webp",
+        "textCn": "Fold the center piece up as shown."
+      }
+    ],
+    "thumb": "assets/planes/9/thumb.webp",
+    "square": "assets/planes/9/square.webp",
+    "source": "https://www.foldnfly.com/9.html"
+  },
+  {
+    "id": 19,
+    "name": "Eagle Eye",
+    "slug": "Eagle-Eye",
+    "blurb": "This paper airplane was designed to resemble an eagle in flight.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "decorative"
+    ],
+    "scissors": true,
+    "popularity": 36,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "装饰"
+    ],
+    "description": "With some careful adjustments this can fly, but it is more of a decorative origami model.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold one corner diagonally.",
+        "image": "assets/planes/19/1.webp",
+        "textCn": "Fold one corner diagonally."
+      },
+      {
+        "n": 2,
+        "text": "Cut off the extra piece at the bottom, making a square piece of paper folded once to make a triangle.",
+        "image": "assets/planes/19/2.webp",
+        "textCn": "Cut off the extra piece at the bottom, making a square piece of paper folded once to make a triangle."
+      },
+      {
+        "n": 3,
+        "text": "Fold the corner of the triangle over so about 1/3 of it is overlapping the paper behind and 2/3 is sticking out.",
+        "image": "assets/planes/19/3.webp",
+        "textCn": "Fold the corner of the triangle over so about 1/3 of it is overlapping the paper behind and 2/3 is sticking out."
+      },
+      {
+        "n": 4,
+        "text": "Take one layer and fold it in the opposite direction as shown.",
+        "image": "assets/planes/19/4.webp",
+        "textCn": "Take one layer and fold it in the opposite direction as shown."
+      },
+      {
+        "n": 5,
+        "text": "Fold the paper in half.",
+        "image": "assets/planes/19/5.webp",
+        "textCn": "把纸对折。"
+      },
+      {
+        "n": 6,
+        "text": "Fold up one wing from the nose of the plane to the center of the tail.",
+        "image": "assets/planes/19/6.webp",
+        "textCn": "Fold up one wing from the nose of the plane to the center of the tail."
+      }
+    ],
+    "thumb": "assets/planes/19/thumb.webp",
+    "square": "assets/planes/19/square.webp",
+    "source": "https://www.foldnfly.com/19.html"
+  },
+  {
+    "id": 22,
+    "name": "King Bee",
+    "slug": "King-Bee",
+    "blurb": "This acrobatic paper airplane looks like a bee and darts around like one too.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "acrobatic"
+    ],
+    "scissors": true,
+    "popularity": 36,
+    "distanceScore": 168,
+    "timeScore": 138,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "特技"
+    ],
+    "description": "If you throw this paper plane at the right angle, it will wiggle back and forth like a bee hunting for flowers.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the corners down to each side and unfold.",
+        "image": "assets/planes/22/1.webp",
+        "textCn": "Fold the corners down to each side and unfold."
+      },
+      {
+        "n": 2,
+        "text": "Fold the top down so the three creases line up.",
+        "image": "assets/planes/22/2.webp",
+        "textCn": "Fold the top down so the three creases line up."
+      },
+      {
+        "n": 3,
+        "text": "Open up the sheet and accordion fold the sides in.",
+        "image": "assets/planes/22/3.webp",
+        "textCn": "Open up the sheet and accordion fold the sides in."
+      },
+      {
+        "n": 4,
+        "text": "Fold both edges of the triangle to the center (top layer only).",
+        "image": "assets/planes/22/4.webp",
+        "textCn": "Fold both edges of the triangle to the center (top layer only)."
+      },
+      {
+        "n": 5,
+        "text": "Fold the top back to meet the bottom edge of the other side. If you are using A4 size paper, stop about 2cm short of the bottom edge.",
+        "image": "assets/planes/22/5.webp",
+        "textCn": "Fold the top back to meet the bottom edge of the other side. If you are using A4 size paper, stop about 2cm short of the bottom edge."
+      },
+      {
+        "n": 6,
+        "text": "Fold up both middle flaps up.",
+        "image": "assets/planes/22/6.webp",
+        "textCn": "Fold up both middle flaps up."
+      }
+    ],
+    "thumb": "assets/planes/22/thumb.webp",
+    "square": "assets/planes/22/square.webp",
+    "source": "https://www.foldnfly.com/22.html"
+  },
+  {
+    "id": 56,
+    "name": "Boomerang",
+    "slug": "Boomerang",
+    "blurb": "This paper boomerang will fly away from you, change directions and then fly back so you can catch it.",
+    "difficulty": "Expert",
+    "difficultyLevel": 3,
+    "tags": [
+      "acrobatic"
+    ],
+    "scissors": true,
+    "popularity": 36,
+    "distanceScore": 160,
+    "timeScore": 0,
+    "badge": "Returns",
+    "difficultyCn": "专家",
+    "tagsCn": [
+      "特技"
+    ],
+    "description": "Boomerangs come in a variety of shapes and styles. This origami boomerang has the traditional shape and can be made from a single piece of paper with only one simple cut. It has some tricky steps, so we recommend downloading our printable template to make it easier.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half and then unfold. Cut along the fold and pick one side. You can save the other side to make a second boomerang.",
+        "image": "assets/planes/56/1.webp",
+        "textCn": "Fold the paper in half and then unfold. Cut along the fold and pick one side. You can save the other side to make a second boomerang."
+      },
+      {
+        "n": 2,
+        "text": "Fold the paper in half. Then unfold and fold both sides into the middle.",
+        "image": "assets/planes/56/2.webp",
+        "textCn": "Fold the paper in half. Then unfold and fold both sides into the middle."
+      },
+      {
+        "n": 3,
+        "text": "Fold the paper in half the other direction and orient the folded edge at the bottom.",
+        "image": "assets/planes/56/3.webp",
+        "textCn": "Fold the paper in half the other direction and orient the folded edge at the bottom."
+      },
+      {
+        "n": 4,
+        "text": "Fold both corners into the middle and use your fingernail to make a crisp crease.",
+        "image": "assets/planes/56/4.webp",
+        "textCn": "Fold both corners into the middle and use your fingernail to make a crisp crease."
+      },
+      {
+        "n": 5,
+        "text": "Unfold the previous 2 steps, then open up the left flap and pinch the middle of the paper so it folds the other direction.",
+        "image": "assets/planes/56/5.webp",
+        "textCn": "Unfold the previous 2 steps, then open up the left flap and pinch the middle of the paper so it folds the other direction."
+      },
+      {
+        "n": 6,
+        "text": "Continue rotating and folding that pinched piece flat until you get an L shape with vertical walls.",
+        "image": "assets/planes/56/6.webp",
+        "textCn": "Continue rotating and folding that pinched piece flat until you get an L shape with vertical walls."
+      }
+    ],
+    "thumb": "assets/planes/56/thumb.webp",
+    "square": "assets/planes/56/square.webp",
+    "source": "https://www.foldnfly.com/56.html"
+  },
+  {
+    "id": 17,
+    "name": "The Square",
+    "slug": "The-Square",
+    "blurb": "This boxy paper plane is great for gliding through the air.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": true,
+    "popularity": 35,
+    "distanceScore": 203,
+    "timeScore": 160,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "Its wide stiff wings allow it to fly in a strong wind. It also likes to fly upside down.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the corners down to each side and unfold, making an X shape.",
+        "image": "assets/planes/17/1.webp",
+        "textCn": "Fold the corners down to each side and unfold, making an X shape."
+      },
+      {
+        "n": 2,
+        "text": "Fold the top down so the crease lines up with the center of the X.",
+        "image": "assets/planes/17/2.webp",
+        "textCn": "Fold the top down so the crease lines up with the center of the X."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top two corners to the center line.",
+        "image": "assets/planes/17/3.webp",
+        "textCn": "Fold the top two corners to the center line."
+      },
+      {
+        "n": 4,
+        "text": "Open up the previous steps and accordion fold the sides into the middle.",
+        "image": "assets/planes/17/4.webp",
+        "textCn": "Open up the previous steps and accordion fold the sides into the middle."
+      },
+      {
+        "n": 5,
+        "text": "Fold the left and right points up to the top, as shown.",
+        "image": "assets/planes/17/5.webp",
+        "textCn": "Fold the left and right points up to the top, as shown."
+      },
+      {
+        "n": 6,
+        "text": "Fold the top down to the end of the triangle shape.",
+        "image": "assets/planes/17/6.webp",
+        "textCn": "Fold the top down to the end of the triangle shape."
+      }
+    ],
+    "thumb": "assets/planes/17/thumb.webp",
+    "square": "assets/planes/17/square.webp",
+    "source": "https://www.foldnfly.com/17.html"
+  },
+  {
+    "id": 20,
+    "name": "White Dove",
+    "slug": "White-Dove",
+    "blurb": "An origami paper airplane inspired by the peaceful dove.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "decorative"
+    ],
+    "scissors": false,
+    "popularity": 35,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": "Cute",
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "装饰"
+    ],
+    "description": "If you really try, you can get this to slightly glide like a dove, but this creation is mostly decorative.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold one corner diagonally.",
+        "image": "assets/planes/20/1.webp",
+        "textCn": "Fold one corner diagonally."
+      },
+      {
+        "n": 2,
+        "text": "Cut off the extra piece at the bottom, making a square piece of paper folded once to make a triangle.",
+        "image": "assets/planes/20/2.webp",
+        "textCn": "Cut off the extra piece at the bottom, making a square piece of paper folded once to make a triangle."
+      },
+      {
+        "n": 3,
+        "text": "Fold the corner of the triangle over so about 1/3 of it is overlapping the paper behind and 2/3 is sticking out.",
+        "image": "assets/planes/20/3.webp",
+        "textCn": "Fold the corner of the triangle over so about 1/3 of it is overlapping the paper behind and 2/3 is sticking out."
+      },
+      {
+        "n": 4,
+        "text": "Take one layer and fold it in the opposite direction as shown.",
+        "image": "assets/planes/20/4.webp",
+        "textCn": "Take one layer and fold it in the opposite direction as shown."
+      },
+      {
+        "n": 5,
+        "text": "Fold the paper plane in half.",
+        "image": "assets/planes/20/5.webp",
+        "textCn": "Fold the paper plane in half."
+      },
+      {
+        "n": 6,
+        "text": "Fold one wing up at a slight angle.",
+        "image": "assets/planes/20/6.webp",
+        "textCn": "Fold one wing up at a slight angle."
+      }
+    ],
+    "thumb": "assets/planes/20/thumb.webp",
+    "square": "assets/planes/20/square.webp",
+    "source": "https://www.foldnfly.com/20.html"
+  },
+  {
+    "id": 44,
+    "name": "Light Spinner",
+    "slug": "Light-Spinner",
+    "blurb": "An acrobatic paper airplane design that will corkscrew through the air.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "distance",
+      "acrobatic"
+    ],
+    "scissors": false,
+    "popularity": 35,
+    "distanceScore": 190,
+    "timeScore": 200,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "远距",
+      "特技"
+    ],
+    "description": "As this paper plane makes wide spirals through the air imagine what it would be like if you were sitting inside.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the top right corner to the left side.",
+        "image": "assets/planes/44/1.webp",
+        "textCn": "Fold the top right corner to the left side."
+      },
+      {
+        "n": 2,
+        "text": "Open the sheet back up and repeat the same step with the left corner.",
+        "image": "assets/planes/44/2.webp",
+        "textCn": "Open the sheet back up and repeat the same step with the left corner."
+      },
+      {
+        "n": 3,
+        "text": "Open the sheet back up and accordion fold both sides in so it looks like this.",
+        "image": "assets/planes/44/3.webp",
+        "textCn": "Open the sheet back up and accordion fold both sides in so it looks like this."
+      },
+      {
+        "n": 4,
+        "text": "Next, fold the top point down to the middle edge.",
+        "image": "assets/planes/44/4.webp",
+        "textCn": "Next, fold the top point down to the middle edge."
+      },
+      {
+        "n": 5,
+        "text": "Fold both triangle flaps into the center.",
+        "image": "assets/planes/44/5.webp",
+        "textCn": "Fold both triangle flaps into the center."
+      },
+      {
+        "n": 6,
+        "text": "Take each triangle flap, fold them up and tuck them into the previously folded top triangle.",
+        "image": "assets/planes/44/6.webp",
+        "textCn": "Take each triangle flap, fold them up and tuck them into the previously folded top triangle."
+      }
+    ],
+    "thumb": "assets/planes/44/thumb.webp",
+    "square": "assets/planes/44/square.webp",
+    "source": "https://www.foldnfly.com/44.html"
+  },
+  {
+    "id": 45,
+    "name": "Fun Flyer",
+    "slug": "Fun-Flyer",
+    "blurb": "This paper airplane is fun to fold and fun to fly.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "distance"
+    ],
+    "scissors": false,
+    "popularity": 35,
+    "distanceScore": 220,
+    "timeScore": 138,
+    "badge": null,
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "远距"
+    ],
+    "description": "Try throwing it straight up and see if you can catch it on the way down.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the top right corner to the left side.",
+        "image": "assets/planes/45/1.webp",
+        "textCn": "Fold the top right corner to the left side."
+      },
+      {
+        "n": 2,
+        "text": "Repeat the last step with the other side.",
+        "image": "assets/planes/45/2.webp",
+        "textCn": "Repeat the last step with the other side."
+      },
+      {
+        "n": 3,
+        "text": "Open the sheet back up and accordion fold the sides into the center.",
+        "image": "assets/planes/45/3.webp",
+        "textCn": "Open the sheet back up and accordion fold the sides into the center."
+      },
+      {
+        "n": 4,
+        "text": "Fold the bottom ends of the triangle shape to the top point.",
+        "image": "assets/planes/45/4.webp",
+        "textCn": "Fold the bottom ends of the triangle shape to the top point."
+      },
+      {
+        "n": 5,
+        "text": "Fold down both flaps of the diamond shape, then unfold.",
+        "image": "assets/planes/45/5.webp",
+        "textCn": "Fold down both flaps of the diamond shape, then unfold."
+      },
+      {
+        "n": 6,
+        "text": "Fold the top edges of the diamond shape to the middle and then unfold.",
+        "image": "assets/planes/45/6.webp",
+        "textCn": "Fold the top edges of the diamond shape to the middle and then unfold."
+      }
+    ],
+    "thumb": "assets/planes/45/thumb.webp",
+    "square": "assets/planes/45/square.webp",
+    "source": "https://www.foldnfly.com/45.html"
+  },
+  {
+    "id": 47,
+    "name": "Wedge Plane",
+    "slug": "Wedge-Plane",
+    "blurb": "A flying paper wedge with a sleek profile.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "distance"
+    ],
+    "scissors": false,
+    "popularity": 35,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "远距"
+    ],
+    "description": "This paper airplane looks like the basic dart, but built inside out and upside down, giving it a unique look and feel.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the sheet in half.",
+        "image": "assets/planes/47/1.webp",
+        "textCn": "Fold the sheet in half."
+      },
+      {
+        "n": 2,
+        "text": "Open the sheet back up and fold the upper corners to the center.",
+        "image": "assets/planes/47/2.webp",
+        "textCn": "Open the sheet back up and fold the upper corners to the center."
+      },
+      {
+        "n": 3,
+        "text": "Repeat the last step with the both upper edges.",
+        "image": "assets/planes/47/3.webp",
+        "textCn": "Repeat the last step with the both upper edges."
+      },
+      {
+        "n": 4,
+        "text": "Repeat again by folding the corners in",
+        "image": "assets/planes/47/4.webp",
+        "textCn": "Repeat again by folding the corners in"
+      },
+      {
+        "n": 5,
+        "text": "Unfold everything back to step 2 and then fold the corners to the diagonal crease that you just made.",
+        "image": "assets/planes/47/5.webp",
+        "textCn": "Unfold everything back to step 2 and then fold the corners to the diagonal crease that you just made."
+      },
+      {
+        "n": 6,
+        "text": "Fold along this same crease again so the two halves cross over a bit in the middle.",
+        "image": "assets/planes/47/6.webp",
+        "textCn": "Fold along this same crease again so the two halves cross over a bit in the middle."
+      }
+    ],
+    "thumb": "assets/planes/47/thumb.webp",
+    "square": "assets/planes/47/square.webp",
+    "source": "https://www.foldnfly.com/47.html"
+  },
+  {
+    "id": 24,
+    "name": "Jet Fighter",
+    "slug": "Jet-Fighter",
+    "blurb": "This paper jet has a unique two level wing that gives it some style.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 34,
+    "distanceScore": 173,
+    "timeScore": 170,
+    "badge": null,
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "When adjusted correctly, this paper jet can glide for long distances.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half vertically. Then, open and fold both corners down to the middle.",
+        "image": "assets/planes/24/1.webp",
+        "textCn": "Fold the paper in half vertically. Then, open and fold both corners down to the middle."
+      },
+      {
+        "n": 2,
+        "text": "Take one top edge and fold down to the bottom edge on the same side.",
+        "image": "assets/planes/24/2.webp",
+        "textCn": "Take one top edge and fold down to the bottom edge on the same side."
+      },
+      {
+        "n": 3,
+        "text": "Unfold and repeat step two on the other side to get the creases as shown in the picture.",
+        "image": "assets/planes/24/3.webp",
+        "textCn": "Unfold and repeat step two on the other side to get the creases as shown in the picture."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top down and accordion fold the sides in at the same time.",
+        "image": "assets/planes/24/4.webp",
+        "textCn": "Fold the top down and accordion fold the sides in at the same time."
+      },
+      {
+        "n": 5,
+        "text": "Fold the bottom triangular piece back up.",
+        "image": "assets/planes/24/5.webp",
+        "textCn": "Fold the bottom triangular piece back up."
+      },
+      {
+        "n": 6,
+        "text": "Fold back both outer points of the triangle shape. Be sure the folds are tucked in-between both layers.",
+        "image": "assets/planes/24/6.webp",
+        "textCn": "Fold back both outer points of the triangle shape. Be sure the folds are tucked in-between both layers."
+      }
+    ],
+    "thumb": "assets/planes/24/thumb.webp",
+    "square": "assets/planes/24/square.webp",
+    "source": "https://www.foldnfly.com/24.html"
+  },
+  {
+    "id": 0,
+    "name": "The Basic",
+    "slug": "The-Basic",
+    "blurb": "The most basic design that almost everyone has tried.",
+    "difficulty": "Easy",
+    "difficultyLevel": 0,
+    "tags": [
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 33,
+    "distanceScore": 73,
+    "timeScore": 330,
+    "badge": null,
+    "difficultyCn": "简单",
+    "tagsCn": [
+      "滞空"
+    ],
+    "description": "It's quick and easy to make, and it flies fairly well. This paper airplane is a little floppy, so it works better if you give it a gentle toss, not a hard throw. A good starter airplane for young kids.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half.",
+        "image": "assets/planes/0/1.webp",
+        "textCn": "把纸对折。"
+      },
+      {
+        "n": 2,
+        "text": "Unfold and then fold the top two corners into the center line.",
+        "image": "assets/planes/0/2.webp",
+        "textCn": "Unfold and then fold the top two corners into the center line."
+      },
+      {
+        "n": 3,
+        "text": "Again, fold the paper in half.",
+        "image": "assets/planes/0/3.webp",
+        "textCn": "再次把纸对折。"
+      },
+      {
+        "n": 4,
+        "text": "Finally, fold the edges down to meet the bottom of the body.",
+        "image": "assets/planes/0/4.webp",
+        "textCn": "Finally, fold the edges down to meet the bottom of the body."
+      }
+    ],
+    "thumb": "assets/planes/0/thumb.webp",
+    "square": "assets/planes/0/square.webp",
+    "source": "https://www.foldnfly.com/0.html"
+  },
+  {
+    "id": 5,
+    "name": "Sea Glider",
+    "slug": "Sea-Glider",
+    "blurb": "This bird-like paper airplane resembles a seagull gliding over the ocean.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "decorative"
+    ],
+    "scissors": true,
+    "popularity": 33,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "装饰"
+    ],
+    "description": "You can experiment to find your own ways to bend the wings and how much weight to add to the front.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper diagonally.",
+        "image": "assets/planes/5/1.webp",
+        "textCn": "Fold the paper diagonally."
+      },
+      {
+        "n": 2,
+        "text": "Cut off the extra piece at the bottom.",
+        "image": "assets/planes/5/2.webp",
+        "textCn": "Cut off the extra piece at the bottom."
+      },
+      {
+        "n": 3,
+        "text": "Fold the closed edge over about 1 inch (2.5 cm).",
+        "image": "assets/planes/5/3.webp",
+        "textCn": "Fold the closed edge over about 1 inch (2.5 cm)."
+      },
+      {
+        "n": 4,
+        "text": "Fold the plane in half.",
+        "image": "assets/planes/5/4.webp",
+        "textCn": "Fold the plane in half."
+      },
+      {
+        "n": 5,
+        "text": "Fold one of the top edges over as shown.",
+        "image": "assets/planes/5/5.webp",
+        "textCn": "Fold one of the top edges over as shown."
+      },
+      {
+        "n": 6,
+        "text": "Repeat with the other side.",
+        "image": "assets/planes/5/6.webp",
+        "textCn": "另一侧重复同样操作。"
+      }
+    ],
+    "thumb": "assets/planes/5/thumb.webp",
+    "square": "assets/planes/5/square.webp",
+    "source": "https://www.foldnfly.com/5.html"
+  },
+  {
+    "id": 14,
+    "name": "Cross Wing",
+    "slug": "Cross-Wing",
+    "blurb": "This plane is small and fast, allowing it to go wherever you want.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "distance",
+      "time_aloft"
+    ],
+    "scissors": false,
+    "popularity": 33,
+    "distanceScore": 143,
+    "timeScore": 93,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "远距",
+      "滞空"
+    ],
+    "description": "Its size and heavy nose makes it one of the better flying paper airplanes.  Bend two wingtips up and the other two down for a dramatic look.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half by bringing the top to the bottom.",
+        "image": "assets/planes/14/1.webp",
+        "textCn": "Fold the paper in half by bringing the top to the bottom."
+      },
+      {
+        "n": 2,
+        "text": "Fold in half the other direction, making a crease and then unfold.",
+        "image": "assets/planes/14/2.webp",
+        "textCn": "Fold in half the other direction, making a crease and then unfold."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top corners to the center line so that the crease goes through to the bottom corners.",
+        "image": "assets/planes/14/3.webp",
+        "textCn": "Fold the top corners to the center line so that the crease goes through to the bottom corners."
+      },
+      {
+        "n": 4,
+        "text": "Unfold the last step and accordion fold the corners inside.",
+        "image": "assets/planes/14/4.webp",
+        "textCn": "Unfold the last step and accordion fold the corners inside."
+      },
+      {
+        "n": 5,
+        "text": "Fold the top corners to the center line.",
+        "image": "assets/planes/14/5.webp",
+        "textCn": "Fold the top corners to the center line."
+      },
+      {
+        "n": 6,
+        "text": "Fold the tip back about one inch (2.5cm).",
+        "image": "assets/planes/14/6.webp",
+        "textCn": "Fold the tip back about one inch (2.5cm)."
+      }
+    ],
+    "thumb": "assets/planes/14/thumb.webp",
+    "square": "assets/planes/14/square.webp",
+    "source": "https://www.foldnfly.com/14.html"
+  },
+  {
+    "id": 8,
+    "name": "Royal Wing",
+    "slug": "Royal-Wing",
+    "blurb": "A flying airfoil with almost no fuselage.",
+    "difficulty": "Hard",
+    "difficultyLevel": 2,
+    "tags": [
+      "acrobatic"
+    ],
+    "scissors": true,
+    "popularity": 32,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "困难",
+    "tagsCn": [
+      "特技"
+    ],
+    "description": "This is an advanced glider that floats slowly away from you if adjusted correctly. Read the notes at the bottom for tips.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Holding the paper sidesways, fold the paper in half and unfold.",
+        "image": "assets/planes/8/1.webp",
+        "textCn": "Holding the paper sidesways, fold the paper in half and unfold."
+      },
+      {
+        "n": 2,
+        "text": "Fold down the top right corner down to the end of the crease you just made.",
+        "image": "assets/planes/8/2.webp",
+        "textCn": "Fold down the top right corner down to the end of the crease you just made."
+      },
+      {
+        "n": 3,
+        "text": "Open the last fold and repeat with the other side to get the creases shown.",
+        "image": "assets/planes/8/3.webp",
+        "textCn": "Open the last fold and repeat with the other side to get the creases shown."
+      },
+      {
+        "n": 4,
+        "text": "Next, accordion fold the two corners in and the center out to get this diamond shape.",
+        "image": "assets/planes/8/4.webp",
+        "textCn": "Next, accordion fold the two corners in and the center out to get this diamond shape."
+      },
+      {
+        "n": 5,
+        "text": "Fold the front two flaps up.",
+        "image": "assets/planes/8/5.webp",
+        "textCn": "Fold the front two flaps up."
+      },
+      {
+        "n": 6,
+        "text": "Continue folding the two flaps behind the top edge.",
+        "image": "assets/planes/8/6.webp",
+        "textCn": "Continue folding the two flaps behind the top edge."
+      }
+    ],
+    "thumb": "assets/planes/8/thumb.webp",
+    "square": "assets/planes/8/square.webp",
+    "source": "https://www.foldnfly.com/8.html"
+  },
+  {
+    "id": 11,
+    "name": "Star Wing",
+    "slug": "Star-Wing",
+    "blurb": "This plane is made to have long wings and a very small body.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "acrobatic",
+      "decorative"
+    ],
+    "scissors": false,
+    "popularity": 32,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "特技",
+      "装饰"
+    ],
+    "description": "This is a difficult design to perfect and often doesnt work, but it looks cool and if you adjust it correctly you can get it to do some fun tricks.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half in both directions, forming 4 equal rectangles. Unfold.",
+        "image": "assets/planes/11/1.webp",
+        "textCn": "Fold the paper in half in both directions, forming 4 equal rectangles. Unfold."
+      },
+      {
+        "n": 2,
+        "text": "Fold the top corners to the center horizontal line.",
+        "image": "assets/planes/11/2.webp",
+        "textCn": "Fold the top corners to the center horizontal line."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top point down to the bottom edge.",
+        "image": "assets/planes/11/3.webp",
+        "textCn": "Fold the top point down to the bottom edge."
+      },
+      {
+        "n": 4,
+        "text": "Fold the top corners to the bottom of each side.",
+        "image": "assets/planes/11/4.webp",
+        "textCn": "Fold the top corners to the bottom of each side."
+      },
+      {
+        "n": 5,
+        "text": "Fold the paper airplane in half towards you.",
+        "image": "assets/planes/11/5.webp",
+        "textCn": "Fold the paper airplane in half towards you."
+      },
+      {
+        "n": 6,
+        "text": "Fold out each side to create the wings. The body should be about a 2cm (3/4 inch) tall.",
+        "image": "assets/planes/11/6.webp",
+        "textCn": "Fold out each side to create the wings. The body should be about a 2cm (3/4 inch) tall."
+      }
+    ],
+    "thumb": "assets/planes/11/thumb.webp",
+    "square": "assets/planes/11/square.webp",
+    "source": "https://www.foldnfly.com/11.html"
+  },
+  {
+    "id": 4,
+    "name": "The Sprinter",
+    "slug": "The-Sprinter",
+    "blurb": "This odd looking paper airplane has a large stabilizing tail fin.",
+    "difficulty": "Medium",
+    "difficultyLevel": 1,
+    "tags": [
+      "distance",
+      "acrobatic"
+    ],
+    "scissors": false,
+    "popularity": 31,
+    "distanceScore": 0,
+    "timeScore": 0,
+    "badge": null,
+    "difficultyCn": "中等",
+    "tagsCn": [
+      "远距",
+      "特技"
+    ],
+    "description": "The wings will flap at certain angles, so experiment with it and throw gently. This design is sensitive to asymmetries and takes some small adjustments to work well.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half diagonally so opposite corners meet.",
+        "image": "assets/planes/4/1.webp",
+        "textCn": "Fold the paper in half diagonally so opposite corners meet."
+      },
+      {
+        "n": 2,
+        "text": "Fold the long edge about 3/4 inch (19 mm).",
+        "image": "assets/planes/4/2.webp",
+        "textCn": "Fold the long edge about 3/4 inch (19 mm)."
+      },
+      {
+        "n": 3,
+        "text": "Fold the paper in half towards you and then rotate so that the thickest point is facing up.  The squared off point will be facing to the left.",
+        "image": "assets/planes/4/3.webp",
+        "textCn": "Fold the paper in half towards you and then rotate so that the thickest point is facing up.  The squared off point will be facing to the left."
+      },
+      {
+        "n": 4,
+        "text": "Fold the right side over and line it up with the left side and make a vertical crease.",
+        "image": "assets/planes/4/4.webp",
+        "textCn": "Fold the right side over and line it up with the left side and make a vertical crease."
+      },
+      {
+        "n": 5,
+        "text": "Fold the other side down so opposite sides meet.",
+        "image": "assets/planes/4/5.webp",
+        "textCn": "Fold the other side down so opposite sides meet."
+      },
+      {
+        "n": 6,
+        "text": "Now, fold one outer flap down to create the first wing. The body will be about 3/4 inch (19 mm) tall.",
+        "image": "assets/planes/4/6.webp",
+        "textCn": "Now, fold one outer flap down to create the first wing. The body will be about 3/4 inch (19 mm) tall."
+      }
+    ],
+    "thumb": "assets/planes/4/thumb.webp",
+    "square": "assets/planes/4/square.webp",
+    "source": "https://www.foldnfly.com/4.html"
+  },
+  {
+    "id": 12,
+    "name": "Water Plane",
+    "slug": "Water-Plane",
+    "blurb": "This paper airplane is made to look like a boat.",
+    "difficulty": "Easy",
+    "difficultyLevel": 0,
+    "tags": [
+      "time_aloft",
+      "acrobatic"
+    ],
+    "scissors": false,
+    "popularity": 31,
+    "distanceScore": 156,
+    "timeScore": 229,
+    "badge": null,
+    "difficultyCn": "简单",
+    "tagsCn": [
+      "滞空",
+      "特技"
+    ],
+    "description": "It glides through the air like a boat glides through water, slow and smooth.",
+    "paper": "Letter & A4",
+    "steps": [
+      {
+        "n": 1,
+        "text": "Fold the paper in half and then fold in half again.",
+        "image": "assets/planes/12/1.webp",
+        "textCn": "Fold the paper in half and then fold in half again."
+      },
+      {
+        "n": 2,
+        "text": "Open the previous folds up. Mark a point about 4 inches (10cm) down from the top and fold down along that point.",
+        "image": "assets/planes/12/2.webp",
+        "textCn": "Open the previous folds up. Mark a point about 4 inches (10cm) down from the top and fold down along that point."
+      },
+      {
+        "n": 3,
+        "text": "Fold the top two corners in to the closest crease.",
+        "image": "assets/planes/12/3.webp",
+        "textCn": "Fold the top two corners in to the closest crease."
+      },
+      {
+        "n": 4,
+        "text": "Unfold and then accordion fold the top corners into the inside.",
+        "image": "assets/planes/12/4.webp",
+        "textCn": "Unfold and then accordion fold the top corners into the inside."
+      },
+      {
+        "n": 5,
+        "text": "Fold the two outer flaps in to the center line.",
+        "image": "assets/planes/12/5.webp",
+        "textCn": "Fold the two outer flaps in to the center line."
+      },
+      {
+        "n": 6,
+        "text": "Fold the airplane in half towards you.",
+        "image": "assets/planes/12/6.webp",
+        "textCn": "Fold the airplane in half towards you."
+      }
+    ],
+    "thumb": "assets/planes/12/thumb.webp",
+    "square": "assets/planes/12/square.webp",
+    "source": "https://www.foldnfly.com/12.html"
+  }
+]
