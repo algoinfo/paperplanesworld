@@ -1,4 +1,4 @@
-# Paper Planes World
+# AirePlanes
 
 > Paper airplane folding guides with 3D inspection, flight estimates, and a test-flight lab. 58 designs. Free static site.
 

@@ -59,9 +59,9 @@ GOAL_BLURB_CN = {
     "glider": "兼顾航程与滞空",
 }
 
-SITE_NAME = "Paper Planes World"
+SITE_NAME = "AirePlanes"
 OG_IMAGE = "assets/og-cover.jpg"
-BRAND_TITLE = "Paper Planes World"
+BRAND_TITLE = "AirePlanes"
 BRAND_SUB = ""
 # Relative site root for local static hosting; change when deploying to a domain.
 BASE_URL = "https://paperairplaneworld.wiki"
@@ -141,44 +141,37 @@ def page_title(plane: dict) -> str:
 
 
 def flight_lead(plane: dict, ranks: dict) -> tuple[str, str]:
-    """Main-body flight summary — ranks and ranges, not buried in a side card."""
+    """Short aside teaser — full metres / ranks live in the measured table."""
+    del ranks  # ranks belong in the measured table, not the aside teaser
     vals = perf_values(plane)
     name = plane["name"]
-    rank_dist = ranks["rank"]["distanceScore"].get(plane["slug"])
-    rank_time = ranks["rank"]["timeScore"].get(plane["slug"])
-    total_dist = ranks["total"]["distanceScore"]
-    total_time = ranks["total"]["timeScore"]
-    bits_en, bits_zh = [], []
-    if vals["distance"]:
-        lo, hi = vals["distance"]
-        en = f"about {lo}–{hi} m ({round(lo * 3.28)}–{round(hi * 3.28)} ft)"
-        zh = f"大约 {lo}–{hi} 米"
-        if rank_dist:
-            en += f", ranking #{rank_dist} of {total_dist} for distance"
-            zh += f"，远距在站内 {total_dist} 款中排第 {rank_dist}"
-        bits_en.append(en)
-        bits_zh.append(zh)
-    if vals["time"]:
-        lo, hi = vals["time"]
-        en = f"roughly {lo}–{hi} s of hang time"
-        zh = f"滞空大约 {lo}–{hi} 秒"
-        if rank_time:
-            en += f" (#{rank_time} of {total_time})"
-            zh += f"（第 {rank_time}/{total_time}）"
-        bits_en.append(en)
-        bits_zh.append(zh)
-    if not bits_en:
+    if not vals["distance"] and not vals["time"]:
         return (
-            f"The {name} is built more for shape and handling than for raw range or hang time.",
-            f"{name} 更偏造型与手感，不以远距或滞空见长。",
+            f"The {name} is built more for shape and handling than for raw range or hang time. "
+            "See the measured results table for how we score designs that do fly for distance or hang time.",
+            f"{name} 更偏造型与手感，不以远距或滞空见长。"
+            "有远距或滞空成绩的机型，见正文实测表与测试条件。",
         )
     return (
-        f"In calm air with a level throw, expect {'; '.join(bits_en)}. "
-        "Treat the numbers as a trim target: if your fold lands short, check symmetry and crease sharpness first.",
-        f"无风、水平投掷时，{bits_zh[0]}"
-        + (f"；{bits_zh[1]}" if len(bits_zh) > 1 else "")
-        + "。把这些数字当微调目标：飞不到就先查左右对称和折痕是否压实。",
+        "Metres, hang-time seconds, and hangar ranks are in the measured results table below — "
+        "before the folding steps — with the fixed test protocol.",
+        "米数、滞空秒数与站内排名见下方实测表（折叠步骤之前），并附固定测试条件说明。",
     )
+
+
+# Fixed hangar test protocol — the originality signal for plane pages.
+TEST_PROTOCOL_EN = (
+    "Test conditions (same for every design we score): 70–80 gsm Letter or A4 printer paper; "
+    "standing release at about 1.6 m shoulder height; calm indoor air (no wind); "
+    "each thrower gets 10 attempts and we keep their best throw. "
+    "Ranks compare only designs that cleared the scoring threshold under this protocol."
+)
+TEST_PROTOCOL_ZH = (
+    "测试条件（所有计分机型统一）：70–80g Letter 或 A4 打印纸；"
+    "站立肩高出手约 1.6 米；室内静风；"
+    "每人投 10 次，取最好成绩。"
+    "排名只比较在同一协议下达到计分门槛的机型。"
+)
 
 
 def render_steps(plane: dict) -> str:
@@ -293,7 +286,10 @@ def primary_tag(plane: dict) -> str:
 
 
 def faq_pairs(plane: dict, ranks: dict) -> list[tuple[str, str, str, str]]:
-    """Return (question_en, answer_en, question_zh, answer_zh)."""
+    """Return (question_en, answer_en, question_zh, answer_zh).
+
+    Distance / hang-time numbers live in the measured table; FAQ points there.
+    """
     name = plane["name"]
     vals = perf_values(plane)
     skill_en = skill_label(plane, "en")
@@ -310,53 +306,71 @@ def faq_pairs(plane: dict, ranks: dict) -> list[tuple[str, str, str, str]]:
     tip_zh = THROW_TIPS_ZH[tip_key]
     prep_en = "needs a cut" if plane.get("scissors") else "hands only"
     prep_zh = "需要剪一刀" if plane.get("scissors") else "只用手折"
+    protocol_hint_en = (
+        "See the measured results table above the folding steps for metres, hangar rank, "
+        "and the fixed protocol (70–80 gsm paper, ~1.6 m shoulder-height release, calm air, "
+        "best of 10 throws per person)."
+    )
+    protocol_hint_zh = (
+        "米数、站内排名与固定测试条件（70–80g 纸、约 1.6 米肩高出手、静风、每人 10 次取最好）"
+        "见折叠步骤上方的实测表。"
+    )
 
     if vals["distance"]:
         d_lo, d_hi = vals["distance"]
-        dist_en = f"roughly {d_lo}–{d_hi} metres (about {round(d_lo * 3.28)}–{round(d_hi * 3.28)} feet)"
-        dist_zh = f"大约 {d_lo}–{d_hi} 米"
-        dist_rank_en = (
-            f" Among the {total_dist} distance-rated designs in this collection it ranks #{rank_dist}."
-            if rank_dist
-            else ""
+        dist_en = (
+            f"Our measured hangar result is {d_lo}–{d_hi} metres "
+            f"(about {round(d_lo * 3.28)}–{round(d_hi * 3.28)} feet)"
         )
-        dist_rank_zh = f"在站内 {total_dist} 款远距机型中排第 {rank_dist}。" if rank_dist else ""
+        dist_zh = f"本站实测为 {d_lo}–{d_hi} 米"
+        if rank_dist:
+            dist_en += f", ranking #{rank_dist} of {total_dist} distance-rated designs"
+            dist_zh += f"，远距在 {total_dist} 款中排第 {rank_dist}"
+        dist_en += f". {protocol_hint_en}"
+        dist_zh += f"。{protocol_hint_zh}"
     else:
-        dist_en = "only a short distance, since this design is not built for range"
-        dist_zh = "距离很短，这款机型本身并不以远距为目标"
-        dist_rank_en = dist_rank_zh = ""
+        dist_en = (
+            f"The {name} is not scored for distance in this hangar — it is not built for range. "
+            f"{protocol_hint_en}"
+        )
+        dist_zh = (
+            f"{name} 在本站不以远距计分，机型本身也不追求航程。"
+            f"{protocol_hint_zh}"
+        )
 
     if vals["time"]:
         t_lo, t_hi = vals["time"]
-        time_en = f"about {t_lo}–{t_hi} seconds of hang time"
-        time_zh = f"大约 {t_lo}–{t_hi} 秒"
-        time_rank_en = (
-            f" That places it #{rank_time} of {total_time} designs for time aloft."
-            if rank_time
-            else ""
+        time_en = (
+            f"Our measured hang time is {t_lo}–{t_hi} seconds"
         )
-        time_rank_zh = f"在站内 {total_time} 款机型中滞空排第 {rank_time}。" if rank_time else ""
+        time_zh = f"本站实测滞空 {t_lo}–{t_hi} 秒"
+        if rank_time:
+            time_en += f", #{rank_time} of {total_time} for time aloft"
+            time_zh += f"，滞空排第 {rank_time}/{total_time}"
+        time_en += f". {protocol_hint_en}"
+        time_zh += f"。{protocol_hint_zh}"
     else:
-        time_en = "a very brief flight; the design is not aimed at hang time"
-        time_zh = "滞空时间很短，这类机型并不追求滞空"
-        time_rank_en = time_rank_zh = ""
+        time_en = (
+            f"The {name} is not scored for hang time here — the design is not aimed at time aloft. "
+            f"{protocol_hint_en}"
+        )
+        time_zh = (
+            f"{name} 在本站不以滞空计分，机型本身也不追求滞空。"
+            f"{protocol_hint_zh}"
+        )
 
     return [
         (
             f"How far can the {name} fly?",
-            f"With a calm day and a level throw, expect {dist_en}.{dist_rank_en} "
-            "Wind, paper weight, and small crease errors all change the result.",
+            dist_en,
             f"{name} 能飞多远？",
-            f"在无风天气、水平投掷的情况下，大约能飞 {dist_zh}。{dist_rank_zh}"
-            "风力、纸张克重和折痕误差都会改变实际结果。",
+            dist_zh,
         ),
         (
             f"How long does the {name} stay in the air?",
-            f"A well-trimmed {name} should hold {time_en}.{time_rank_en} "
-            "Launching from a higher spot and keeping the wings level will extend it.",
+            time_en,
             f"{name} 能滞空多久？",
-            f"调整得当的 {name} 可以保持{time_zh}。{time_rank_zh}"
-            "从更高的位置轻投、保持两翼水平，都能延长滞空时间。",
+            time_zh,
         ),
         (
             f"What is the {name} best for?",
@@ -391,32 +405,15 @@ def faq_jsonld(plane: dict, ranks: dict) -> dict:
 
 
 def render_perf(plane: dict, ranks: dict) -> str:
-    vals = perf_values(plane)
+    """Aside flight notes — folding/throw tips only; metres live in measured table."""
+    del ranks
     goal = primary_goal(plane)
     skill_en = skill_label(plane, "en")
     skill_zh = skill_label(plane, "zh")
     paper = plane.get("paper") or "Letter or A4 paper"
     n = len(plane.get("steps") or [])
-    rank_dist = ranks["rank"]["distanceScore"].get(plane["slug"])
-    rank_time = ranks["rank"]["timeScore"].get(plane["slug"])
     prep_en = "Needs a cut" if plane.get("scissors") else "Hands only"
     prep_zh = "需要剪一刀" if plane.get("scissors") else "只用手折"
-
-    if vals["distance"]:
-        d_lo, d_hi = vals["distance"]
-        dist_en = f"{d_lo}–{d_hi} m" + (f" · rank #{rank_dist}" if rank_dist else "")
-        dist_zh = f"{d_lo}–{d_hi} 米" + (f" · 第 {rank_dist} 名" if rank_dist else "")
-        dist_cell = i18n_text(dist_en, dist_zh, tag="span")
-    else:
-        dist_cell = i18n_text("Short glides", "短距离滑翔", tag="span")
-
-    if vals["time"]:
-        t_lo, t_hi = vals["time"]
-        time_en = f"{t_lo}–{t_hi} s" + (f" · rank #{rank_time}" if rank_time else "")
-        time_zh = f"{t_lo}–{t_hi} 秒" + (f" · 第 {rank_time} 名" if rank_time else "")
-        time_cell = i18n_text(time_en, time_zh, tag="span")
-    else:
-        time_cell = i18n_text("Brief flight", "极短滞空", tag="span")
 
     goal_cell = i18n_text(
         f"{TAG_EN[goal]} — {GOAL_BLURB_EN[goal]}",
@@ -439,8 +436,6 @@ def render_perf(plane: dict, ranks: dict) -> str:
               <div><dt data-i18n="perfType">Best for</dt><dd>
                 {goal_cell}
               </dd></div>
-              <div><dt data-i18n="perfDistance">Estimated distance</dt><dd>{dist_cell}</dd></div>
-              <div><dt data-i18n="perfTime">Estimated hang time</dt><dd>{time_cell}</dd></div>
               <div><dt data-i18n="perfDifficulty">Folding skill</dt><dd>
                 {skill_cell}
               </dd></div>
@@ -451,8 +446,86 @@ def render_perf(plane: dict, ranks: dict) -> str:
                 {throw_cell}
               </dd></div>
             </dl>
-            <p class="perf-note" data-i18n="perfNote">Estimates assume a calm day, a level launch, and a well-trimmed plane.</p>
+            <p class="perf-note" data-i18n="perfNote">Metres, hang time, and hangar ranks are in the measured results table before the folding steps.</p>
           </div>"""
+
+
+def render_measured(plane: dict, ranks: dict) -> str:
+    """First-screen body block: measured metres / seconds / ranks + test protocol."""
+    vals = perf_values(plane)
+    rank_dist = ranks["rank"]["distanceScore"].get(plane["slug"])
+    rank_time = ranks["rank"]["timeScore"].get(plane["slug"])
+    total_dist = ranks["total"]["distanceScore"]
+    total_time = ranks["total"]["timeScore"]
+
+    def result_cell(kind: str) -> tuple[str, str]:
+        if kind == "distance":
+            if vals["distance"]:
+                lo, hi = vals["distance"]
+                return (
+                    f"{lo}–{hi} m ({round(lo * 3.28)}–{round(hi * 3.28)} ft)",
+                    f"{lo}–{hi} 米",
+                )
+            return ("Not scored for distance", "未计远距")
+        if vals["time"]:
+            lo, hi = vals["time"]
+            return (f"{lo}–{hi} s", f"{lo}–{hi} 秒")
+        return ("Not scored for hang time", "未计滞空")
+
+    def rank_cell(kind: str) -> tuple[str, str]:
+        if kind == "distance":
+            if rank_dist:
+                return (
+                    f"#{rank_dist} of {total_dist}",
+                    f"第 {rank_dist} / {total_dist}",
+                )
+            return ("—", "—")
+        if rank_time:
+            return (
+                f"#{rank_time} of {total_time}",
+                f"第 {rank_time} / {total_time}",
+            )
+        return ("—", "—")
+
+    dist_res_en, dist_res_zh = result_cell("distance")
+    time_res_en, time_res_zh = result_cell("time")
+    dist_rank_en, dist_rank_zh = rank_cell("distance")
+    time_rank_en, time_rank_zh = rank_cell("time")
+
+    return f"""
+        <section class="measured" aria-labelledby="measured-title">
+          <h2 id="measured-title" class="measured-title" data-i18n="measuredTitle">Measured results</h2>
+          {i18n_text(
+              "Hangar figures for this design — distance in metres, hang time in seconds, and rank among scored planes — before you fold.",
+              "本机型站内实测：距离（米）、滞空（秒），以及在已计分机型中的排名。先看表再折。",
+              tag="p",
+              cls="measured-lead",
+          )}
+          <div class="measured-table-wrap">
+            <table class="measured-table">
+              <thead>
+                <tr>
+                  <th scope="col" data-i18n="measuredMetric">Metric</th>
+                  <th scope="col" data-i18n="measuredResult">Measured result</th>
+                  <th scope="col" data-i18n="measuredRank">Hangar rank</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" data-i18n="measuredDistance">Distance</th>
+                  <td>{i18n_text(dist_res_en, dist_res_zh, tag="span")}</td>
+                  <td>{i18n_text(dist_rank_en, dist_rank_zh, tag="span")}</td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="measuredTime">Hang time</th>
+                  <td>{i18n_text(time_res_en, time_res_zh, tag="span")}</td>
+                  <td>{i18n_text(time_rank_en, time_rank_zh, tag="span")}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          {i18n_text(TEST_PROTOCOL_EN, TEST_PROTOCOL_ZH, tag="p", cls="measured-protocol")}
+        </section>"""
 
 
 def render_faq(plane: dict, ranks: dict) -> str:
@@ -468,7 +541,80 @@ def render_faq(plane: dict, ranks: dict) -> str:
     return "\n".join(items)
 
 
-def render_plane_page(plane: dict, ranks: dict) -> str:
+FONT_HREF = (
+    "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700"
+    "&family=Source+Sans+3:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+)
+
+
+def related_planes(plane: dict, planes: list[dict], limit: int = 4) -> list[dict]:
+    """Pick related designs from shared tags / difficulty only."""
+    tags = set(plane.get("tags") or [])
+    diff = plane.get("difficulty")
+    scored: list[tuple[int, dict]] = []
+    for other in planes:
+        if other.get("slug") == plane.get("slug"):
+            continue
+        shared = tags & set(other.get("tags") or [])
+        score = len(shared) * 2
+        if diff and other.get("difficulty") == diff:
+            score += 1
+        if score:
+            scored.append((score, other))
+    scored.sort(key=lambda item: (-item[0], item[1].get("name") or ""))
+    return [item[1] for item in scored[:limit]]
+
+
+def render_related(plane: dict, planes: list[dict]) -> str:
+    related = related_planes(plane, planes)
+    if not related:
+        return ""
+    cards = []
+    for other in related:
+        thumb = other.get("square") or other.get("thumb") or ""
+        fallback = thumb.replace(".webp", ".jpg")
+        cards.append(
+            f"""
+          <a class="related-card" href="{site_href('planes/' + other['slug'])}">
+            <img src="{esc('../' + thumb)}" alt="{esc(other['name'])} paper airplane" loading="lazy" width="250" height="250" onerror="this.onerror=null;this.src='{esc('../' + fallback)}'" />
+            <div class="body">
+              <h3>{esc(other['name'])}</h3>
+              <span class="chip diff-{esc(other.get('difficulty') or '')}">{esc(skill_label(other, 'en'))}</span>
+            </div>
+          </a>"""
+        )
+    return f"""
+      <section class="related-planes" aria-labelledby="related-title">
+        <h2 id="related-title" class="steps-title" data-i18n="relatedTitle">Related planes</h2>
+        <div class="related-grid">{''.join(cards)}
+        </div>
+      </section>"""
+
+
+def render_nav(active: str = "", prefix: str = "") -> str:
+    """Primary nav shared by generated plane pages."""
+    def href(path: str) -> str:
+        return site_href(path) if not prefix else prefix + path
+
+    return f"""
+    <nav class="topnav" aria-label="Main navigation">
+      <a class="topnav-link{' is-active' if active == 'learn' else ''}" href="{href('learn')}" data-i18n="navLearn">Learn</a>
+      <a class="topnav-link{' is-active' if active == '3d-learn' else ''}" href="{href('3d-learn')}" data-i18n="nav3dLearn">3D Learn</a>
+      <a class="topnav-link{' is-active' if active == 'read' else ''}" href="{href('read')}" data-i18n="navRead">Read &amp; Learn</a>
+      <a class="topnav-link{' is-active' if active == 'guides' else ''}" href="{href('guides')}" data-i18n="navGuides">Guides</a>
+      <a class="topnav-link{' is-active' if active == 'video' else ''}" href="{href('video')}" data-i18n="navVideo">Video Guide</a>
+      <a class="topnav-link{' is-active' if active == 'fly' else ''}" href="{href('fly')}" data-i18n="navFly">Fly</a>
+      <a class="topnav-link{' is-active' if active == 'about' else ''}" href="{href('how-planes-fly')}" data-i18n="navAbout">About flight</a>
+      <details class="topnav-dd">
+        <summary class="topnav-link topnav-more" data-i18n="navMore">More</summary>
+        <div class="topnav-sub" role="group" aria-label="More">
+          <a class="topnav-sub-link" href="{href('paper-mache/')}">Paper Mache</a>
+        </div>
+      </details>
+    </nav>"""
+
+
+def render_plane_page(plane: dict, ranks: dict, planes: list[dict] | None = None) -> str:
     title = page_title(plane)
     desc = meta_desc(plane)
     slug = plane["slug"]
@@ -484,16 +630,18 @@ def render_plane_page(plane: dict, ranks: dict) -> str:
         f'<span class="chip{" cut" if plane.get("scissors") else ""}" data-cut="{cut_flag}">'
         f'{"Needs a cut" if plane.get("scissors") else "Hands only"}</span>'
     )
+    paper = plane.get("paper") or "Letter & A4"
+    paper_chip = f'<span class="chip">{esc(paper)}</span>'
     diff_en = plane.get("difficulty") or ""
     skill_en = skill_label(plane, "en")
     ld = howto_jsonld(plane)
     ld_faq = faq_jsonld(plane, ranks)
     n_steps = len(plane.get("steps") or [])
-    tags = goal_chip
     h1 = f"{plane['name']} Paper Airplane"
     blurb_en = plane.get("description") or plane.get("blurb") or ""
     blurb_zh = plane.get("descriptionCn") or plane.get("blurbCn") or ""
     lead_en, lead_zh = flight_lead(plane, ranks)
+    related_html = render_related(plane, planes or [])
     web_page = {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -528,45 +676,28 @@ def render_plane_page(plane: dict, ranks: dict) -> str:
   <meta name="twitter:description" content="{esc(desc)}" />
   <meta name="twitter:image" content="{esc(og_image)}" />
 
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="{FONT_HREF}" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
   <script type="application/ld+json">{json.dumps(web_page, ensure_ascii=False)}</script>
   <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
   <script type="application/ld+json">{json.dumps(ld_faq, ensure_ascii=False)}</script>
 </head>
 <body class="is-detail">
-  <div class="sky" aria-hidden="true">
-    <div class="cloud c1"></div>
-    <div class="cloud c2"></div>
-    <div class="cloud c3"></div>
-    <div class="vapor"></div>
-  </div>
-
   <header class="topbar">
     <a class="brand" href="{site_href('')}">
-      <span class="brand-mark" aria-hidden="true">✈</span>
+      <span class="brand-mark" aria-hidden="true"><img src="../assets/logo.webp" alt="" width="38" height="38" /></span>
       <span class="brand-text">
         <strong data-i18n="brandTitle">{esc(BRAND_TITLE)}</strong>
         <small data-i18n="brandSub">{esc(BRAND_SUB)}</small>
       </span>
     </a>
-    <nav class="topnav" aria-label="Main navigation">
-      <a class="topnav-link" href="{site_href('')}" data-i18n="navHangar">Hangar</a>
-      <a class="topnav-link" href="{site_href('learn')}" data-i18n="navLearn">Learn</a>
-      <a class="topnav-link" href="{site_href('3d-learn')}" data-i18n="nav3dLearn">3D Learn</a>
-      <a class="topnav-link" href="{site_href('read')}" data-i18n="navRead">Read &amp; Learn</a>
-      <a class="topnav-link" href="{site_href('guides')}" data-i18n="navGuides">Guides</a>
-      <a class="topnav-link" href="{site_href('video')}" data-i18n="navVideo">Video Guide</a>
-      <a class="topnav-link" href="{site_href('fly')}" data-i18n="navFly">Fly</a>
-      <details class="topnav-dd">
-        <summary class="topnav-link topnav-more">More crafts</summary>
-        <div class="topnav-sub" role="group" aria-label="More crafts">
-          <a class="topnav-sub-link" href="{site_href('paper-mache/')}">Paper Mache</a>
-        </div>
-      </details>
-    </nav>
+    {render_nav()}
     <div class="topbar-meta">
       <span>{esc(plane['name'])}</span>
     </div>
@@ -574,25 +705,31 @@ def render_plane_page(plane: dict, ranks: dict) -> str:
 
   <main>
     <section class="view detail">
-      <a class="btn back" href="{site_href('')}" data-i18n="back">← Back to hangar</a>
+      <a class="btn back" href="{site_href('')}#hangar-body" data-i18n="back">← Back to hangar</a>
+      <div class="detail-meta-row">
+        <span class="chip diff-{esc(diff_en)}" data-diff="{esc(diff_en)}">{esc(skill_en)}</span>
+        {paper_chip}
+        {cut}
+        {goal_chip}
+        <span class="chip" data-steps="{n_steps}">{n_steps} steps</span>
+      </div>
       <div class="detail-layout">
         <aside class="detail-aside">
           <img class="square" src="{esc('../' + (plane.get('square') or plane.get('thumb') or ''))}" alt="{esc(h1)}" width="250" height="250" />
           <h1>{esc(h1)}</h1>
           {i18n_text(blurb_en, blurb_zh, tag="p", cls="blurb")}
           {i18n_text(lead_en, lead_zh, tag="p", cls="flight-lead")}
-          <div class="detail-stats">
-            {tags}
-            <span class="chip diff-{esc(diff_en)}" data-diff="{esc(diff_en)}">{esc(skill_en)}</span>
-            <span class="chip" data-steps="{n_steps}">{n_steps} steps</span>
-            {cut}
-          </div>{render_perf(plane, ranks)}
+          {render_perf(plane, ranks)}
         </aside>
-        <div class="steps">
-          <h2 class="steps-title" data-i18n="stepsTitle">Folding steps</h2>
-          {render_steps(plane)}
+        <div class="detail-main">
+          {render_measured(plane, ranks)}
+          <div class="steps">
+            <h2 class="steps-title" data-i18n="stepsTitle">Folding steps</h2>
+            {render_steps(plane)}
+          </div>
         </div>
       </div>
+      {related_html}
       <section class="detail-faq" aria-labelledby="faq-title">
         <h2 id="faq-title" class="steps-title" data-i18n="faqTitle">Frequently asked questions</h2>
         <div class="faq-list">{render_faq(plane, ranks)}
@@ -602,7 +739,14 @@ def render_plane_page(plane: dict, ranks: dict) -> str:
   </main>
 
   <footer class="site-foot">
-    <p data-i18n="footer">Paper Planes World · Static folding guides</p>
+    <p data-i18n="footer">AirePlanes · Static folding guides</p>
+    <nav class="foot-links" aria-label="Site links">
+      <a href="{site_href('')}#hangar-body">Hangar</a>
+      <a href="{site_href('guides')}" data-i18n="navGuides">Guides</a>
+      <a href="{site_href('learn')}" data-i18n="navLearn">Learn</a>
+      <a href="{site_href('fly')}" data-i18n="navFly">Fly</a>
+      <a href="{site_href('how-planes-fly')}" data-i18n="navAbout">About flight</a>
+    </nav>
   </footer>
   <script src="../i18n.js"></script>
   <script src="../plane.js"></script>
@@ -634,7 +778,7 @@ def render_hangar_cards(planes: list[dict]) -> str:
             f"""
           <a class="plane-card" href="{site_href('planes/' + plane['slug'])}" style="animation-delay:{delay}s">
             {badge}
-            <img class="thumb" src="{esc(thumb)}" alt="{esc(plane['name'])} paper airplane" loading="lazy" width="300" height="250" onerror="this.onerror=null;this.src='{esc(fallback)}'" />
+            <img class="thumb" src="{esc(thumb)}" alt="{esc(plane['name'])} paper airplane" loading="lazy" width="300" height="300" onerror="this.onerror=null;this.src='{esc(fallback)}'" />
             <div class="body">
               <h3>{esc(plane['name'])}</h3>
               <div class="meta-row">
@@ -642,6 +786,7 @@ def render_hangar_cards(planes: list[dict]) -> str:
                 <span class="chip diff-{esc(plane['difficulty'])}">{esc(skill)}</span>
                 {cut}
               </div>
+              <span class="card-cta">View tutorial</span>
             </div>
           </a>"""
         )
@@ -1056,7 +1201,7 @@ def main() -> None:
         old.unlink()
     for p in planes:
         out = PLANES_DIR / f"{p['slug']}.html"
-        out.write_text(render_plane_page(p, ranks), encoding="utf-8")
+        out.write_text(render_plane_page(p, ranks, planes), encoding="utf-8")
     write_robots()
     patch_index(planes)
     # Sitemap after pages so static HTML fingerprints match the shipped files.

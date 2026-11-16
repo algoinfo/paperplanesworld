@@ -3,38 +3,42 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>How a paper airplane flies without an engine · Paper Planes World</title>
+  <title>How a paper airplane flies without an engine · AirePlanes</title>
   <meta name="description" content="Lift, drag, weight and thrust explained for paper airplanes — and how each force shows up in dives, stalls and long glides." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://paperairplaneworld.wiki/how-planes-fly" />
   <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="Paper Planes World" />
+  <meta property="og:site_name" content="AirePlanes" />
   <meta property="og:title" content="How a paper airplane flies without an engine" />
   <meta property="og:description" content="Lift, drag, weight and thrust explained for paper airplanes — and how each force shows up in dives, stalls and long glides." />
   <meta property="og:url" content="https://paperairplaneworld.wiki/how-planes-fly" />
   <meta property="og:image" content="https://paperairplaneworld.wiki/assets/og-cover.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
   <link rel="stylesheet" href="styles.css" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How a paper airplane flies without an engine", "description": "Lift, drag, weight and thrust explained for paper airplanes — and how each force shows up in dives, stalls and long glides.", "url": "https://paperairplaneworld.wiki/how-planes-fly", "isPartOf": {"@type": "WebSite", "name": "Paper Planes World", "url": "https://paperairplaneworld.wiki/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How a paper airplane flies without an engine", "description": "Lift, drag, weight and thrust explained for paper airplanes — and how each force shows up in dives, stalls and long glides.", "url": "https://paperairplaneworld.wiki/how-planes-fly", "isPartOf": {"@type": "WebSite", "name": "AirePlanes", "url": "https://paperairplaneworld.wiki/"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do paper airplanes fly?", "acceptedAnswer": {"@type": "Answer", "text": "A paper airplane flies by converting the energy of your throw into a glide. Wings produce lift while moving through air; drag and weight pull it down. Without an engine, every flight is a controlled descent."}}, {"@type": "Question", "name": "What is the centre of gravity on a paper airplane?", "acceptedAnswer": {"@type": "Answer", "text": "It is the balance point of the folded sheet. Support the plane on one finger under the body to find it. Shifting that point forward or aft changes whether the plane dives or stalls."}}]}</script>
 </head>
 <body>
-  <div class="sky" aria-hidden="true"><div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div><div class="vapor"></div></div>
   <header class="topbar">
-    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">✈</span><span class="brand-text"><strong data-i18n="brandTitle">Paper Planes World</strong><small data-i18n="brandSub"></small></span></a>
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><img src="assets/logo.webp" alt="" width="38" height="38" /></span><span class="brand-text"><strong data-i18n="brandTitle">AirePlanes</strong><small data-i18n="brandSub"></small></span></a>
     <nav class="topnav" aria-label="Main navigation">
-      <a class="topnav-link" href="/" data-i18n="navHangar">Hangar</a>
       <a class="topnav-link" href="/learn" data-i18n="navLearn">Learn</a>
       <a class="topnav-link" href="/3d-learn" data-i18n="nav3dLearn">3D Learn</a>
       <a class="topnav-link" href="/read" data-i18n="navRead">Read &amp; Learn</a>
-      <a class="topnav-link is-active" href="/guides" data-i18n="navGuides" aria-current="page">Guides</a>
+      <a class="topnav-link" href="/guides" data-i18n="navGuides">Guides</a>
       <a class="topnav-link" href="/video" data-i18n="navVideo">Video Guide</a>
       <a class="topnav-link" href="/fly" data-i18n="navFly">Fly</a>
+      <a class="topnav-link is-active" href="/how-planes-fly" data-i18n="navAbout">About flight</a>
       <details class="topnav-dd">
-        <summary class="topnav-link topnav-more">More crafts</summary>
-        <div class="topnav-sub" role="group" aria-label="More crafts">
+        <summary class="topnav-link topnav-more" data-i18n="navMore">More</summary>
+        <div class="topnav-sub" role="group" aria-label="More">
           <a class="topnav-sub-link" href="/paper-mache/">Paper Mache</a>
         </div>
       </details>
@@ -50,7 +54,7 @@
       </nav>
       <h1><span class="i18n-text" data-zh="没有发动机，纸飞机怎么飞起来">How a paper airplane flies without an engine</span></h1>
       <p class="read-lead"><span class="i18n-text" data-zh="升力、阻力、重力与你出手的推力，几乎能解释你看到的所有飞行。能叫出力的名字，微调就不再靠猜。">Lift, drag, weight and the push from your hand explain almost every flight you see. Once you can name the forces, trim stops feeling like guessing.</span></p>
-      <p class="read-byline"><span class="i18n-text" data-zh="纸飞机世界 · 约 4 分钟">Paper Planes World · 4 min read</span></p>
+      <p class="read-byline"><span class="i18n-text" data-zh="纸飞机世界 · 约 4 分钟">AirePlanes · 4 min read</span></p>
     </header>
     <div class="read-layout">
       <article class="read-article">
@@ -82,7 +86,7 @@
       </aside>
     </div>
   </main>
-  <footer class="site-foot"><p data-i18n="footer">Paper Planes World · Static folding guides</p>    <nav class="foot-links" aria-label="Guides">
+  <footer class="site-foot"><p data-i18n="footer">AirePlanes · Static folding guides</p>    <nav class="foot-links" aria-label="Guides">
       <a href="/guides" data-i18n="navGuides">Guides</a>
       <a href="/fix-flight"><span class="i18n-text" data-zh="修正飞行">Fix a flight</span></a>
       <a href="/how-to-throw"><span class="i18n-text" data-zh="怎么投">How to throw</span></a>
