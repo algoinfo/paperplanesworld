@@ -373,7 +373,7 @@
     const fromQuery = params.get("plane");
     const preferred =
       (fromQuery && state.planes.find((p) => p.slug === fromQuery)) ||
-      state.planes.find((p) => p.slug === "Stealth-Glider") ||
+      state.planes.find((p) => p.slug === "Silent-High-Glider") ||
       state.planes[0];
     select(preferred.slug);
     bindModelDrag();

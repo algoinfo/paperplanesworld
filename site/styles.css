@@ -96,6 +96,7 @@ button, input, select { font: inherit; }
   font-size: 1.5rem; letter-spacing: .04em;
 }
 .brand-text small { color: var(--ink-soft); font-size: .75rem; }
+.brand-text small:empty { display: none; }
 .topbar-meta {
   display: flex;
   align-items: center;

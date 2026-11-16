@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en" data-pref="">
+<head>
+	<meta charset="utf-8"/>
+	<title>Fold 'N Fly » Whoops!  Error 404</title>
+	<meta name="keywords" content="paper, airplane, fly, fold, oragami, plane, design, instructions, plans, dart, glider, airport, database"/>
+	<meta name="description" content="That page was not found"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="robots" content="noindex" />	
+	<link rel="canonical" href="UNKNOWN" />
+	
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed for foldnfly.com" href="/rss/" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@Fold_N_Fly" />
+	<meta property="og:url" content="UNKNOWN" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Fold 'N Fly » Whoops!  Error 404" />
+	<meta property="og:description" content="That page was not found" />
+	<meta property="og:image" content="https://www.foldnfly.com/images/social.png" />
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+		
+	<link rel="icon" href="/favicon.ico" sizes="any" />
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+	<link rel="apple-touch-icon" href="https://www.foldnfly.com/apple-touch-icon.png" sizes="180x180" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<meta name="msapplication-TileColor" content="#17569e" />
+	<meta name="theme-color" content="#17569e" />
+	
+			
+					<link rel="stylesheet" type="text/css" href="https://www.foldnfly.com/build/css/style.c861e601ef372f1d4a725e36f2849b4b.min.css" /> 			
+			<link rel="stylesheet" type="text/css" data-href="https://www.foldnfly.com/build/css/child.9809df399b721bbb7f5f306b32e0c7c2.min.css" id="css_childmode" />
+		
+		<link rel="preload" as="font" href="https://www.foldnfly.com/build/font/LondrinaShadow-en.woff2?2" type="font/woff2" crossorigin="anonymous" />		
+		<script defer src="https://www.foldnfly.com/build/js/script.74606936443d8f2e388532434abf0e60.min.js"></script>
+		<meta id="ss_js" data-an="0" data-si="d98e7ad5c1e1e5d7df126afa8cca2a0c7" />
+
+		<link id="gas" rel="dns-prefetch" href="https://ssl.google-analytics.com" />
+</head>
+<body class=" guest">
+	<header><nav class="navbar navbar-expand-sm navbar-light bg-white ">
+		<a class="navbar-brand py-0" href="/"><img src="https://www.foldnfly.com/images/logo.svg" height="60" width="110" alt="Fold'N Fly Logo" title="Learn how to make paper planes" id="js_logo" /></a>
+		<div class="navbar-nav ml-auto nav-dropbelow">
+						<a class="nav-link  text-center sections" href="/"><span class="text-nowrap"><svg class="icon" role="img"><title>Paper Airplane Designs</title><use xlink:href="/images/sprites.svg#hangar"/></svg> Hangar</span> <small><br />Airplanes</small></a>
+			<a class="nav-link  text-center sections mx-0 mx-sm-2 mx-md-4" href="/runway.php"><span class="text-nowrap"><svg class="icon" role="img"><title>Paper Airplane Designer and League</title><use xlink:href="/images/sprites.svg#road"/></svg> Runway</span> <small><br />Design &amp; Fly</small></a>
+			<a class="nav-link  text-center sections mr-0 mr-sm-2 mr-md-4" href="/lounge.php"><span class="text-nowrap"><svg class="icon" role="img"><title>Articles and Info</title><use xlink:href="/images/sprites.svg#book"/></svg> Lounge</span> <small><br />Read &amp; Learn</small></a>
+			<a class="nav-link  text-center sections" href="/store.php"><span class="text-nowrap"><svg class="icon" role="img"><title>Paper Airplane Shopping</title><use xlink:href="/images/sprites.svg#basket"/></svg> Store</span> <small><br />Shopping</small></a>
+		</div>
+		<div class="navbar-nav ml-auto nav-account">
+
+												<div class="nav-link text-center pb-0">
+						<a href="/signin.php">Sign In</a>
+						<div class="custom-control custom-switch" id="kid-switch-cont">
+							<input type="checkbox" class="custom-control-input"  id="kid-switch">
+							<label class="custom-control-label" for="kid-switch">Fun Mode</label>
+						</div>
+					</div>
+									</div>
+	</nav></header>
+	<div id="redline" class="d-none d-sm-block d-print-none"></div>
+	<main><div class="container">
+	<div class="row mx-0 mx-sm-4 mx-md-5">
+		<div class="col-12 shadow text-center" id="page_title">
+			<h1>Whoops!</h1>
+		</div>
+	</div>
+
+	<div class="row mx-0 mx-sm-4 mx-md-5">
+		<div class="col-12 white_box mt-4 text-center">
+			<p>The page you are looking for doesn't exist.</p>
+			<a href="/">Try here</a><br /><br />
+
+			<img src="/data/404/square.jpg" width="250" alt="Crumpled Ball of Paper" class="max_width" />
+		</div>
+	</div>
+</div>
+</main>
+<footer>
+	<div class="container-fluid">
+		<div class="row mx-0 mx-sm-4 mx-md-5">
+			<div class="col-12 shadow text-center" id="footer">
+				<span class="text-nowrap mx-2">Copyright &copy; 2026</span><span class='printonly mx-2'>www.foldnfly.com</span>
+				<a href="/terms.php" class="text-nowrap mx-2">Privacy &amp; Terms</a>
+
+				<div id="banner_ad" class="banner_ad pub_300x250 text_ads" style="position: absolute !important; width:300px; height:250px; left: -10000px !important; top: -1000px !important;"></div>
+				
+				<div class="mt-2 text-nowrap">
+					<a href="/contact.php" class="mr-3">Contact Us</a>
+					<a href="https://www.youtube.com/user/Foldnflycom/" target="_blank" rel="nofollow noopener noreferrer" aria-label="Open our YouTube channel in a new window"><svg class="icon" role="img"><title>Subscribe to us on YouTube</title><use xlink:href="/images/sprites.svg#youtube"/></svg></a>
+					<a href="https://www.facebook.com/foldnfly" target="_blank" rel="nofollow noopener noreferrer" aria-label="Open our Facebook page in a new window"><svg class="icon" role="img"><title>Like us on Facebook</title><use xlink:href="/images/sprites.svg#facebook"/></svg></a>
+					<a href="https://www.instagram.com/fold.n.fly/" target="_blank" rel="nofollow noopener noreferrer" aria-label="Open our Instagram page in a new window"><svg class="icon" role="img"><title>Follow us on Instagram</title><use xlink:href="/images/sprites.svg#instagram"/></svg></a>
+										<a href="https://www.amazon.com/gp/search/ref=as_li_qf_sp_sr_il_tl?ie=UTF8&tag=foldnfly-20&keywords=paper+airplane&index=aps&camp=1789&creative=9325&linkCode=xm2&linkId=a22498c7d1a530ca00d298a1d3a579c0" data-ping="a=KWPAPERPLANE" target="_blank" rel="nofollow noopener noreferrer" aria-label="Open Amazon in a new window with paper airplane products displayed"><svg class="icon" role="img"><title>Shop for Paper Airplane Products on Amazon</title><use xlink:href="/images/sprites.svg#amazon"/></svg></a>
+					<a href="/discord.php" aria-label="Join our Discord Server and discuss paper airplanes"><svg class="icon" role="img"><title>Chat with other paper pilots on Discord</title><use xlink:href="/images/sprites.svg#discord"/></svg></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="rap_disclosure"></div>
+</footer>
+	<a href="#" title="Change Page Language" id="lang-switch"><svg class="icon" role="img"><title>Change Page Language</title><use xlink:href="/images/sprites.svg#language"/></svg></a>
+	<div id="lang-pick">
+		<p>Please select your preferred language:</p>
+					<span>English</span>
+							<a href="/es/" data-lang="es">Español</a>
+			</div>	
+</body>
+</html>

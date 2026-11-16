@@ -419,8 +419,8 @@ def main() -> None:
             step["textCn"] = new_cn
 
     DATA.write_text(json.dumps(planes, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    # Sanity: Basic Dart
-    bd = next(p for p in planes if p["slug"] == "Basic-Dart")
+    # Sanity: Classic Dart
+    bd = next(p for p in planes if p["slug"] == "Classic-Dart")
     print(f"updated steps touching {changed} entries; identical EN leftovers {same_en}")
     for s in bd["steps"]:
         print(f"  {s['n']}. {s['text']}")

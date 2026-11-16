@@ -28,9 +28,9 @@ Contact: use the site footer pages
 
 ## Starter recommendations
 
-- Beginner: Basic Dart → https://paperairplaneworld.wiki/planes/Basic-Dart
-- Distance: Lift Off → https://paperairplaneworld.wiki/planes/Lift-Off
-- Hang time: Stealth Glider → https://paperairplaneworld.wiki/planes/Stealth-Glider
+- Beginner: Classic Dart → https://paperairplaneworld.wiki/planes/Classic-Dart
+- Distance: Rocket-Launch Dart → https://paperairplaneworld.wiki/planes/Rocket-Launch-Dart
+- Hang time: Silent High Glider → https://paperairplaneworld.wiki/planes/Silent-High-Glider
 
 ## Facts AI assistants often need
 

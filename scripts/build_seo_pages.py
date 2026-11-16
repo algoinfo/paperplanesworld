@@ -2,14 +2,18 @@
 """Generate SEO plane pages, sitemap, and update hangar meta helpers."""
 from __future__ import annotations
 
+import hashlib
 import html
 import json
+import subprocess
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
 PLANES_DIR = SITE / "planes"
 DATA = SITE / "data" / "planes.json"
+LASTMOD_STORE = SITE / "data" / "sitemap_lastmod.json"
 
 TAG_CN = {
     "distance": "飞得远",
@@ -56,6 +60,9 @@ GOAL_BLURB_CN = {
 }
 
 SITE_NAME = "Paper Planes World"
+OG_IMAGE = "assets/og-cover.jpg"
+BRAND_TITLE = "Paper Planes World"
+BRAND_SUB = ""
 # Relative site root for local static hosting; change when deploying to a domain.
 BASE_URL = "https://paperairplaneworld.wiki"
 
@@ -541,8 +548,8 @@ def render_plane_page(plane: dict, ranks: dict) -> str:
     <a class="brand" href="{site_href('')}">
       <span class="brand-mark" aria-hidden="true">✈</span>
       <span class="brand-text">
-        <strong data-i18n="brandTitle">Paper Airplane</strong>
-        <small data-i18n="brandSub">Folding Hangar</small>
+        <strong data-i18n="brandTitle">{esc(BRAND_TITLE)}</strong>
+        <small data-i18n="brandSub">{esc(BRAND_SUB)}</small>
       </span>
     </a>
     <nav class="topnav" aria-label="Main navigation">
@@ -648,12 +655,16 @@ def hangar_jsonld(planes: list[dict]) -> dict:
     return {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        "name": f"{SITE_NAME} · {count} Paper Airplane Folding Guides",
-        "description": f"{count} classic paper airplane designs with illustrated folding steps. Pick by flying goal, folding skill, and whether you need scissors.",
+        "name": f"Paper Airplane Designs — {count} Folding Guides",
+        "description": (
+            f"Browse {count} paper airplane designs with illustrated folding steps, "
+            "flight estimates, and filters for far throws, long floats, tricks, and display."
+        ),
         "url": abs_url(""),
         "isPartOf": {"@type": "WebSite", "name": SITE_NAME, "url": abs_url("")},
         "mainEntity": {
             "@type": "ItemList",
+            "name": "Paper airplane designs",
             "numberOfItems": count,
             "itemListElement": [
                 {
@@ -668,10 +679,8 @@ def hangar_jsonld(planes: list[dict]) -> dict:
     }
 
 
-def sitemap_lastmod(path: str) -> str:
-    """ISO date from the on-disk page when present, else today."""
-    from datetime import date, datetime
-
+def sitemap_page_file(path: str) -> Path | None:
+    """Resolve a sitemap path to its on-disk HTML source."""
     rel = pretty_path(path).rstrip("/")
     candidates = []
     if not rel:
@@ -686,8 +695,112 @@ def sitemap_lastmod(path: str) -> str:
         )
     for cand in candidates:
         if cand.is_file():
-            return datetime.fromtimestamp(cand.stat().st_mtime).date().isoformat()
-    return date.today().isoformat()
+            return cand
+    return None
+
+
+def plane_content_fingerprint(plane: dict) -> str:
+    """Hash only fields that appear on the public plane page."""
+    payload = {
+        "slug": plane.get("slug"),
+        "name": plane.get("name"),
+        "nameCn": plane.get("nameCn"),
+        "description": plane.get("description"),
+        "descriptionCn": plane.get("descriptionCn"),
+        "difficulty": plane.get("difficulty"),
+        "scissors": plane.get("scissors"),
+        "tags": plane.get("tags"),
+        "distance": plane.get("distance"),
+        "time": plane.get("time"),
+        "steps": plane.get("steps"),
+        "images": plane.get("images"),
+    }
+    raw = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:20]
+
+
+def page_content_fingerprint(path: str, planes_by_slug: dict[str, dict]) -> str:
+    """Stable content hash for a sitemap URL (not filesystem mtime)."""
+    key = pretty_path(path).rstrip("/")
+    if key.startswith("planes/"):
+        slug = key.split("/", 1)[1]
+        plane = planes_by_slug.get(slug)
+        if plane:
+            return f"plane:{plane_content_fingerprint(plane)}"
+    page = sitemap_page_file(path)
+    if page is not None:
+        digest = hashlib.sha256(page.read_bytes()).hexdigest()[:20]
+        return f"file:{digest}"
+    return f"missing:{key}"
+
+
+def git_source_date(path: str) -> str | None:
+    """Best-effort last substantive git date for bootstrap only."""
+    key = pretty_path(path).rstrip("/")
+    if key.startswith("planes/"):
+        sources = [DATA]
+    else:
+        page = sitemap_page_file(path)
+        sources = [page] if page is not None else []
+    for src in sources:
+        if src is None or not src.is_file():
+            continue
+        try:
+            out = subprocess.check_output(
+                ["git", "log", "-1", "--format=%cs", "--", str(src)],
+                cwd=ROOT,
+                stderr=subprocess.DEVNULL,
+                text=True,
+            ).strip()
+        except (subprocess.CalledProcessError, FileNotFoundError):
+            continue
+        if out:
+            return out
+    return None
+
+
+def load_lastmod_store() -> dict:
+    if not LASTMOD_STORE.is_file():
+        return {}
+    try:
+        data = json.loads(LASTMOD_STORE.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def save_lastmod_store(store: dict) -> None:
+    LASTMOD_STORE.parent.mkdir(parents=True, exist_ok=True)
+    LASTMOD_STORE.write_text(
+        json.dumps(store, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+
+
+def sitemap_lastmod(
+    path: str,
+    planes_by_slug: dict[str, dict],
+    store: dict,
+) -> str:
+    """Per-page lastmod from content fingerprint, not build-day mtime.
+
+    Unchanged content keeps the previous date. New/changed content gets today
+    (or a git source date on first bootstrap so a mass rebuild does not invent
+    fake staggered dates).
+    """
+    key = pretty_path(path).rstrip("/")
+    fingerprint = page_content_fingerprint(path, planes_by_slug)
+    prev = store.get(key) if isinstance(store.get(key), dict) else None
+    if prev and prev.get("hash") == fingerprint and prev.get("lastmod"):
+        return str(prev["lastmod"])
+
+    lastmod = date.today().isoformat()
+    if not prev:
+        seeded = git_source_date(path)
+        if seeded:
+            lastmod = seeded
+    store[key] = {"hash": fingerprint, "lastmod": lastmod}
+    return lastmod
 
 
 def write_sitemap(planes: list[dict]) -> None:
@@ -721,6 +834,8 @@ def write_sitemap(planes: list[dict]) -> None:
         "paper-mache-recipe/",
         "paper-mache-volcano/",
     ] + [f"planes/{p['slug']}" for p in planes]
+    planes_by_slug = {p["slug"]: p for p in planes}
+    store = load_lastmod_store()
     body = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -731,11 +846,16 @@ def write_sitemap(planes: list[dict]) -> None:
         priority = "1.0" if not key else "0.9" if key in high else "0.8"
         body.append("  <url>")
         body.append(f"    <loc>{esc(loc)}</loc>")
-        body.append(f"    <lastmod>{sitemap_lastmod(u)}</lastmod>")
+        body.append(f"    <lastmod>{sitemap_lastmod(u, planes_by_slug, store)}</lastmod>")
         body.append("    <changefreq>monthly</changefreq>")
         body.append(f"    <priority>{priority}</priority>")
         body.append("  </url>")
     body.append("</urlset>")
+    # Drop stale keys so deleted pages do not linger.
+    keep = {pretty_path(u).rstrip("/") for u in urls}
+    for stale in [k for k in store if k not in keep]:
+        del store[stale]
+    save_lastmod_store(store)
     (SITE / "sitemap.xml").write_text("\n".join(body) + "\n", encoding="utf-8")
 
 
@@ -748,6 +868,12 @@ def write_robots() -> None:
 
 HOME_FAQ = [
     (
+        "How many paper airplane designs are on this site?",
+        "This hangar lists 58 paper airplane designs with illustrated folding steps. Filter by far throws, long floats, tricks, or display, then open any card for a full guide. If you need help choosing, see the best paper airplane design guide.",
+        "站内有多少款纸飞机设计？",
+        "机库目前有 58 款纸飞机设计，每款都有图解折法。可按飞得远、停得久、特技或摆设筛选，点开卡片即可看完整教程。若不知道怎么选，先看「最好的纸飞机怎么选」指南。",
+    ),
+    (
         "What paper should I use for paper airplanes?",
         "Standard A4 or US Letter printer paper around 70–80 gsm works for almost every design on this site. Lighter paper folds easily and glides well indoors, while slightly heavier paper holds sharper creases in outdoor air. Avoid thick card stock: it makes dense planes that stall almost immediately.",
         "折纸飞机应该用什么纸？",
@@ -755,9 +881,9 @@ HOME_FAQ = [
     ),
     (
         "Are there 3D folding tutorials on this site?",
-        "Yes. Every plane is cut into short illustrated folds, and the guides are built for 3D inspection — check each step from the side, top, and front so you can see exactly how the wings and nose line up before continuing. That makes unusual designs such as the Stealth Glider much easier to copy than a flat diagram.",
+        "Yes. Every plane is cut into short illustrated folds, and the guides are built for 3D inspection — check each step from the side, top, and front so you can see exactly how the wings and nose line up before continuing. That makes unusual designs such as the Silent High Glider much easier to copy than a flat diagram.",
         "站内有 3D 折法教程吗？",
-        "有。每款纸飞机都拆成了简短的图解步骤，教程按 3D 视角组织：可以从侧面、顶部和正面检查每一步，先看清机翼和机头的位置关系再继续折。像 Stealth Glider 这类造型特别的机型，跟着 3D 视角比看平面图容易得多。",
+        "有。每款纸飞机都拆成了简短的图解步骤，教程按 3D 视角组织：可以从侧面、顶部和正面检查每一步，先看清机翼和机头的位置关系再继续折。像「静音高抛滑翔机」这类造型特别的机型，跟着 3D 视角比看平面图容易得多。",
     ),
     (
         "Can I test-fly a plane before folding it?",
@@ -767,15 +893,15 @@ HOME_FAQ = [
     ),
     (
         "How far can a paper airplane fly?",
-        "In normal indoor conditions the designs in this collection travel roughly 10–26 metres (33–85 feet) with a level throw. Distance designs such as the Lift Off and Basic Dart sit at the top of that range. Wind, paper weight, and small fold errors can easily change the result by several metres.",
+        "In normal indoor conditions the designs in this collection travel roughly 10–26 metres (33–85 feet) with a level throw. Distance designs such as the Rocket-Launch Dart and Classic Dart sit at the top of that range. Wind, paper weight, and small fold errors can easily change the result by several metres.",
         "纸飞机能飞多远？",
-        "在正常的室内环境下，站内机型以水平投掷大约能飞 10–26 米。Lift Off、Basic Dart 这类远距机型处于这个区间的上限。风力、纸张克重和细微的折叠误差，都可能让结果相差好几米。",
+        "在正常的室内环境下，站内机型以水平投掷大约能飞 10–26 米。火箭投射机、经典飞镖这类远距机型处于这个区间的上限。风力、纸张克重和细微的折叠误差，都可能让结果相差好几米。",
     ),
     (
         "How long can a paper airplane stay in the air?",
-        "Hang time ranges from a couple of seconds for heavy darts to roughly 10–13 seconds for well-trimmed gliders such as the Stealth Glider. Long flights come from light paper, a gentle upward launch, and a high release point — more than from throwing harder.",
+        "Hang time ranges from a couple of seconds for heavy darts to roughly 10–13 seconds for well-trimmed gliders such as the Silent High Glider. Long flights come from light paper, a gentle upward launch, and a high release point — more than from throwing harder.",
         "纸飞机能滞空多久？",
-        "偏重的机型可能只有两三秒，而 Stealth Glider 这类调整得当的滑翔机可以达到 10–13 秒左右。想要长时间滞空，关键在轻薄纸张、略向上扬的轻投和更高的出手位置，而不是用力猛抛。",
+        "偏重的机型可能只有两三秒，而「静音高抛滑翔机」这类调整得当的滑翔机可以达到 10–13 秒左右。想要长时间滞空，关键在轻薄纸张、略向上扬的轻投和更高的出手位置，而不是用力猛抛。",
     ),
     (
         "Why does my paper airplane fly in circles?",
@@ -803,9 +929,9 @@ HOME_FAQ = [
     ),
     (
         "Are these paper airplanes suitable for kids?",
-        "Yes. Start with beginner designs such as the Basic Dart — straight folds, hands only. Intermediate and advanced models add squash folds and sharp creases that younger folders may need help with; master designs work best as a shared project.",
+        "Yes. Start with beginner designs such as the Classic Dart — straight folds, hands only. Intermediate and advanced models add squash folds and sharp creases that younger folders may need help with; master designs work best as a shared project.",
         "这些纸飞机适合小朋友折吗？",
-        "适合。建议从 Basic Dart 这类入门机型开始：直线折法、只用手折。进阶和挑战机型会用到压折、对齐尖角，年纪较小的孩子可能需要协助；大师难度更适合当作亲子合作项目。",
+        "适合。建议从「经典飞镖」这类入门机型开始：直线折法、只用手折。进阶和挑战机型会用到压折、对齐尖角，年纪较小的孩子可能需要协助；大师难度更适合当作亲子合作项目。",
     ),
     (
         "How can I make my paper airplane fly farther?",
@@ -854,12 +980,12 @@ def patch_index(planes: list[dict]) -> None:
     index = SITE / "index.html"
     text = index.read_text(encoding="utf-8")
     count = len(planes)
-    title = f"{SITE_NAME} · {count} Paper Airplane Designs with 3D Folding Guides"
+    title = f"Paper Airplane Designs — {count} Folding Guides · {SITE_NAME}"
     desc = (
-        f"Fold {count} classic paper airplanes with 3D step-by-step guides, estimated flight "
-        "distance and hang time, and a test-flight preview. Pick by flying goal, folding skill, and prep."
+        f"Browse {count} paper airplane designs with 3D step-by-step folds, estimated distance "
+        "and hang time, and a test-flight preview. Filter by far throws, long floats, tricks, or display."
     )
-    og = abs_url("assets/planes/Basic-Dart/square.webp")
+    og = abs_url(OG_IMAGE)
     ld = hangar_jsonld(planes)
     ld_faq = home_faq_jsonld()
     head = f"""<!DOCTYPE html>
@@ -931,9 +1057,10 @@ def main() -> None:
     for p in planes:
         out = PLANES_DIR / f"{p['slug']}.html"
         out.write_text(render_plane_page(p, ranks), encoding="utf-8")
-    write_sitemap(planes)
     write_robots()
     patch_index(planes)
+    # Sitemap after pages so static HTML fingerprints match the shipped files.
+    write_sitemap(planes)
     print(f"generated {len(planes)} plane pages + sitemap/robots")
 
 
