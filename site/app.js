@@ -20,7 +20,7 @@
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;");
 
-  const planeHref = (p) => `planes/${encodeURIComponent(p.slug)}.html`;
+  const planeHref = (p) => `/planes/${encodeURIComponent(p.slug)}`;
 
   const getChecked = (name) =>
     [...document.querySelectorAll(`input[name="${name}"]:checked`)].map(
@@ -29,6 +29,18 @@
 
   const getCut = () =>
     document.querySelector('input[name="cut"]:checked')?.value || "any";
+
+  /** Prefer a single clearest goal for cards / chips. */
+  const primaryGoal = (p) => {
+    const tags = p.tags || [];
+    if (tags.includes("distance") && tags.includes("time_aloft")) {
+      return "time_aloft";
+    }
+    for (const key of ["distance", "time_aloft", "acrobatic", "decorative"]) {
+      if (tags.includes(key)) return key;
+    }
+    return "distance";
+  };
 
   function applyFilters() {
     if (!state.planes.length) return;
@@ -46,6 +58,7 @@
       ) {
         return false;
       }
+      // Empty skill/goal selection = no restriction (not "match all checked").
       if (diffs.length && !diffs.includes(p.difficulty)) return false;
       if (cut === "yes" && !p.scissors) return false;
       if (cut === "no" && p.scissors) return false;
@@ -81,12 +94,7 @@
     els.empty.classList.add("hidden");
     els.grid.innerHTML = state.filtered
       .map((p, i) => {
-        const tags = (p.tags || [])
-          .map(
-            (t) =>
-              `<span class="chip">${escapeHtml(window.PPW.tagLabel(t))}</span>`
-          )
-          .join("");
+        const goal = primaryGoal(p);
         const cut = p.scissors
           ? `<span class="chip cut">${escapeHtml(window.PPW.t("needScissors"))}</span>`
           : "";
@@ -104,8 +112,9 @@
             <div class="body">
               <h3>${escapeHtml(p.name)}</h3>
               <div class="meta-row">
+                <span class="chip goal goal-${escapeHtml(goal)}">${escapeHtml(window.PPW.tagLabel(goal))}</span>
                 <span class="chip diff-${escapeHtml(p.difficulty)}">${escapeHtml(window.PPW.diffLabel(p.difficulty))}</span>
-                ${tags}${cut}
+                ${cut}
               </div>
             </div>
           </a>`;

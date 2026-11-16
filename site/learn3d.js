@@ -116,8 +116,8 @@
     const vals = perf(plane);
     document.getElementById("l3d-distance").textContent = vals.distance;
     document.getElementById("l3d-time").textContent = vals.time;
-    document.getElementById("l3d-guide").href = `planes/${encodeURIComponent(plane.slug)}.html`;
-    document.getElementById("l3d-lab").href = `fly.html?plane=${encodeURIComponent(plane.slug)}`;
+    document.getElementById("l3d-guide").href = `/planes/${encodeURIComponent(plane.slug)}`;
+    document.getElementById("l3d-lab").href = `/fly?plane=${encodeURIComponent(plane.slug)}`;
   }
 
   function resize() {

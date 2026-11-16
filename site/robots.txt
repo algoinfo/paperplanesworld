@@ -1,6 +1,3 @@
 User-agent: *
 Allow: /
 Sitemap: https://paperairplaneworld.wiki/sitemap.xml
-
-# AI / GEO
-# https://paperairplaneworld.wiki/llms.txt

@@ -14,12 +14,12 @@ UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 )
-DIFF_CN = {"Easy": "简单", "Medium": "中等", "Hard": "困难", "Expert": "专家"}
+DIFF_CN = {"Easy": "入门", "Medium": "进阶", "Hard": "挑战", "Expert": "大师"}
 TAG_CN = {
-    "distance": "远距",
-    "time_aloft": "滞空",
-    "acrobatic": "特技",
-    "decorative": "装饰",
+    "distance": "飞得远",
+    "time_aloft": "停得久",
+    "acrobatic": "玩特技",
+    "decorative": "好看摆设",
 }
 
 
@@ -95,6 +95,7 @@ def load_meta(hangar_html):
 
 def fetch_plane(meta):
     pid = meta["id"]
+    slug = meta["slug"]
     html = curl(f"https://www.foldnfly.com/{pid}.html")
     desc_m = re.search(
         r'<div class="details[\s\S]*?<p class="left[^"]*">([\s\S]*?)</p>', html
@@ -110,11 +111,12 @@ def fetch_plane(meta):
             {
                 "n": n,
                 "text": strip_tags(sm.group(2)),
-                "image": f"assets/planes/{pid}/{n}.webp",
+                "image": f"assets/planes/{slug}/{n}.webp",
             }
         )
 
-    pdir = ASSETS / str(pid)
+    # Local folders use plane slug; foldnfly remote still uses numeric id.
+    pdir = ASSETS / slug
     pdir.mkdir(parents=True, exist_ok=True)
     for fname, remote in [
         ("thumb.webp", f"https://www.foldnfly.com/data/{pid}/rect_s.webp"),
@@ -128,9 +130,9 @@ def fetch_plane(meta):
         webp = pdir / f"{n}.webp"
         jpg = pdir / f"{n}.jpg"
         if curl(f"https://www.foldnfly.com/data/{pid}/{n}_s.webp", webp) and webp.stat().st_size > 500:
-            st["image"] = f"assets/planes/{pid}/{n}.webp"
+            st["image"] = f"assets/planes/{slug}/{n}.webp"
         elif curl(f"https://www.foldnfly.com/data/{pid}/{n}.jpg", jpg) and jpg.stat().st_size > 500:
-            st["image"] = f"assets/planes/{pid}/{n}.jpg"
+            st["image"] = f"assets/planes/{slug}/{n}.jpg"
         else:
             st["image"] = f"https://www.foldnfly.com/data/{pid}/{n}.jpg"
 
@@ -141,8 +143,8 @@ def fetch_plane(meta):
         "description": description,
         "paper": "Letter & A4",
         "steps": steps,
-        "thumb": f"assets/planes/{pid}/thumb.webp",
-        "square": f"assets/planes/{pid}/square.webp",
+        "thumb": f"assets/planes/{slug}/thumb.webp",
+        "square": f"assets/planes/{slug}/square.webp",
         "source": f"https://www.foldnfly.com/{pid}.html",
     }
 

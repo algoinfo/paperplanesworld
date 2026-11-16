@@ -142,7 +142,9 @@ button, input, select { font: inherit; }
   outline-offset: 2px;
 }
 
-html[data-lang="en"] .lang-zh { display: none; }
+/* Default to English so crawlers and first paint are one language. */
+.lang-zh { display: none; }
+html[data-lang="zh"] .lang-zh { display: revert; }
 html[data-lang="zh"] .lang-en { display: none; }
 
 main { width: min(1220px, calc(100% - 2rem)); margin: 0 auto; padding: 0 0 4rem; }
@@ -333,6 +335,12 @@ legend {
   text-transform: uppercase;
   color: var(--ink-soft);
 }
+.filter-hint {
+  margin: 0 0 .2rem;
+  font-size: .78rem;
+  line-height: 1.35;
+  color: var(--ink-soft);
+}
 fieldset label {
   display: inline-flex;
   align-items: center;
@@ -390,6 +398,10 @@ fieldset label {
 .chip.diff-Hard { background: #ffe4d6; color: #b24616; }
 .chip.diff-Expert { background: #fde2e2; color: #9f1239; }
 .chip.cut { background: #e8e0ff; color: #5b21b6; }
+.chip.goal-distance { background: #e0f0ff; color: #0b5cab; }
+.chip.goal-time_aloft { background: #e7f7ef; color: #0f6b3d; }
+.chip.goal-acrobatic { background: #fff0e4; color: #a34a0a; }
+.chip.goal-decorative { background: #f3e8ff; color: #6b21a8; }
 .badge {
   position: absolute; top: .7rem; left: .7rem;
   background: var(--ink); color: #fff;
@@ -591,6 +603,17 @@ fieldset label {
   display: flex; flex-wrap: wrap; gap: .4rem;
 }
 .detail-stats .chip { font-size: .8rem; padding: .3rem .65rem; }
+.flight-lead {
+  margin: .65rem 0 0;
+  padding: .75rem .85rem;
+  border-left: 3px solid rgba(31, 111, 191, .55);
+  background: rgba(31, 111, 191, .06);
+  border-radius: 0 10px 10px 0;
+  font-size: .95rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.detail-aside .blurb { margin-bottom: .35rem; }
 
 .perf-card {
   margin-top: .9rem;
@@ -684,12 +707,6 @@ fieldset label {
   line-height: 1.6;
   font-size: 1.02rem;
 }
-.step p.lang-en,
-.step p.lang-zh {
-  margin-top: .4rem;
-}
-html:not([data-lang="en"]) .step p.lang-en,
-html[data-lang="en"] .step p.lang-zh,
 [hidden] {
   display: none !important;
 }
@@ -966,6 +983,30 @@ html[data-lang="en"] .step p.lang-zh,
   line-height: 1.6;
 }
 .pm-back a { font-weight: 700; color: var(--blue); }
+.pm-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin: 1.1rem 0 0;
+}
+.pm-idea-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+.pm-idea-list > li {
+  padding: 0 0 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.pm-idea-list > li:last-child { border-bottom: 0; padding-bottom: 0; }
+.pm-idea-list h3 {
+  margin: 0 0 .35rem;
+  font-size: 1.12rem;
+  line-height: 1.3;
+}
+.pm-idea-list p { margin: .25rem 0; }
 
 /* —— Fly page —— */
 .fly-main { padding-top: .5rem; }

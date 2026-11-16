@@ -12,17 +12,47 @@ PLANES_DIR = SITE / "planes"
 DATA = SITE / "data" / "planes.json"
 
 TAG_CN = {
-    "distance": "远距",
-    "time_aloft": "滞空",
-    "acrobatic": "特技",
-    "decorative": "装饰",
+    "distance": "飞得远",
+    "time_aloft": "停得久",
+    "acrobatic": "玩特技",
+    "decorative": "好看摆设",
 }
 
 TAG_EN = {
-    "distance": "Distance",
-    "time_aloft": "Time aloft",
-    "acrobatic": "Acrobatic",
-    "decorative": "Decorative",
+    "distance": "Far throws",
+    "time_aloft": "Long floats",
+    "acrobatic": "Tricks",
+    "decorative": "Display",
+}
+
+DIFF_EN = {
+    "Easy": "Beginner",
+    "Medium": "Intermediate",
+    "Hard": "Advanced",
+    "Expert": "Master",
+}
+
+DIFF_CN = {
+    "Easy": "入门",
+    "Medium": "进阶",
+    "Hard": "挑战",
+    "Expert": "大师",
+}
+
+GOAL_BLURB_EN = {
+    "distance": "far, straight throws",
+    "time_aloft": "long floating glides",
+    "acrobatic": "tricks and loops",
+    "decorative": "looking great on a shelf",
+    "glider": "balanced range and hang time",
+}
+
+GOAL_BLURB_CN = {
+    "distance": "远距直线飞行",
+    "time_aloft": "长时间滑翔滞空",
+    "acrobatic": "特技与翻转",
+    "decorative": "好看的摆设展示",
+    "glider": "兼顾航程与滞空",
 }
 
 SITE_NAME = "Paper Planes World"
@@ -34,41 +64,114 @@ def esc(s: str) -> str:
     return html.escape(s or "", quote=True)
 
 
+def i18n_text(en: str, zh: str, tag: str = "p", cls: str = "") -> str:
+    """English in the DOM; Chinese only in data-zh for the language switcher.
+
+    Keeps the crawlable document language unambiguously English.
+    """
+    class_attr = f' class="{cls} i18n-text"' if cls else ' class="i18n-text"'
+    if zh and zh.strip() and zh.strip() != en.strip():
+        return f"<{tag}{class_attr} data-zh=\"{esc(zh)}\">{esc(en)}</{tag}>"
+    if cls:
+        return f'<{tag} class="{cls}">{esc(en)}</{tag}>'
+    return f"<{tag}>{esc(en)}</{tag}>"
+
+
+def pretty_path(path: str) -> str:
+    """Strip .html so URLs match Cloudflare's extensionless canonical form."""
+    path = (path or "").lstrip("/")
+    if path.endswith("/index.html"):
+        path = path[: -len("index.html")]
+    elif path == "index.html":
+        path = ""
+    elif path.endswith(".html"):
+        path = path[: -len(".html")]
+    return path
+
+
 def abs_url(path: str) -> str:
-    path = path.lstrip("/")
+    path = pretty_path(path)
     if BASE_URL:
-        return f"{BASE_URL.rstrip('/')}/{path}"
+        return f"{BASE_URL.rstrip('/')}/{path}" if path else f"{BASE_URL.rstrip('/')}/"
     return f"/{path}" if path else "/"
 
 
+def site_href(path: str) -> str:
+    """Root-absolute href used in templates (no .html)."""
+    path = pretty_path(path)
+    return f"/{path}" if path else "/"
+
+
+def primary_goal(plane: dict) -> str:
+    """Single clearest flying goal for chips and copy."""
+    tags = plane.get("tags") or []
+    if "distance" in tags and "time_aloft" in tags:
+        return "time_aloft"
+    for key in ("distance", "time_aloft", "acrobatic", "decorative"):
+        if key in tags:
+            return key
+    return "distance"
+
+
+def skill_label(plane: dict, lang: str = "en") -> str:
+    raw = plane.get("difficulty") or ""
+    return (DIFF_CN if lang == "zh" else DIFF_EN).get(raw, raw)
+
+
 def meta_desc(plane: dict) -> str:
-    tags = ", ".join(TAG_EN.get(t, t) for t in plane.get("tags") or [])
-    diff = plane.get("difficulty") or ""
-    details = []
-    if diff:
-        details.append(f"{diff} difficulty")
-    if tags:
-        details.append(f"{tags} flyer")
-    details.append(f"{len(plane.get('steps') or [])}-step illustrated guide")
-    details.append("scissors needed" if plane.get("scissors") else "no scissors required")
-    return f"Learn how to fold the {plane['name']} paper airplane: {', '.join(details)}."
+    goal = primary_goal(plane)
+    skill = skill_label(plane, "en")
+    n = len(plane.get("steps") or [])
+    prep = "needs a cut" if plane.get("scissors") else "hands-only fold"
+    return (
+        f"Fold the {plane['name']} paper airplane — best for {GOAL_BLURB_EN[goal]}, "
+        f"{skill.lower()} skill, {n}-step {prep}."
+    )
 
 
 def page_title(plane: dict) -> str:
     return f"{plane['name']} Paper Airplane · Step-by-Step Folding Guide"
 
 
-def keywords(plane: dict) -> str:
-    parts = [
-        plane["name"],
-        "paper airplane",
-        "paper plane",
-        "folding guide",
-        "origami",
-        plane.get("difficulty") or "",
-        *[TAG_EN.get(t, t) for t in plane.get("tags") or []],
-    ]
-    return ", ".join(p for p in parts if p)
+def flight_lead(plane: dict, ranks: dict) -> tuple[str, str]:
+    """Main-body flight summary — ranks and ranges, not buried in a side card."""
+    vals = perf_values(plane)
+    name = plane["name"]
+    rank_dist = ranks["rank"]["distanceScore"].get(plane["slug"])
+    rank_time = ranks["rank"]["timeScore"].get(plane["slug"])
+    total_dist = ranks["total"]["distanceScore"]
+    total_time = ranks["total"]["timeScore"]
+    bits_en, bits_zh = [], []
+    if vals["distance"]:
+        lo, hi = vals["distance"]
+        en = f"about {lo}–{hi} m ({round(lo * 3.28)}–{round(hi * 3.28)} ft)"
+        zh = f"大约 {lo}–{hi} 米"
+        if rank_dist:
+            en += f", ranking #{rank_dist} of {total_dist} for distance"
+            zh += f"，远距在站内 {total_dist} 款中排第 {rank_dist}"
+        bits_en.append(en)
+        bits_zh.append(zh)
+    if vals["time"]:
+        lo, hi = vals["time"]
+        en = f"roughly {lo}–{hi} s of hang time"
+        zh = f"滞空大约 {lo}–{hi} 秒"
+        if rank_time:
+            en += f" (#{rank_time} of {total_time})"
+            zh += f"（第 {rank_time}/{total_time}）"
+        bits_en.append(en)
+        bits_zh.append(zh)
+    if not bits_en:
+        return (
+            f"The {name} is built more for shape and handling than for raw range or hang time.",
+            f"{name} 更偏造型与手感，不以远距或滞空见长。",
+        )
+    return (
+        f"In calm air with a level throw, expect {'; '.join(bits_en)}. "
+        "Treat the numbers as a trim target: if your fold lands short, check symmetry and crease sharpness first.",
+        f"无风、水平投掷时，{bits_zh[0]}"
+        + (f"；{bits_zh[1]}" if len(bits_zh) > 1 else "")
+        + "。把这些数字当微调目标：飞不到就先查左右对称和折痕是否压实。",
+    )
 
 
 def render_steps(plane: dict) -> str:
@@ -76,13 +179,7 @@ def render_steps(plane: dict) -> str:
     for s in plane.get("steps") or []:
         cn = s.get("textCn") or ""
         en = s.get("text") or ""
-        if cn and cn != en:
-            body = (
-                f'<p class="lang-en">{esc(en)}</p>'
-                f'<p class="lang-zh">{esc(cn)}</p>'
-            )
-        else:
-            body = f"<p>{esc(en)}</p>"
+        body = i18n_text(en, cn, tag="p")
         img = esc("../" + s["image"])
         blocks.append(
             f"""
@@ -160,19 +257,6 @@ def perf_values(plane: dict) -> dict:
     return {"distance": dist, "time": time}
 
 
-def plane_kind(plane: dict) -> str:
-    tags = plane.get("tags") or []
-    if "time_aloft" in tags and "distance" in tags:
-        return "glider"
-    if "time_aloft" in tags:
-        return "glider"
-    if "acrobatic" in tags:
-        return "stunt plane"
-    if "decorative" in tags:
-        return "display model"
-    return "dart"
-
-
 THROW_TIPS = {
     "glider": "Launch gently at a slight upward angle, ideally from a high spot, and let it settle into a glide instead of throwing it hard.",
     "distance": "Hold the plane level and throw with a smooth, firm push, aiming straight ahead rather than upward.",
@@ -191,6 +275,7 @@ THROW_TIPS_ZH = {
 
 
 def primary_tag(plane: dict) -> str:
+    """Throw-tip key (keeps glider when both distance + time)."""
     tags = plane.get("tags") or []
     if "distance" in tags and "time_aloft" in tags:
         return "glider"
@@ -204,17 +289,20 @@ def faq_pairs(plane: dict, ranks: dict) -> list[tuple[str, str, str, str]]:
     """Return (question_en, answer_en, question_zh, answer_zh)."""
     name = plane["name"]
     vals = perf_values(plane)
-    diff = plane.get("difficulty") or ""
-    kind = plane_kind(plane)
-    tags = " and ".join(TAG_EN.get(t, t).lower() for t in plane.get("tags") or [])
+    skill_en = skill_label(plane, "en")
+    skill_zh = skill_label(plane, "zh")
+    goal = primary_goal(plane)
+    tip_key = primary_tag(plane)
     paper = plane.get("paper") or "Letter or A4 paper"
     n = len(plane.get("steps") or [])
     rank_dist = ranks["rank"]["distanceScore"].get(plane["slug"])
     rank_time = ranks["rank"]["timeScore"].get(plane["slug"])
     total_dist = ranks["total"]["distanceScore"]
     total_time = ranks["total"]["timeScore"]
-    tip_en = THROW_TIPS[primary_tag(plane)]
-    tip_zh = THROW_TIPS_ZH[primary_tag(plane)]
+    tip_en = THROW_TIPS[tip_key]
+    tip_zh = THROW_TIPS_ZH[tip_key]
+    prep_en = "needs a cut" if plane.get("scissors") else "hands only"
+    prep_zh = "需要剪一刀" if plane.get("scissors") else "只用手折"
 
     if vals["distance"]:
         d_lo, d_hi = vals["distance"]
@@ -264,13 +352,12 @@ def faq_pairs(plane: dict, ranks: dict) -> list[tuple[str, str, str, str]]:
             "从更高的位置轻投、保持两翼水平，都能延长滞空时间。",
         ),
         (
-            f"What type of paper airplane is the {name}?",
-            f"It is a {tags} {kind} rated {diff} difficulty. Fold it from {paper} "
-            f"in {n} steps{' and keep a pair of scissors handy' if plane.get('scissors') else ' with no scissors required'}.",
-            f"{name} 属于什么类型的纸飞机？",
-            f"它是一款{''.join(TAG_CN.get(t, t) for t in plane.get('tags') or [])}机型，"
-            f"难度为{plane.get('difficultyCn') or diff}，用{paper}折 {n} 步"
-            f"{'，需要准备剪刀' if plane.get('scissors') else '，全程不用剪刀'}。",
+            f"What is the {name} best for?",
+            f"It is best for {GOAL_BLURB_EN[goal]}. Folding skill is {skill_en.lower()}. "
+            f"Use {paper}, {n} steps, {prep_en}.",
+            f"{name} 最适合做什么？",
+            f"它最适合{GOAL_BLURB_CN[goal]}。折纸难度为{skill_zh}，"
+            f"用{paper}折 {n} 步，{prep_zh}。",
         ),
         (
             f"How should I throw the {name}?",
@@ -298,67 +385,63 @@ def faq_jsonld(plane: dict, ranks: dict) -> dict:
 
 def render_perf(plane: dict, ranks: dict) -> str:
     vals = perf_values(plane)
-    tags_en = " + ".join(TAG_EN.get(t, t) for t in plane.get("tags") or [])
-    tags_zh = " + ".join(TAG_CN.get(t, t) for t in plane.get("tags") or [])
-    kind = plane_kind(plane)
-    diff = plane.get("difficulty") or ""
-    diff_zh = plane.get("difficultyCn") or diff
+    goal = primary_goal(plane)
+    skill_en = skill_label(plane, "en")
+    skill_zh = skill_label(plane, "zh")
     paper = plane.get("paper") or "Letter or A4 paper"
     n = len(plane.get("steps") or [])
     rank_dist = ranks["rank"]["distanceScore"].get(plane["slug"])
     rank_time = ranks["rank"]["timeScore"].get(plane["slug"])
-    total_dist = ranks["total"]["distanceScore"]
-    total_time = ranks["total"]["timeScore"]
+    prep_en = "Needs a cut" if plane.get("scissors") else "Hands only"
+    prep_zh = "需要剪一刀" if plane.get("scissors") else "只用手折"
 
     if vals["distance"]:
         d_lo, d_hi = vals["distance"]
-        dist_cell = (
-            f'<span class="lang-en">{d_lo}–{d_hi} m'
-            f'{" · rank #" + str(rank_dist) if rank_dist else ""}</span>'
-            f'<span class="lang-zh">{d_lo}–{d_hi} 米'
-            f'{" · 第 " + str(rank_dist) + " 名" if rank_dist else ""}</span>'
-        )
+        dist_en = f"{d_lo}–{d_hi} m" + (f" · rank #{rank_dist}" if rank_dist else "")
+        dist_zh = f"{d_lo}–{d_hi} 米" + (f" · 第 {rank_dist} 名" if rank_dist else "")
+        dist_cell = i18n_text(dist_en, dist_zh, tag="span")
     else:
-        dist_cell = (
-            '<span class="lang-en">Short glides</span>'
-            '<span class="lang-zh">短距离滑翔</span>'
-        )
+        dist_cell = i18n_text("Short glides", "短距离滑翔", tag="span")
 
     if vals["time"]:
         t_lo, t_hi = vals["time"]
-        time_cell = (
-            f'<span class="lang-en">{t_lo}–{t_hi} s'
-            f'{" · rank #" + str(rank_time) if rank_time else ""}</span>'
-            f'<span class="lang-zh">{t_lo}–{t_hi} 秒'
-            f'{" · 第 " + str(rank_time) + " 名" if rank_time else ""}</span>'
-        )
+        time_en = f"{t_lo}–{t_hi} s" + (f" · rank #{rank_time}" if rank_time else "")
+        time_zh = f"{t_lo}–{t_hi} 秒" + (f" · 第 {rank_time} 名" if rank_time else "")
+        time_cell = i18n_text(time_en, time_zh, tag="span")
     else:
-        time_cell = (
-            '<span class="lang-en">Brief flight</span>'
-            '<span class="lang-zh">极短滞空</span>'
-        )
+        time_cell = i18n_text("Brief flight", "极短滞空", tag="span")
+
+    goal_cell = i18n_text(
+        f"{TAG_EN[goal]} — {GOAL_BLURB_EN[goal]}",
+        f"{TAG_CN[goal]} — {GOAL_BLURB_CN[goal]}",
+        tag="span",
+    )
+    skill_cell = i18n_text(skill_en, skill_zh, tag="span")
+    paper_cell = i18n_text(
+        f"{paper} · {n} folds · {prep_en}",
+        f"{paper} · {n} 步 · {prep_zh}",
+        tag="span",
+    )
+    tip_key = primary_tag(plane)
+    throw_cell = i18n_text(THROW_TIPS[tip_key], THROW_TIPS_ZH[tip_key], tag="span")
 
     return f"""
           <div class="perf-card">
-            <h2 class="perf-title" data-i18n="perfTitle">Performance</h2>
+            <h2 class="perf-title" data-i18n="perfTitle">Flight notes</h2>
             <dl class="perf-list">
-              <div><dt data-i18n="perfType">Type</dt><dd>
-                <span class="lang-en">{esc(tags_en)} {kind}</span>
-                <span class="lang-zh">{esc(tags_zh)}{'滑翔机' if kind == 'glider' else '机型'}</span>
+              <div><dt data-i18n="perfType">Best for</dt><dd>
+                {goal_cell}
               </dd></div>
               <div><dt data-i18n="perfDistance">Estimated distance</dt><dd>{dist_cell}</dd></div>
               <div><dt data-i18n="perfTime">Estimated hang time</dt><dd>{time_cell}</dd></div>
-              <div><dt data-i18n="perfDifficulty">Difficulty</dt><dd>
-                <span class="lang-en">{esc(diff)}</span>
-                <span class="lang-zh">{esc(diff_zh)}</span>
+              <div><dt data-i18n="perfDifficulty">Folding skill</dt><dd>
+                {skill_cell}
               </dd></div>
               <div><dt data-i18n="perfPaper">Paper &amp; folds</dt><dd>
-                <span class="lang-en">{esc(paper)} · {n} folds</span>
-                <span class="lang-zh">{esc(paper)} · {n} 步</span>
+                {paper_cell}
               </dd></div>
               <div><dt data-i18n="perfThrow">How to throw</dt><dd>
-                <span class="lang-en">{esc(THROW_TIPS[primary_tag(plane)])}</span>
-                <span class="lang-zh">{esc(THROW_TIPS_ZH[primary_tag(plane)])}</span>
+                {throw_cell}
               </dd></div>
             </dl>
             <p class="perf-note" data-i18n="perfNote">Estimates assume a calm day, a level launch, and a well-trimmed plane.</p>
@@ -371,9 +454,8 @@ def render_faq(plane: dict, ranks: dict) -> str:
         items.append(
             f"""
           <details class="faq-item">
-            <summary><span class="lang-en">{esc(q_en)}</span><span class="lang-zh">{esc(q_zh)}</span></summary>
-            <p class="lang-en">{esc(a_en)}</p>
-            <p class="lang-zh">{esc(a_zh)}</p>
+            {i18n_text(q_en, q_zh, tag="summary")}
+            {i18n_text(a_en, a_zh, tag="p")}
           </details>"""
         )
     return "\n".join(items)
@@ -382,23 +464,29 @@ def render_faq(plane: dict, ranks: dict) -> str:
 def render_plane_page(plane: dict, ranks: dict) -> str:
     title = page_title(plane)
     desc = meta_desc(plane)
-    kw = keywords(plane)
     slug = plane["slug"]
-    path = f"planes/{slug}.html"
+    path = f"planes/{slug}"
     og_image = abs_url(plane.get("square") or plane.get("thumb") or "")
-    tags = "".join(
-        f'<span class="chip" data-tag="{esc(t)}">{esc(TAG_EN.get(t, t))}</span>'
-        for t in plane.get("tags") or []
+    goal = primary_goal(plane)
+    goal_chip = (
+        f'<span class="chip goal goal-{esc(goal)}" data-tag="{esc(goal)}">'
+        f'{esc(TAG_EN[goal])}</span>'
     )
     cut_flag = "1" if plane.get("scissors") else "0"
     cut = (
         f'<span class="chip{" cut" if plane.get("scissors") else ""}" data-cut="{cut_flag}">'
-        f'{"Scissors" if plane.get("scissors") else "No scissors"}</span>'
+        f'{"Needs a cut" if plane.get("scissors") else "Hands only"}</span>'
     )
     diff_en = plane.get("difficulty") or ""
+    skill_en = skill_label(plane, "en")
     ld = howto_jsonld(plane)
     ld_faq = faq_jsonld(plane, ranks)
     n_steps = len(plane.get("steps") or [])
+    tags = goal_chip
+    h1 = f"{plane['name']} Paper Airplane"
+    blurb_en = plane.get("description") or plane.get("blurb") or ""
+    blurb_zh = plane.get("descriptionCn") or plane.get("blurbCn") or ""
+    lead_en, lead_zh = flight_lead(plane, ranks)
     web_page = {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -416,7 +504,6 @@ def render_plane_page(plane: dict, ranks: dict) -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(desc)}" />
-  <meta name="keywords" content="{esc(kw)}" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="{esc(abs_url(path))}" />
 
@@ -451,7 +538,7 @@ def render_plane_page(plane: dict, ranks: dict) -> str:
   </div>
 
   <header class="topbar">
-    <a class="brand" href="../index.html">
+    <a class="brand" href="{site_href('')}">
       <span class="brand-mark" aria-hidden="true">✈</span>
       <span class="brand-text">
         <strong data-i18n="brandTitle">Paper Airplane</strong>
@@ -459,17 +546,17 @@ def render_plane_page(plane: dict, ranks: dict) -> str:
       </span>
     </a>
     <nav class="topnav" aria-label="Main navigation">
-      <a class="topnav-link" href="../index.html" data-i18n="navHangar">Hangar</a>
-      <a class="topnav-link" href="../learn.html" data-i18n="navLearn">Learn</a>
-      <a class="topnav-link" href="../3d-learn.html" data-i18n="nav3dLearn">3D Learn</a>
-      <a class="topnav-link" href="../read.html" data-i18n="navRead">Read &amp; Learn</a>
-      <a class="topnav-link" href="../guides.html" data-i18n="navGuides">Guides</a>
-      <a class="topnav-link" href="../video.html" data-i18n="navVideo">Video Guide</a>
-      <a class="topnav-link" href="../fly.html" data-i18n="navFly">Fly</a>
+      <a class="topnav-link" href="{site_href('')}" data-i18n="navHangar">Hangar</a>
+      <a class="topnav-link" href="{site_href('learn')}" data-i18n="navLearn">Learn</a>
+      <a class="topnav-link" href="{site_href('3d-learn')}" data-i18n="nav3dLearn">3D Learn</a>
+      <a class="topnav-link" href="{site_href('read')}" data-i18n="navRead">Read &amp; Learn</a>
+      <a class="topnav-link" href="{site_href('guides')}" data-i18n="navGuides">Guides</a>
+      <a class="topnav-link" href="{site_href('video')}" data-i18n="navVideo">Video Guide</a>
+      <a class="topnav-link" href="{site_href('fly')}" data-i18n="navFly">Fly</a>
       <details class="topnav-dd">
         <summary class="topnav-link topnav-more">More crafts</summary>
         <div class="topnav-sub" role="group" aria-label="More crafts">
-          <a class="topnav-sub-link" href="../paper-mache/">Paper Mache</a>
+          <a class="topnav-sub-link" href="{site_href('paper-mache/')}">Paper Mache</a>
         </div>
       </details>
     </nav>
@@ -480,17 +567,18 @@ def render_plane_page(plane: dict, ranks: dict) -> str:
 
   <main>
     <section class="view detail">
-      <a class="btn back" href="../index.html" data-i18n="back">← Back to hangar</a>
+      <a class="btn back" href="{site_href('')}" data-i18n="back">← Back to hangar</a>
       <div class="detail-layout">
         <aside class="detail-aside">
-          <img class="square" src="{esc('../' + (plane.get('square') or plane.get('thumb') or ''))}" alt="{esc(plane['name'])}" width="250" height="250" />
-          <h1>{esc(plane['name'])}</h1>
-          <p class="blurb">{esc(plane.get('description') or plane.get('blurb') or '')}</p>
+          <img class="square" src="{esc('../' + (plane.get('square') or plane.get('thumb') or ''))}" alt="{esc(h1)}" width="250" height="250" />
+          <h1>{esc(h1)}</h1>
+          {i18n_text(blurb_en, blurb_zh, tag="p", cls="blurb")}
+          {i18n_text(lead_en, lead_zh, tag="p", cls="flight-lead")}
           <div class="detail-stats">
-            <span class="chip diff-{esc(diff_en)}" data-diff="{esc(diff_en)}">{esc(diff_en)}</span>
-            <span class="chip">{esc(plane.get('paper') or 'Letter & A4')}</span>
+            {tags}
+            <span class="chip diff-{esc(diff_en)}" data-diff="{esc(diff_en)}">{esc(skill_en)}</span>
             <span class="chip" data-steps="{n_steps}">{n_steps} steps</span>
-            {tags}{cut}
+            {cut}
           </div>{render_perf(plane, ranks)}
         </aside>
         <div class="steps">
@@ -519,9 +607,9 @@ def render_plane_page(plane: dict, ranks: dict) -> str:
 def render_hangar_cards(planes: list[dict]) -> str:
     cards = []
     for i, plane in enumerate(planes):
-        tags = "".join(
-            f'<span class="chip">{esc(TAG_EN.get(tag, tag))}</span>'
-            for tag in plane.get("tags") or []
+        goal = primary_goal(plane)
+        goal_chip = (
+            f'<span class="chip goal goal-{esc(goal)}">{esc(TAG_EN[goal])}</span>'
         )
         badge = (
             f'<span class="badge">{esc(plane["badge"])}</span>'
@@ -529,21 +617,23 @@ def render_hangar_cards(planes: list[dict]) -> str:
             else ""
         )
         cut = (
-            '<span class="chip cut">Scissors</span>' if plane.get("scissors") else ""
+            '<span class="chip cut">Needs cut</span>' if plane.get("scissors") else ""
         )
+        skill = skill_label(plane, "en")
         thumb = plane["thumb"]
         fallback = thumb.replace(".webp", ".jpg")
         delay = min(i, 12) * 0.03
         cards.append(
             f"""
-          <a class="plane-card" href="planes/{esc(plane['slug'])}.html" style="animation-delay:{delay}s">
+          <a class="plane-card" href="{site_href('planes/' + plane['slug'])}" style="animation-delay:{delay}s">
             {badge}
             <img class="thumb" src="{esc(thumb)}" alt="{esc(plane['name'])} paper airplane" loading="lazy" width="300" height="250" onerror="this.onerror=null;this.src='{esc(fallback)}'" />
             <div class="body">
               <h3>{esc(plane['name'])}</h3>
               <div class="meta-row">
-                <span class="chip diff-{esc(plane['difficulty'])}">{esc(plane['difficulty'])}</span>
-                {tags}{cut}
+                {goal_chip}
+                <span class="chip diff-{esc(plane['difficulty'])}">{esc(skill)}</span>
+                {cut}
               </div>
             </div>
           </a>"""
@@ -559,7 +649,7 @@ def hangar_jsonld(planes: list[dict]) -> dict:
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": f"{SITE_NAME} · {count} Paper Airplane Folding Guides",
-        "description": f"{count} classic paper airplane designs with illustrated folding steps. Filter by distance, time aloft, acrobatic, and difficulty.",
+        "description": f"{count} classic paper airplane designs with illustrated folding steps. Pick by flying goal, folding skill, and whether you need scissors.",
         "url": abs_url(""),
         "isPartOf": {"@type": "WebSite", "name": SITE_NAME, "url": abs_url("")},
         "mainEntity": {
@@ -569,7 +659,7 @@ def hangar_jsonld(planes: list[dict]) -> dict:
                 {
                     "@type": "ListItem",
                     "position": i + 1,
-                    "url": abs_url(f"planes/{p['slug']}.html"),
+                    "url": abs_url(f"planes/{p['slug']}"),
                     "name": p["name"],
                 }
                 for i, p in enumerate(planes)
@@ -578,58 +668,74 @@ def hangar_jsonld(planes: list[dict]) -> dict:
     }
 
 
+def sitemap_lastmod(path: str) -> str:
+    """ISO date from the on-disk page when present, else today."""
+    from datetime import date, datetime
+
+    rel = pretty_path(path).rstrip("/")
+    candidates = []
+    if not rel:
+        candidates.append(SITE / "index.html")
+    else:
+        candidates.extend(
+            [
+                SITE / f"{rel}.html",
+                SITE / rel / "index.html",
+                SITE / f"{rel}/index.html",
+            ]
+        )
+    for cand in candidates:
+        if cand.is_file():
+            return datetime.fromtimestamp(cand.stat().st_mtime).date().isoformat()
+    return date.today().isoformat()
+
+
 def write_sitemap(planes: list[dict]) -> None:
+    high = {
+        "fly",
+        "learn",
+        "3d-learn",
+        "read",
+        "guides",
+        "fix-flight",
+        "how-to-throw",
+        "dart-or-glider",
+        "choose-paper",
+        "how-planes-fly",
+        "video",
+    }
     urls = [
         "",
-        "learn.html",
-        "3d-learn.html",
-        "read.html",
-        "guides.html",
-        "fix-flight.html",
-        "how-to-throw.html",
-        "dart-or-glider.html",
-        "choose-paper.html",
-        "how-planes-fly.html",
-        "video.html",
-        "fly.html",
+        "learn",
+        "3d-learn",
+        "read",
+        "guides",
+        "fix-flight",
+        "how-to-throw",
+        "dart-or-glider",
+        "choose-paper",
+        "how-planes-fly",
+        "video",
+        "fly",
         "paper-mache/",
         "paper-mache-recipe/",
         "paper-mache-volcano/",
-    ] + [f"planes/{p['slug']}.html" for p in planes]
+    ] + [f"planes/{p['slug']}" for p in planes]
     body = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ]
     for u in urls:
-        loc = abs_url(u) if BASE_URL else f"/{u}" if u else "/"
-        # For file:// or relative deploys without domain, still emit path-style locs
-        if not BASE_URL:
-            loc = f"https://example.com/{u}" if u else "https://example.com/"
+        loc = abs_url(u)
+        key = pretty_path(u).rstrip("/")
+        priority = "1.0" if not key else "0.9" if key in high else "0.8"
         body.append("  <url>")
         body.append(f"    <loc>{esc(loc)}</loc>")
+        body.append(f"    <lastmod>{sitemap_lastmod(u)}</lastmod>")
         body.append("    <changefreq>monthly</changefreq>")
-        body.append(
-            f"    <priority>{'1.0' if not u else '0.9' if u in ('fly.html', 'learn.html', '3d-learn.html', 'read.html', 'guides.html', 'fix-flight.html', 'how-to-throw.html', 'dart-or-glider.html', 'choose-paper.html', 'how-planes-fly.html', 'video.html') else '0.8'}</priority>"
-        )
+        body.append(f"    <priority>{priority}</priority>")
         body.append("  </url>")
     body.append("</urlset>")
-    # Prefer placeholder note when BASE_URL empty — write relative-friendly sitemap with paths
-    if not BASE_URL:
-        body = [
-            '<?xml version="1.0" encoding="UTF-8"?>',
-            "<!-- 部署时请把 BASE_URL 设成正式域名后重新运行 scripts/build_seo_pages.py -->",
-            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-        ]
-        for u in urls:
-            loc = f"/{u}" if u else "/"
-            body += [
-                "  <url>",
-                f"    <loc>{esc(loc)}</loc>",
-                "    <changefreq>monthly</changefreq>",
-                f"    <priority>{'1.0' if not u else '0.8'}</priority>",
-                "  </url>",
-            ]
-        body.append("</urlset>")
     (SITE / "sitemap.xml").write_text("\n".join(body) + "\n", encoding="utf-8")
 
 
@@ -685,9 +791,9 @@ HOME_FAQ = [
     ),
     (
         "Do I need scissors for these paper airplanes?",
-        "Only some designs need scissors, usually to cut a small slit or shape the tail. Every card carries a Scissors label, and the filter rail lets you hide those models with the No scissors option, so you can start folding with just a sheet of paper.",
+        "Only some designs need a cut, usually to open a small slit or shape the tail. Cards marked Needs cut are optional — pick Hands only in the filter to keep planes you can fold with just a sheet of paper.",
         "这些纸飞机需要剪刀吗？",
-        "只有部分机型需要剪刀，通常用来开一个小口或修整机尾。每张卡片上都有剪刀标识，左侧筛选栏也可以勾选“不用剪刀”，只保留徒手就能折的机型。",
+        "只有部分机型需要剪一刀，通常用来开一个小口或修整机尾。卡片上会标“需剪”，左侧筛选也可选“只用手折”，只看徒手就能完成的机型。",
     ),
     (
         "A4 or Letter paper — does the size matter?",
@@ -697,9 +803,9 @@ HOME_FAQ = [
     ),
     (
         "Are these paper airplanes suitable for kids?",
-        "Yes. Start with Easy designs such as the Basic Dart, which use straight folds and need no scissors. Medium and Hard models add squash folds and sharp creases that younger folders may need help with, and Expert designs are best treated as a shared project.",
+        "Yes. Start with beginner designs such as the Basic Dart — straight folds, hands only. Intermediate and advanced models add squash folds and sharp creases that younger folders may need help with; master designs work best as a shared project.",
         "这些纸飞机适合小朋友折吗？",
-        "适合。建议从 Basic Dart 这类“简单”难度开始，都是直线折法，也不需要剪刀。中等和困难机型会用到压折、对齐尖角等技巧，年纪较小的孩子可能需要协助；专家难度更适合当作亲子合作项目。",
+        "适合。建议从 Basic Dart 这类入门机型开始：直线折法、只用手折。进阶和挑战机型会用到压折、对齐尖角，年纪较小的孩子可能需要协助；大师难度更适合当作亲子合作项目。",
     ),
     (
         "How can I make my paper airplane fly farther?",
@@ -722,9 +828,8 @@ def render_home_faq() -> str:
         items.append(
             f"""
           <details class="faq-item">
-            <summary><span class="lang-en">{esc(q_en)}</span><span class="lang-zh">{esc(q_zh)}</span></summary>
-            <p class="lang-en">{esc(a_en)}</p>
-            <p class="lang-zh">{esc(a_zh)}</p>
+            {i18n_text(q_en, q_zh, tag="summary")}
+            {i18n_text(a_en, a_zh, tag="p")}
           </details>"""
         )
     return "\n".join(items)
@@ -752,14 +857,9 @@ def patch_index(planes: list[dict]) -> None:
     title = f"{SITE_NAME} · {count} Paper Airplane Designs with 3D Folding Guides"
     desc = (
         f"Fold {count} classic paper airplanes with 3D step-by-step guides, estimated flight "
-        "distance and hang time, and a test-flight preview. Filter by distance, difficulty, and scissors."
+        "distance and hang time, and a test-flight preview. Pick by flying goal, folding skill, and prep."
     )
-    keywords = (
-        "paper airplane,paper plane,3d paper airplane tutorial,paper airplane folding guide,"
-        "paper airplane test flight,paper airplane simulator,how far can a paper airplane fly,"
-        "paper airplane template,dart,glider,origami airplane"
-    )
-    og = abs_url("assets/planes/1/square.webp")
+    og = abs_url("assets/planes/Basic-Dart/square.webp")
     ld = hangar_jsonld(planes)
     ld_faq = home_faq_jsonld()
     head = f"""<!DOCTYPE html>
@@ -769,7 +869,6 @@ def patch_index(planes: list[dict]) -> None:
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(desc)}" />
-  <meta name="keywords" content="{esc(keywords)}" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="{esc(abs_url(''))}" />
 
@@ -800,7 +899,7 @@ def patch_index(planes: list[dict]) -> None:
         raise SystemExit("index.html missing </head>")
     rest = text[end + len("</head>") :]
     # Ensure brand links to index without hash-only
-    rest = rest.replace('href="#/"', 'href="index.html"', 1)
+    rest = rest.replace('href="#/"', 'href="/"', 1)
     start_marker = "<!-- PLANE_GRID_START -->"
     end_marker = "<!-- PLANE_GRID_END -->"
     start = rest.find(start_marker)

@@ -52,7 +52,7 @@
       ? `${vals.distance[0]}–${vals.distance[1]} m`
       : "—";
     $("stat-time").textContent = vals.time ? `${vals.time[0]}–${vals.time[1]} s` : "—";
-    $("stat-guide").href = `planes/${encodeURIComponent(state.selected.slug)}.html`;
+    $("stat-guide").href = `/planes/${encodeURIComponent(state.selected.slug)}`;
     cancelFlight();
   }
 
