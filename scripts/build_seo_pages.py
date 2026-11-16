@@ -65,6 +65,16 @@ BRAND_TITLE = "AirePlanes"
 BRAND_SUB = ""
 # Relative site root for local static hosting; change when deploying to a domain.
 BASE_URL = "https://paperairplaneworld.wiki"
+GA_MEASUREMENT_ID = "G-1MQHQ45J4X"
+GA_SNIPPET = f"""  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={GA_MEASUREMENT_ID}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', '{GA_MEASUREMENT_ID}');
+  </script>
+"""
 
 
 def esc(s: str) -> str:
@@ -687,7 +697,7 @@ def render_plane_page(plane: dict, ranks: dict, planes: list[dict] | None = None
   <script type="application/ld+json">{json.dumps(web_page, ensure_ascii=False)}</script>
   <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
   <script type="application/ld+json">{json.dumps(ld_faq, ensure_ascii=False)}</script>
-</head>
+{GA_SNIPPET}</head>
 <body class="is-detail">
   <header class="topbar">
     <a class="brand" href="{site_href('')}">
@@ -1163,7 +1173,7 @@ def patch_index(planes: list[dict]) -> None:
   <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
   <script type="application/ld+json">{json.dumps(ld_faq, ensure_ascii=False)}</script>
-</head>"""
+{GA_SNIPPET}</head>"""
     # Replace from start through </head>
     end = text.find("</head>")
     if end == -1:
